@@ -1,5 +1,7 @@
 # Nano Banana Pro 全网最全提示词整理
 
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](README_EN.md) [![中文](https://img.shields.io/badge/lang-中文-red.svg)](README.md)
+
 ## 开源协议
 
 本项目采用 [MIT License](LICENSE) 开源协议。
