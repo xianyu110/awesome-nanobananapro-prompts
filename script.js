@@ -1,803 +1,257 @@
-// 全局配置
-const CONFIG = {
-    animations: {
-        enabled: true,
-        duration: 300,
-        easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
-    },
-    breakpoints: {
-        mobile: 768,
-        tablet: 1024,
-        desktop: 1280
-    },
-    performance: {
-        lazyLoad: true,
-        throttleDelay: 100,
-        debounceDelay: 300
-    }
-};
+// 所有案例数据
+const casesData = [
+    // Part 1: 核心能力展示
+    { id: 1, title: "角色一致性与口型准确性", category: "character", author: "@balconychy", tags: ["角色一致性", "4K"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719889.png", prompt: "请绘制一张四宫格图片，四张图依次表现同一位戴着斗笠的年轻男子分别发音「我」「上」「早」「八」，人物外貌保持一致，口型准确对应每个字的发音，整体风格统一，16:9，4K" },
+    { id: 2, title: "漫画上色与翻译", category: "translation", author: "@dotey", tags: ["翻译", "上色"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719131.png", prompt: "将图片上的文字翻译为中文，并上色，其他不变" },
+    { id: 3, title: "国际化海报翻译与重排", category: "poster", author: "@dotey", tags: ["海报", "翻译"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719266.png", prompt: "将英文海报中的英文翻译成中文。" },
+    { id: 4, title: "复杂UI界面复刻（聊天记录）", category: "ui", author: "@designer", tags: ["UI设计", "微信"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719642.png", prompt: "生成两张竖版的微信群聊天界面截图，群成员正在讨论 Nano Banana Pro 的发布。" },
+    { id: 5, title: "长文本与古画风格结合", category: "creative", author: "@artist", tags: ["古风", "长文本"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719856.png", prompt: "生成一幅 4K 古画，画上写着《水调歌头》全文" },
+    { id: 6, title: "IP角色融合创作", category: "creative", author: "@creator", tags: ["IP融合", "创意"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719241.png", prompt: "哆啦A梦和李白在月下对酌。圆月高悬，古代亭台楼阁，哆啦A梦穿着唐朝服饰，李白持酒壶，石桌上摆着酒具，仙气飘飘，中日混合画风，精致细节" },
+    { id: 7, title: "搜索增强：行程规划", category: "infographic", author: "@traveler", tags: ["信息图", "搜索增强"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719795.png", prompt: "生成一张可视化的图片，展示在广州旅游的 2 天行程。" },
+    { id: 8, title: "搜索增强：天气信息图", category: "infographic", author: "@weather", tags: ["波普艺术", "实时"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211720294.png", prompt: "搜索广州实时天气信息，制作一幅中文波普艺术风格的信息图，4:3" },
+    { id: 9, title: "实时天气UI设计", category: "ui", author: "@designer", tags: ["UI设计", "天气"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740561.jpeg", prompt: "帮我搜索现在北京的天气信息，并且将其放在一个天气UI设计稿中" },
+    { id: 10, title: "搜索增强与图像编辑结合", category: "creative", author: "@editor", tags: ["复古海报", "搜索增强"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740241.png", prompt: "搜索北京市今天的天气和一条正能量的早间新闻。将我的照片转换成'美式复古海报'风格。" },
+    { id: 11, title: "多语言手账创作", category: "creative", author: "@traveler", tags: ["手账", "多语言"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740100.jpeg", prompt: "帮我生成一张拼贴手帐风格的广西旅游笔记，上面记录着自己的行程以及路上的照片等，文字有中文、韩语和英语。" },
+    { id: 12, title: "多图输入与手写日记风格", category: "creative", author: "@diary", tags: ["日记", "手写"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740825.jpeg", prompt: "模拟在一张略带纹理的纸张上手写的关于今天的日记，拼贴画风格" },
+    { id: 13, title: "中文字体设计", category: "creative", author: "@font", tags: ["字体", "设计"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740992.jpeg", prompt: "多种字体设计提示词的综合效果展示" },
+    { id: 14, title: "产品海报设计（单图）", category: "poster", author: "@product", tags: ["产品", "海报"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740269.png", prompt: "为这款米色皮革手机壳设计产品海报。4K超清画面质感，静物摄影，昏暗氛围，光线追踪，高级柔光。" },
+    { id: 15, title: "产品海报设计（多图）", category: "poster", author: "@product", tags: ["香薰", "海报"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740031.jpeg", prompt: "为这两个香薰产品设计产品海报。两个香薰放在一起的超近景特写，质感清晰。" },
+    { id: 16, title: "产品场景渲染", category: "creative", author: "@render", tags: ["场景", "渲染"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740567.jpeg", prompt: "帮我将这个香薰放在符合设计风格的室内，大师级摄影，特写镜头" },
+    { id: 17, title: "多物品场景融合", category: "creative", author: "@interior", tags: ["家具", "融合"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740721.jpeg", prompt: "将这些家具融洽的放到一个房间中" },
+    { id: 18, title: "人像精细编辑与美颜", category: "character", author: "@beauty", tags: ["美颜", "编辑"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740959.jpeg", prompt: "轻度美颜、瘦脸，发型替换为美式前刺，发际线前移，眼镜更换为墨镜" },
+    { id: 19, title: "IP版权内容生成（跨文化融合）", category: "creative", author: "@ip", tags: ["IP融合", "大闹天宫"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740823.jpeg", prompt: "杰瑞鼠身披《大闹天宫》动画版标志性的鹅黄色虎皮裙、大红披风和金甲，头戴凤翅紫金冠，手持金箍棒" },
+    { id: 20, title: "IP版权内容生成（关系图）", category: "infographic", author: "@ip", tags: ["权游", "关系图"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740621.jpeg", prompt: "一张手帐风格图片，上面画着电视剧权力的游戏的人物关系和势力关系图，人物有头像" },
+    { id: 21, title: "IP版权内容生成（游戏截图）", category: "ui", author: "@game", tags: ["宝可梦", "游戏"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740038.jpeg", prompt: "3D写实风格的宝可梦主题MMO游戏截图" },
+    { id: 22, title: "白模上色与渲染", category: "creative", author: "@3d", tags: ["手办", "上色"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740819.jpeg", prompt: "为这张手办完成材质添加和上色，同时将周围环境变为符合角色设定的环境" },
+    { id: 23, title: "漫画翻译与上色（复杂场景）", category: "translation", author: "@manga", tags: ["海贼王", "上色"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740983.jpeg", prompt: "对复杂海贼王漫画页进行翻译和上色" },
+    { id: 24, title: "酸性设计/Y2K风格海报", category: "poster", author: "@design", tags: ["Y2K", "酸性设计"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740806.jpeg", prompt: "将照片转换成Y2K美学或酸性设计风格的平面设计海报" },
+    { id: 25, title: "UI设计风格迁移", category: "ui", author: "@ui", tags: ["风格迁移", "天气App"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740851.jpeg", prompt: "模仿这个设计稿的风格和关键元素表现形式，帮我生成一个天气应用的UI设计稿" },
+    { id: 26, title: "超长文本古风画卷", category: "creative", author: "@calligraphy", tags: ["琵琶行", "书法"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742741.jpeg", prompt: "在画面上方有一张长长的画卷上用潇洒的书法写着一整首白居易的《琵琶行》" },
+    { id: 27, title: "微信群聊UI复刻（甄嬛传版）", category: "ui", author: "@chat", tags: ["微信", "甄嬛传"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742790.png", prompt: "生成一张微信手机聊天界面截图，严格按照微信的界面UI和排版方式，群聊名称：紫禁城吃瓜群" },
+    { id: 28, title: "跨界IP游戏场景", category: "creative", author: "@game", tags: ["原神", "马斯克"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742683.jpeg", prompt: "生成一张原神的实机战斗图片，旅行者主角正在和 boss 埃隆·马斯克战斗" },
+    { id: 29, title: "超多IP角色大合照", category: "creative", author: "@crossover", tags: ["动漫", "大合照"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742701.jpeg", prompt: "中国动画中的孙悟空和路飞、漩涡鸣人、炭治郎等多个动漫角色站在一起，大杂烩式同框，集体大合照" },
+    { id: 30, title: "科普图制作（光合作用）", category: "infographic", author: "@science", tags: ["科普", "植物"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742099.png", prompt: "用中文给我制作一张科普图片，讲述详细的植物进行光合作用的原理" },
+    { id: 31, title: "科普图制作（牛顿三棱镜）", category: "infographic", author: "@science", tags: ["科普", "光学"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742184.png", prompt: "设计「经典光学实验：牛顿三棱镜分光」分镜式科普海报" },
+    { id: 32, title: "科普图制作（染色体）", category: "infographic", author: "@science", tags: ["科普", "基因"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742565.jpeg", prompt: "用中文绘一张「人类基因组 23 对染色体概览」信息图" },
+    { id: 33, title: "宠物照片编辑与Cos", category: "creative", author: "@pet", tags: ["宠物", "Cos"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742309.jpeg", prompt: "帮我的猫穿上疯狂动物城的兔子警官cos装扮" },
+    { id: 34, title: "宠物商业联名海报", category: "poster", author: "@pet", tags: ["宠物", "联名"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742258.jpeg", prompt: "以「77X肯德基」联名企划为主题，生成一张联名海报" },
+    { id: 35, title: "海报风格迁移（美妆）", category: "poster", author: "@design", tags: ["风格迁移", "美妆"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742362.png", prompt: "参考图片风格，将主题色换成粉色，将菜篮子换成化妆箱" },
+    { id: 36, title: "海报风格迁移（春节）", category: "poster", author: "@design", tags: ["春节", "马年"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742082.png", prompt: "参考图片的风格和色彩以及构图，生成一张2026年马年大吉的春节海报" },
+    { id: 37, title: "产品与海报风格融合", category: "poster", author: "@product", tags: ["洗衣液", "海报"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742003.png", prompt: "参考图1的海报风格，制作一张图2洗衣液产品的海报" },
+    { id: 38, title: "线稿上色与细节丰富", category: "creative", author: "@arch", tags: ["线稿", "城市"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742890.jpeg", prompt: "根据这张线稿，生成一张细节丰富的城市设计效果图" },
+    { id: 39, title: "视角转换", category: "creative", author: "@view", tags: ["视角", "俯视"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742168.jpeg", prompt: "把这张图的四格场景都换成头顶的俯视视角" },
+    { id: 40, title: "漫画翻译与上色（连贯操作）", category: "translation", author: "@manga", tags: ["漫画", "翻译"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742974.jpeg", prompt: "给这张漫画页上色并翻译成中文放到图中原来的位置" },
+    { id: 41, title: "续写书页内容", category: "creative", author: "@book", tags: ["书籍", "续写"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742672.jpeg", prompt: "生成图中这本书的下一页，页面的位置要正确，文字内容要延续" },
+    { id: 42, title: "数学题解题过程可视化", category: "infographic", author: "@math", tags: ["数学", "解题"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742750.png", prompt: "画一张草稿纸，上面是这道题的解法" },
+    { id: 43, title: "论文/长文本转白板图", category: "infographic", author: "@whiteboard", tags: ["白板", "论文"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742352.jpeg", prompt: "将长文本或PDF内容转换成一张详细的白板照片" },
+    { id: 44, title: "产品多场景渲染（唱片店）", category: "creative", author: "@cd", tags: ["CD", "场景"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211743477.png", prompt: "90年代台北旧唱片店的木架上放置周杰伦CD" },
+    { id: 45, title: "产品多场景渲染（悬浮）", category: "creative", author: "@cd", tags: ["CD", "创意"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211743803.png", prompt: "CD悬浮在半空中，周围是破碎的玻璃碎片" },
+    { id: 46, title: "拼豆风格创作（手办）", category: "creative", author: "@perler", tags: ["拼豆", "手办"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211743192.png", prompt: "3D拼豆，盒子里装着精致的手办" },
+    { id: 47, title: "拼豆风格创作（小狗）", category: "creative", author: "@perler", tags: ["拼豆", "可爱"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211743974.png", prompt: "拼豆小狗" },
+    // Part 2: UI/UX与界面复刻
+    { id: 48, title: "Windows XP 复刻", category: "ui", author: "@retro", tags: ["复古", "Windows"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740026.jpeg", prompt: "精确复刻 Windows XP 的桌面环境。要求包含：经典蓝绿色背景、左下角'开始'按钮" },
+    { id: 49, title: "Windows 11 复刻", category: "ui", author: "@modern", tags: ["现代", "Windows"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740313.jpeg", prompt: "生成一个 Windows 11 桌面截图，同时打开三个窗口" },
+    { id: 50, title: "Mac OS 9 复刻", category: "ui", author: "@retro", tags: ["复古", "Mac"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740040.jpeg", prompt: "复刻 Mac OS 9 的桌面截图，黑白或低色彩的像素化图标" },
+    { id: 51, title: "macOS 最新版复刻", category: "ui", author: "@modern", tags: ["现代", "Mac"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740903.jpeg", prompt: "复刻最新的 macOS 桌面，顶部菜单栏清晰显示" },
+    { id: 52, title: "SaaS Dashboard", category: "ui", author: "@dashboard", tags: ["数据", "图表"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740993.jpeg", prompt: "生成一张SaaS平台的数据面板，包含柱状图、饼图和进度条" },
+    { id: 53, title: "数据大屏（新能源）", category: "ui", author: "@bigscreen", tags: ["大屏", "新能源"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749318.png", prompt: "帮我做一个新能源虚拟电厂的数据大屏，我要给领导展示的" },
+    { id: 54, title: "APP原型图", category: "ui", author: "@prototype", tags: ["原型", "播客"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749206.jpeg", prompt: "我想开发一款类似于小宇宙的APP，请你帮我画个原型图" },
+    { id: 55, title: "PPT页面设计", category: "ui", author: "@ppt", tags: ["PPT", "AI"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749614.png", prompt: "做一页PPT，关于AI Agent的应用场景，科技主题" },
+    { id: 56, title: "科幻RPG游戏界面", category: "ui", author: "@game", tags: ["游戏", "RPG"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740076.jpeg", prompt: "生成一个科幻 RPG 游戏的战斗界面" },
+    { id: 57, title: "RTS游戏界面", category: "ui", author: "@game", tags: ["游戏", "RTS"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740526.jpeg", prompt: "生成一个RTS 游戏的战斗界面" },
+    { id: 58, title: "FPS游戏界面", category: "ui", author: "@game", tags: ["游戏", "FPS"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740663.jpeg", prompt: "生成一个FPS 游戏的战斗画面，HUD瞄准镜" },
+    { id: 59, title: "城市沙盒游戏界面", category: "ui", author: "@game", tags: ["游戏", "沙盒"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740880.jpeg", prompt: "生成一个城市沙盒游戏的等距俯视截图" },
+    { id: 60, title: "MOBA游戏界面", category: "ui", author: "@game", tags: ["游戏", "MOBA"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740911.jpeg", prompt: "生成一个 MOBA 游戏的底部中央 HUD" },
+    { id: 61, title: "桌游《卡坦岛》复刻", category: "ui", author: "@board", tags: ["桌游", "卡坦岛"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740290.jpeg", prompt: "生成一个《卡坦岛》桌游的高精度复刻图" },
+    { id: 62, title: "《剑网3》界面", category: "ui", author: "@game", tags: ["剑网3", "武侠"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740303.jpeg", prompt: "生成一个《剑网3》战斗界面截图" },
+    { id: 63, title: "《英雄联盟》界面", category: "ui", author: "@game", tags: ["LOL", "MOBA"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740343.jpeg", prompt: "生成一个《英雄联盟》的对战界面" },
+    { id: 64, title: "夜视仪FPS界面", category: "ui", author: "@game", tags: ["FPS", "夜视"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740603.jpeg", prompt: "生成一个夜间战斗的截图，采用夜视仪效果" },
+    { id: 65, title: "狙击镜界面", category: "ui", author: "@game", tags: ["FPS", "狙击"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740041.jpeg", prompt: "生成一个狙击手通过高倍率瞄准镜瞄准目标的特写截图" },
+    { id: 66, title: "武侠游戏过场", category: "ui", author: "@game", tags: ["武侠", "过场"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740986.jpeg", prompt: "生成一个武侠游戏剧情过场动画的截图" },
+    // Part 3: 内容创作与风格化应用
+    { id: 67, title: "小红书封面（美食）", category: "poster", author: "@xiaohongshu", tags: ["小红书", "美食"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg", prompt: "生成一张高饱和度的美食笔记封面，主题为3天瘦8斤的懒人减肥食谱" },
+    { id: 68, title: "小红书封面（美妆）", category: "poster", author: "@xiaohongshu", tags: ["小红书", "美妆"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740177.jpeg", prompt: "生成一张美妆教程封面，韩系清冷风滤镜" },
+    { id: 69, title: "小红书封面（数码）", category: "poster", author: "@xiaohongshu", tags: ["小红书", "数码"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740996.jpeg", prompt: "生成一个数码产品评测笔记内页" },
+    { id: 70, title: "小红书封面（AI）", category: "poster", author: "@xiaohongshu", tags: ["小红书", "AI"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740248.jpeg", prompt: "生成一张AI绘画教程笔记封面，30个Midjourney核心关键词" },
+    { id: 71, title: "视觉小说（现代言情）", category: "creative", author: "@vn", tags: ["视觉小说", "言情"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740424.jpeg", prompt: "生成一个现代校园风格的视觉小说场景" },
+    { id: 72, title: "视觉小说（古风武侠）", category: "creative", author: "@vn", tags: ["视觉小说", "武侠"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740689.jpeg", prompt: "生成一个古风武侠场景的视觉小说界面" },
+    { id: 73, title: "视觉小说（奇幻冒险）", category: "creative", author: "@vn", tags: ["视觉小说", "奇幻"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741290.jpeg", prompt: "生成一个奇幻冒险风格的视觉小说界面" },
+    { id: 74, title: "视觉小说（科幻机甲）", category: "creative", author: "@vn", tags: ["视觉小说", "机甲"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741345.jpeg", prompt: "生成一个科幻机甲题材的互动场景" },
+    { id: 75, title: "古籍复刻《红楼梦》", category: "creative", author: "@classic", tags: ["红楼梦", "古籍"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741694.jpeg", prompt: "生成一本打开的书，左页是《红楼梦》第一回的开篇段落" },
+    { id: 76, title: "古籍复刻《论语》", category: "creative", author: "@classic", tags: ["论语", "古籍"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741735.jpeg", prompt: "生成一张古籍线装书的双页内文特写，复刻《论语》学而篇" },
+    { id: 77, title: "《兰亭集序》石碑", category: "creative", author: "@calligraphy", tags: ["书法", "石碑"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741215.jpeg", prompt: "一个刻满经文的石碑，上刻有完整的《兰亭集序》" },
+    { id: 78, title: "中文大写数字计算器", category: "creative", author: "@creative", tags: ["计算器", "中文"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741252.jpeg", prompt: "一个电子计算器的屏幕，用中文字符显示算式" },
+    { id: 79, title: "古画题跋", category: "creative", author: "@painting", tags: ["山水画", "题跋"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741896.jpeg", prompt: "生成一幅南宋时期的青绿山水画长卷，有苏轼《题西林壁》题跋" },
+    { id: 80, title: "漫画翻译上色（鬼灭）", category: "translation", author: "@manga", tags: ["鬼灭之刃", "上色"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742933.png", prompt: "把这张图变成彩色，翻译成中文并放在对应的对话框内" },
+    { id: 81, title: "风格转换（3D毛绒）", category: "creative", author: "@style", tags: ["风格转换", "3D"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742667.jpeg", prompt: "将漫画转换为3D毛绒风格" },
+    { id: 82, title: "电影海报《死亡诗社》", category: "poster", author: "@movie", tags: ["电影", "海报"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742631.jpeg", prompt: "电影《死亡诗社》艺术海报，主标题用流动的艺术手写字体" },
+    { id: 83, title: "电影海报《天书奇谭》", category: "poster", author: "@movie", tags: ["动画", "海报"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742848.jpeg", prompt: "动画电影《天书奇谭》艺术海报，中国山水画风格" },
+    { id: 84, title: "活动海报（AI赋能）", category: "poster", author: "@event", tags: ["活动", "AI"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749177.png", prompt: "主题为AI赋能发明创新的活动宣传海报" },
+    { id: 85, title: "应县木塔结构解说图", category: "infographic", author: "@arch", tags: ["建筑", "解说"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742475.jpeg", prompt: "生成应县木塔的结构解说图，附上详细中文" },
+    { id: 86, title: "苏绣工艺解说图", category: "infographic", author: "@craft", tags: ["苏绣", "工艺"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742643.jpeg", prompt: "生成苏绣工艺的详细解说图，配上详细的中文知识解析" },
+    { id: 87, title: "百年孤独人物关系图", category: "infographic", author: "@book", tags: ["文学", "关系图"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211751857.png", prompt: "画出《百年孤独》中的重要人物关系图，用中文表示关系" },
+    { id: 88, title: "锂电池原理图", category: "infographic", author: "@science", tags: ["科普", "电池"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749359.png", prompt: "锂电池作用原理图，用中英文双语进行标注" },
+    { id: 89, title: "个人名片设计", category: "poster", author: "@personal", tags: ["名片", "个人"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749848.png", prompt: "生成一张个人介绍图，用于向外展示" },
+    { id: 90, title: "功夫图解", category: "infographic", author: "@kungfu", tags: ["功夫", "图解"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749585.png", prompt: "让特朗普用中文图解的方式教八部金刚功" },
+    { id: 91, title: "古诗配图", category: "creative", author: "@poetry", tags: ["古诗", "配图"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749972.png", prompt: "为采菊东篱下，悠然见南山这首诗配图" },
+];
 
-// 工具函数
-const utils = {
-    // 节流函数
-    throttle(func, limit) {
-        let inThrottle;
-        return function() {
-            const args = arguments;
-            const context = this;
-            if (!inThrottle) {
-                func.apply(context, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    },
+// ===== DOM Elements =====
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+const langBtn = document.getElementById('langBtn');
+const langMenu = document.getElementById('langMenu');
+const backToTop = document.getElementById('backToTop');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalPrompt = document.getElementById('modalPrompt');
+const copyPrompt = document.getElementById('copyPrompt');
+const categoryFilter = document.getElementById('categoryFilter');
+const searchInput = document.getElementById('searchInput');
+const cardGrid = document.getElementById('cardGrid');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
 
-    // 防抖函数
-    debounce(func, wait, immediate) {
-        let timeout;
-        return function() {
-            const context = this;
-            const args = arguments;
-            const later = () => {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
-            const callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
-    },
+// 当前显示数量
+let displayCount = 12;
+const increment = 12;
 
-    // 获取元素在视口中的位置
-    getElementPosition(element) {
-        const rect = element.getBoundingClientRect();
-        return {
-            top: rect.top + window.pageYOffset,
-            left: rect.left + window.pageXOffset,
-            height: rect.height,
-            width: rect.width
-        };
-    },
-
-    // 检查元素是否在视口中
-    isElementInViewport(element, threshold = 0.1) {
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-
-        const verticalThreshold = windowHeight * threshold;
-        const horizontalThreshold = windowWidth * threshold;
-
-        return (
-            rect.top <= windowHeight - verticalThreshold &&
-            rect.bottom >= verticalThreshold &&
-            rect.left <= windowWidth - horizontalThreshold &&
-            rect.right >= horizontalThreshold
-        );
-    }
-};
-
-// 应用初始化
-class NanoBananaApp {
-    constructor() {
-        this.isLoaded = false;
-        this.sections = [];
-        this.navigationElements = [];
-        this.theme = this.loadTheme();
-        this.init();
-    }
-
-    init() {
-        this.setupLoadingScreen();
-        this.setupNavigation();
-        this.setupScrollEffects();
-        this.setupAnimations();
-        this.setupTheme();
-        this.setupImageHandling();
-        this.setupInteractions();
-        this.setupPerformanceOptimizations();
-    }
-
-    // 加载屏幕
-    setupLoadingScreen() {
-        const loadingScreen = document.getElementById('loadingScreen');
-        if (loadingScreen) {
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    loadingScreen.classList.add('fade-out');
-                    setTimeout(() => {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                }, 1000);
-            });
-        }
-    }
-
-    // 初始化动画元素
-    initAnimatedElements() {
-        const animatedElements = document.querySelectorAll('.feature-card, .example-card, .tip-card, .resource-card');
-        animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.setAttribute('data-animate', 'fadeInUp');
-            if (this.animationObserver) {
-                this.animationObserver.observe(el);
-            }
-        });
-    }
-
-    // 导航设置
-    setupNavigation() {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        const navToggle = document.getElementById('navToggle');
-
-        // 移动端菜单切换
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                document.body.classList.toggle('nav-open');
-            });
-
-            // 关闭移动端菜单当点击链接时
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    const href = link.getAttribute('href');
-                    if (href.startsWith('#')) {
-                        e.preventDefault();
-                        this.scrollToSection(href);
-                    }
-
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.classList.remove('nav-open');
-                });
-            });
-        }
-
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = anchor.getAttribute('href');
-                this.scrollToSection(targetId);
-            });
-        });
-    }
-
-    // 滚动到指定部分
-    scrollToSection(targetId) {
-        const target = document.querySelector(targetId);
-        if (target) {
-            const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-            const targetPosition = utils.getElementPosition(target).top - headerHeight - 20;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    }
-
-    // 滚动效果
-    setupScrollEffects() {
-        const header = document.querySelector('.header');
-
-        // 导航栏滚动效果
-        const scrollHandler = utils.throttle(() => {
-            const scrollY = window.pageYOffset;
-
-            // 头部阴影效果
-            if (header) {
-                if (scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            }
-
-            // 进度指示器
-            this.updateScrollIndicator();
-
-            // 视差效果
-            this.updateParallaxEffects();
-
-            // 滚动动画
-            this.updateScrollAnimations();
-        }, CONFIG.performance.throttleDelay);
-
-        window.addEventListener('scroll', scrollHandler);
-    }
-
-    // 更新滚动指示器
-    updateScrollIndicator() {
-        const scrollTop = window.pageYOffset;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-
-        const progressBar = document.querySelector('.scroll-progress');
-        if (progressBar) {
-            progressBar.style.width = `${scrollPercent}%`;
-        }
-    }
-
-    // 视差效果
-    updateParallaxEffects() {
-        const scrollY = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('[data-parallax]');
-
-        parallaxElements.forEach(element => {
-            const speed = parseFloat(element.dataset.parallax) || 0.5;
-            const yPos = -(scrollY * speed);
-            element.style.transform = `translateY(${yPos}px)`;
-        });
-    }
-
-    // 动画设置
-    setupAnimations() {
-        this.animationObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        this.animateElement(entry.target);
-                        this.animationObserver.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            }
-        );
-
-        // 初始化需要动画的元素
-        setTimeout(() => {
-            this.initAnimatedElements();
-        }, 100);
-    }
-
-    // 动画元素
-    animateElement(element) {
-        const animation = element.dataset.animate;
-        const delay = element.dataset.delay || 0;
-
-        setTimeout(() => {
-            element.classList.add('animated', animation);
-        }, delay);
-    }
-
-    // 主题设置
-    setupTheme() {
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                this.toggleTheme();
-            });
-        }
-
-        // 应用保存的主题
-        this.applyTheme(this.theme);
-    }
-
-    toggleTheme() {
-        this.theme = this.theme === 'dark' ? 'light' : 'dark';
-        this.applyTheme(this.theme);
-        this.saveTheme(this.theme);
-    }
-
-    applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        document.body.classList.toggle('dark-theme', theme === 'dark');
-
-        // 更新主题切换按钮
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (themeToggle) {
-            const icon = themeToggle.querySelector('i');
-            if (icon) {
-                icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-            }
-        }
-    }
-
-    saveTheme(theme) {
-        localStorage.setItem('nanobanana-theme', theme);
-    }
-
-    loadTheme() {
-        return localStorage.getItem('nanobanana-theme') ||
-               (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    }
-
-    // 图片处理
-    setupImageHandling() {
-        // 懒加载图片
-        if (CONFIG.performance.lazyLoad) {
-            this.setupLazyLoading();
-        }
-
-        // 图片错误处理
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('error', () => {
-                img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0yMCAxNkMxNy4yIDE2IDE1IDE4LjIgMTUgMjFDMTUgMjMuOCAxNy4yIDI2IDIwIDI2QzIyLjggMjYgMjUgMjMuOCAyNSAyMUMyNSAxOC4yIDIyLjggMTYgMjAgMTZaIiBmaWxsPSIjQzNDNUMzIi8+CjxwYXRoIGQ9Ik04IDMySDE2VjI4SDhWMzJaIiBmaWxsPSIjQzNDNUMzIi8+CjxwYXRoIGQ9Ik0yNCAzMkgzMlYyOEgyNFYzMloiIGZpbGw9IiNDM0M1QzMiLz4KPC9zdmc+';
-                img.classList.add('error-image');
-            });
-        });
-
-        // 图片缩放功能
-        this.setupImageZoom();
-    }
-
-    setupLazyLoading() {
-        const images = document.querySelectorAll('img[data-src]');
-
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            images.forEach(img => imageObserver.observe(img));
-        } else {
-            // 降级处理
-            images.forEach(img => {
-                img.src = img.dataset.src;
-            });
-        }
-    }
-
-    setupImageZoom() {
-        const zoomableImages = document.querySelectorAll('.zoomable-image');
-
-        zoomableImages.forEach(img => {
-            img.addEventListener('click', () => {
-                this.openImageModal(img);
-            });
-        });
-    }
-
-    openImageModal(img) {
-        const modal = document.createElement('div');
-        modal.className = 'image-modal';
-        modal.innerHTML = `
-            <div class="modal-backdrop"></div>
-            <div class="modal-content">
-                <img src="${img.src}" alt="${img.alt}">
-                <button class="modal-close">&times;</button>
+// 生成卡片HTML
+function createCard(item) {
+    return `
+        <div class="card" data-category="${item.category}" data-id="${item.id}">
+            <div class="card-badge">#${item.id}</div>
+            <div class="card-img"><img src="${item.img}" alt="${item.title}" loading="lazy"></div>
+            <div class="card-body">
+                <h3>${item.title}</h3>
+                <p class="card-author">👤 ${item.author}</p>
+                <div class="card-tags">${item.tags.map(t => `<span>${t}</span>`).join('')}</div>
+                <div class="card-actions">
+                    <button class="btn-sm btn-view" data-prompt="${item.prompt.replace(/"/g, '&quot;')}">👁️ 查看详情</button>
+                    <button class="btn-sm btn-copy">📄 原文</button>
+                </div>
             </div>
-        `;
-
-        document.body.appendChild(modal);
-
-        // 关闭模态框
-        const close = () => {
-            modal.classList.add('closing');
-            setTimeout(() => modal.remove(), 300);
-        };
-
-        modal.querySelector('.modal-close').addEventListener('click', close);
-        modal.querySelector('.modal-backdrop').addEventListener('click', close);
-
-        // ESC 键关闭
-        const escHandler = (e) => {
-            if (e.key === 'Escape') {
-                close();
-                document.removeEventListener('keydown', escHandler);
-            }
-        };
-        document.addEventListener('keydown', escHandler);
-    }
-
-    // 交互功能
-    setupInteractions() {
-        // 标签页切换
-        this.setupTabs();
-
-        // 复制功能
-        this.setupCopyToClipboard();
-
-        // 搜索功能
-        this.setupSearch();
-
-        // 工具提示
-        this.setupTooltips();
-    }
-
-    setupTabs() {
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-target') ||
-                               button.getAttribute('data-category');
-
-                // 移除所有活动状态
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-
-                // 添加活动状态
-                button.classList.add('active');
-                const targetContent = document.getElementById(targetId);
-                if (targetContent) {
-                    targetContent.classList.add('active');
-                }
-            });
-        });
-    }
-
-    setupCopyToClipboard() {
-        const copyButtons = document.querySelectorAll('[data-copy]');
-
-        copyButtons.forEach(button => {
-            button.addEventListener('click', async () => {
-                const text = button.getAttribute('data-copy');
-
-                try {
-                    await navigator.clipboard.writeText(text);
-                    this.showCopyFeedback(button);
-                } catch (err) {
-                    // 降级方法
-                    this.fallbackCopyToClipboard(text);
-                    this.showCopyFeedback(button);
-                }
-            });
-        });
-    }
-
-    fallbackCopyToClipboard(text) {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        textArea.style.top = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-            document.execCommand('copy');
-        } catch (err) {
-            console.error('Fallback: Oops, unable to copy', err);
-        }
-
-        document.body.removeChild(textArea);
-    }
-
-    showCopyFeedback(button) {
-        const originalText = button.innerHTML;
-        button.innerHTML = '<i class="fas fa-check"></i> 已复制!';
-        button.classList.add('copied');
-
-        setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('copied');
-        }, 2000);
-    }
-
-    setupSearch() {
-        const searchInput = document.querySelector('[data-search]');
-        if (!searchInput) return;
-
-        const searchHandler = utils.debounce((e) => {
-            const query = e.target.value.toLowerCase();
-            this.performSearch(query);
-        }, CONFIG.performance.debounceDelay);
-
-        searchInput.addEventListener('input', searchHandler);
-    }
-
-    performSearch(query) {
-        const searchableElements = document.querySelectorAll('[data-searchable]');
-        let visibleCount = 0;
-
-        searchableElements.forEach(element => {
-            const text = element.textContent.toLowerCase();
-            const isMatch = text.includes(query);
-
-            if (isMatch) {
-                element.style.display = '';
-                element.classList.remove('search-hidden');
-                visibleCount++;
-            } else {
-                element.style.display = 'none';
-                element.classList.add('search-hidden');
-            }
-        });
-
-        // 显示搜索结果统计
-        this.updateSearchResults(visibleCount, query);
-    }
-
-    updateSearchResults(count, query) {
-        const resultsElement = document.querySelector('[data-search-results]');
-        if (resultsElement) {
-            if (query) {
-                resultsElement.textContent = `找到 ${count} 个结果`;
-                resultsElement.style.display = 'block';
-            } else {
-                resultsElement.style.display = 'none';
-            }
-        }
-    }
-
-    setupTooltips() {
-        const tooltipElements = document.querySelectorAll('[data-tooltip]');
-
-        tooltipElements.forEach(element => {
-            element.addEventListener('mouseenter', (e) => {
-                this.showTooltip(e.target);
-            });
-
-            element.addEventListener('mouseleave', (e) => {
-                this.hideTooltip(e.target);
-            });
-        });
-    }
-
-    showTooltip(element) {
-        const text = element.getAttribute('data-tooltip');
-        if (!text) return;
-
-        const tooltip = document.createElement('div');
-        tooltip.className = 'tooltip-popup';
-        tooltip.textContent = text;
-        document.body.appendChild(tooltip);
-
-        const rect = element.getBoundingClientRect();
-        tooltip.style.left = `${rect.left + rect.width / 2}px`;
-        tooltip.style.top = `${rect.top - 10}px`;
-
-        // 触发重排以应用过渡效果
-        requestAnimationFrame(() => {
-            tooltip.classList.add('visible');
-        });
-    }
-
-    hideTooltip(element) {
-        const tooltip = document.querySelector('.tooltip-popup');
-        if (tooltip) {
-            tooltip.classList.remove('visible');
-            setTimeout(() => tooltip.remove(), 200);
-        }
-    }
-
-    // 滚动动画
-    updateScrollAnimations() {
-        const animatedElements = document.querySelectorAll('[data-scroll-animate]');
-
-        animatedElements.forEach(element => {
-            if (utils.isElementInViewport(element)) {
-                const animation = element.dataset.scrollAnimate;
-                element.classList.add(animation);
-            }
-        });
-    }
-
-    // 性能优化
-    setupPerformanceOptimizations() {
-        // 预加载关键资源
-        this.preloadCriticalResources();
-
-        // 错误监控
-        this.setupErrorMonitoring();
-
-        // 性能监控
-        this.setupPerformanceMonitoring();
-    }
-
-    preloadCriticalResources() {
-        const criticalImages = document.querySelectorAll('[data-critical]');
-        criticalImages.forEach(img => {
-            if (img.dataset.src) {
-                img.src = img.dataset.src;
-            }
-        });
-    }
-
-    setupErrorMonitoring() {
-        window.addEventListener('error', (e) => {
-            console.error('JavaScript error:', e.error);
-            // 可以发送错误报告到分析服务
-        });
-
-        window.addEventListener('unhandledrejection', (e) => {
-            console.error('Unhandled promise rejection:', e.reason);
-        });
-    }
-
-    setupPerformanceMonitoring() {
-        // 监控页面加载性能
-        window.addEventListener('load', () => {
-            if ('performance' in window) {
-                const timing = performance.timing;
-                const loadTime = timing.loadEventEnd - timing.navigationStart;
-                console.log(`Page load time: ${loadTime}ms`);
-            }
-        });
-    }
+        </div>
+    `;
 }
 
-// 初始化应用
-document.addEventListener('DOMContentLoaded', () => {
-    window.nanobananaApp = new NanoBananaApp();
-    console.log('🎨 Nano Banana Pro 提示词整理网站已加载完成!');
+// 渲染卡片
+function renderCards() {
+    const category = categoryFilter?.value || 'all';
+    const search = searchInput?.value.toLowerCase() || '';
+
+    const filtered = casesData.filter(item => {
+        const matchCategory = category === 'all' || item.category === category;
+        const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
+        return matchCategory && matchSearch;
+    });
+
+    const toShow = filtered.slice(0, displayCount);
+    cardGrid.innerHTML = toShow.map(createCard).join('');
+
+    // 显示/隐藏加载更多按钮
+    loadMoreBtn.style.display = displayCount >= filtered.length ? 'none' : 'block';
+
+    // 重新绑定事件
+    bindCardEvents();
+}
+
+// 绑定卡片事件
+function bindCardEvents() {
+    document.querySelectorAll('.btn-view').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const img = card.querySelector('.card-img img');
+            const title = card.querySelector('h3');
+            modalImg.src = img.src;
+            modalTitle.textContent = title.textContent;
+            modalPrompt.textContent = this.dataset.prompt;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    document.querySelectorAll('.btn-copy').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const viewBtn = this.closest('.card').querySelector('.btn-view');
+            navigator.clipboard.writeText(viewBtn.dataset.prompt).then(() => {
+                this.textContent = '✓ 已复制';
+                setTimeout(() => this.textContent = '📄 原文', 2000);
+            });
+        });
+    });
+}
+
+// 初始化
+renderCards();
+
+// 筛选和搜索
+categoryFilter?.addEventListener('change', () => { displayCount = 12; renderCards(); });
+searchInput?.addEventListener('input', () => { displayCount = 12; renderCards(); });
+
+// 加载更多
+loadMoreBtn?.addEventListener('click', () => { displayCount += increment; renderCards(); });
+
+// 移动端菜单
+menuToggle?.addEventListener('click', () => navMenu.classList.toggle('show'));
+
+// 语言选择器
+langBtn?.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('show'); });
+langMenu?.querySelectorAll('li').forEach(item => {
+    item.addEventListener('click', () => {
+        langBtn.textContent = item.textContent.replace('✓ ', '') + ' ▼';
+        langMenu.classList.remove('show');
+    });
+});
+document.addEventListener('click', () => langMenu?.classList.remove('show'));
+
+// 返回顶部
+window.addEventListener('scroll', () => {
+    backToTop?.classList.toggle('show', window.scrollY > 300);
+});
+backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// 模态框
+modalClose?.addEventListener('click', closeModal);
+modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+function closeModal() {
+    modal?.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// 复制提示词
+copyPrompt?.addEventListener('click', async () => {
+    try {
+        await navigator.clipboard.writeText(modalPrompt.textContent);
+        copyPrompt.textContent = '✓ 已复制';
+        setTimeout(() => copyPrompt.textContent = '📋 复制提示词', 2000);
+    } catch (err) { alert('复制失败'); }
 });
 
 // 平滑滚动
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            navMenu?.classList.remove('show');
         }
     });
 });
 
-// 标签页切换
-document.addEventListener('DOMContentLoaded', function() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetCategory = this.getAttribute('data-category');
-
-            // 移除所有活动状态
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-
-            // 添加活动状态到当前选中的标签
-            this.classList.add('active');
-            const targetContent = document.getElementById(targetCategory);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
-        });
+// 导航高亮
+const navLinks = document.querySelectorAll('.nav-menu a');
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === `#${current}`) l.classList.add('active');
     });
 });
 
-// 滚动时的导航栏效果
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
-    }
-});
-
-// 图片懒加载
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img[data-src]');
-
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-});
-
-// 添加滚动动画
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeIn 0.6s ease-in-out';
-            entry.target.style.opacity = '1';
-        }
-    });
-}, observerOptions);
-
-// 观察需要动画的元素
-document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.feature-card, .example-card, .tip-card, .resource-card');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        observer.observe(el);
-    });
-});
-
-// 复制提示词功能
-document.addEventListener('DOMContentLoaded', function() {
-    const copyButtons = document.querySelectorAll('.copy-prompt');
-
-    copyButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const promptText = this.getAttribute('data-prompt');
-            navigator.clipboard.writeText(promptText).then(() => {
-                // 临时更改按钮文本
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-check"></i> 已复制!';
-                this.classList.add('copied');
-
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                    this.classList.remove('copied');
-                }, 2000);
-            }).catch(err => {
-                console.error('复制失败:', err);
-            });
-        });
-    });
-});
-
-// 搜索功能（可选）
-function searchPrompts(query) {
-    const examples = document.querySelectorAll('.example-card');
-    const searchQuery = query.toLowerCase();
-
-    examples.forEach(example => {
-        const title = example.querySelector('.example-title').textContent.toLowerCase();
-        const description = example.querySelector('.example-description').textContent.toLowerCase();
-        const prompt = example.querySelector('.prompt-text').textContent.toLowerCase();
-
-        if (title.includes(searchQuery) ||
-            description.includes(searchQuery) ||
-            prompt.includes(searchQuery)) {
-            example.style.display = 'block';
-        } else {
-            example.style.display = 'none';
-        }
-    });
-}
-
-// 统计功能（可选）
-function trackView(element) {
-    // 这里可以添加分析代码
-    console.log('Viewed:', element);
-}
-
-// 错误处理
-window.addEventListener('error', function(e) {
-    console.error('JavaScript error:', e.error);
-});
-
-// 性能优化
-document.addEventListener('DOMContentLoaded', function() {
-    // 预加载关键图片
-    const criticalImages = document.querySelectorAll('.hero-image img, .feature-icon img');
-    criticalImages.forEach(img => {
-        if (img.dataset.src) {
-            img.src = img.dataset.src;
-        }
-    });
-});
-
-// 主题切换功能（可选）
-function toggleTheme() {
-    document.body.classList.toggle('dark-theme');
-    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
-}
-
-// 加载保存的主题
-document.addEventListener('DOMContentLoaded', function() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-    }
-});
-
-console.log('Nano Banana Pro 提示词整理网站已加载完成!');
+console.log(`🍌 Awesome Nano Bananapro Images 已加载 ${casesData.length} 个案例!`);
