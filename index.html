@@ -20,7 +20,8 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#hero" class="active" data-zh="首页" data-en="Home">首页</a></li>
                 <li><a href="#showcase" data-zh="案例展示" data-en="Showcase">案例展示</a></li>
-                <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
+                <li><a href="#about" data-zh="关于" data-en="About">���于</a></li>
+                <li><a href="#contribute" data-zh="投稿" data-en="Contribute">投稿</a></li>
                 <li><a href="#channels" data-zh="使用渠道" data-en="Channels">使用渠道</a></li>
             </ul>
             <div class="nav-actions">
@@ -45,9 +46,9 @@
             <p class="hero-subtitle" data-zh="精选的Gemini3图像生成案例合集" data-en="Curated collection of Gemini3 image generation examples">精选的Gemini3图像生成案例合集</p>
             <p class="hero-desc" data-zh="借助Google的Gemini3模型，展示AI图像生成与编辑的无限能力，为您的创意创作提供灵感！" data-en="Showcasing the infinite capabilities of AI image generation and editing with Google's Gemini3 model, providing inspiration for your creative work!">借助Google的Gemini3模型，展示AI图像生成与编辑的无限能力，为您的创意创作提供灵感！</p>
             <div class="hero-stats">
-                <div class="stat"><span class="stat-num">100</span><span class="stat-label" data-zh="精选案例" data-en="Curated Cases">精选案例</span></div>
-                <div class="stat"><span class="stat-num">2</span><span class="stat-label" data-zh="AI模型对比" data-en="AI Models">AI模型对比</span></div>
-                <div class="stat"><span class="stat-num">10+</span><span class="stat-label" data-zh="贡献者" data-en="Contributors">贡献者</span></div>
+                <div class="stat"><span class="stat-num">133</span><span class="stat-label" data-zh="精选案例" data-en="Curated Cases">精选案例</span></div>
+                <div class="stat"><span class="stat-num">25+</span><span class="stat-label" data-zh="分类类型" data-en="Categories">分类类型</span></div>
+                <div class="stat"><span class="stat-num">20+</span><span class="stat-label" data-zh="贡献者" data-en="Contributors">贡献者</span></div>
             </div>
             <div class="hero-btns">
                 <a href="#showcase" class="btn btn-primary" data-zh="🖼️ 浏览案例" data-en="🖼️ Browse Cases">🖼️ 浏览案例</a>
@@ -64,17 +65,44 @@
                     <label data-zh="分类：" data-en="Category:">分类：</label>
                     <select id="categoryFilter">
                         <option value="all" data-zh="全部案例" data-en="All Cases">全部案例</option>
-                        <option value="character" data-zh="角色一致性" data-en="Character Consistency">角色一致性</option>
-                        <option value="translation" data-zh="翻译上色" data-en="Translation & Coloring">翻译上色</option>
-                        <option value="poster" data-zh="海报设计" data-en="Poster Design">海报设计</option>
-                        <option value="game" data-zh="游戏设计" data-en="Game Design">游戏设计</option>
-                        <option value="ui" data-zh="UI设计" data-en="UI Design">UI设计</option>
-                        <option value="product" data-zh="产品渲染" data-en="Product Rendering">产品渲染</option>
-                        <option value="ip" data-zh="IP创作" data-en="IP Creation">IP创作</option>
-                        <option value="traditional" data-zh="古风创作" data-en="Traditional Art">古风创作</option>
-                        <option value="infographic" data-zh="信息图表" data-en="Infographics">信息图表</option>
+                        <optgroup label="🎯 核心能力">
+                            <option value="character" data-zh="角色一致性" data-en="Character Consistency">角色一致性</option>
+                            <option value="translation" data-zh="翻译上色" data-en="Translation & Coloring">翻译上色</option>
+                            <option value="text" data-zh="文字处理" data-en="Text Processing">文字处理</option>
+                        </optgroup>
+                        <optgroup label="🎨 设计创作">
+                            <option value="poster" data-zh="海报设计" data-en="Poster Design">海报设计</option>
+                            <option value="product" data-zh="产品渲染" data-en="Product Rendering">产品渲染</option>
+                            <option value="logo" data-zh="Logo设计" data-en="Logo Design">Logo设计</option>
+                            <option value="fashion" data-zh="时尚换装" data-en="Fashion & Style">时尚换装</option>
+                        </optgroup>
+                        <optgroup label="🎮 游戏界面">
+                            <option value="game" data-zh="游戏设计" data-en="Game Design">游戏设计</option>
+                            <option value="ui" data-zh="UI设计" data-en="UI Design">UI设计</option>
+                        </optgroup>
+                        <optgroup label="🛠️ 技术应用">
+                            <option value="technical" data-zh="工程图解" data-en="Technical Drawings">工程图解</option>
+                            <option value="infographic" data-zh="信息图表" data-en="Infographics">信息图表</option>
+                            <option value="fusion" data-zh="图像融合" data-en="Image Fusion">图像融合</option>
+                        </optgroup>
+                        <optgroup label="📚 内容创作">
+                            <option value="ip" data-zh="IP创作" data-en="IP Creation">IP创作</option>
+                            <option value="comic" data-zh="漫画创作" data-en="Comic Creation">漫画创作</option>
+                            <option value="traditional" data-zh="古风创作" data-en="Traditional Art">古风创作</option>
+                            <option value="quote" data-zh="名人金句" data-en="Celebrity Quotes">名人金句</option>
+                        </optgroup>
+                        <optgroup label="🏠 生活应用">
+                            <option value="interior" data-zh="室内设计" data-en="Interior Design">室内设计</option>
+                            <option value="merchandise" data-zh="周边设计" data-en="Merchandise Design">周边设计</option>
+                            <option value="food" data-zh="美食创意" data-en="Food & Creative">美食创意</option>
+                            <option value="social" data-zh="社交媒体" data-en="Social Media">社交媒体</option>
+                        </optgroup>
+                        <optgroup label="🎓 教育创意">
+                            <option value="education" data-zh="教育教学" data-en="Education">教育教学</option>
+                            <option value="scene" data-zh="场景生成" data-en="Scene Generation">场景生成</option>
+                            <option value="creative" data-zh="创意应用" data-en="Creative">创意应用</option>
+                        </optgroup>
                         <option value="style" data-zh="风格转换" data-en="Style Transfer">风格转换</option>
-                        <option value="scene" data-zh="场景编辑" data-en="Scene Editing">场景编辑</option>
                         <option value="design" data-zh="视觉设计" data-en="Visual Design">视觉设计</option>
                     </select>
                 </div>
@@ -125,6 +153,62 @@
                     <div class="about-icon">🚀</div>
                     <h3 data-zh="如何使用？" data-en="How to Use?">如何使用？</h3>
                     <p data-zh="访问 Gemini App、AI Studio 或使用本项目整理的国内镜像站点即可开始创作。" data-en="Visit Gemini App, AI Studio, or use the domestic mirror sites organized in this project to start creating.">访问 Gemini App、AI Studio 或使用本项目整理的国内镜像站点即可开始创作。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 投稿 -->
+    <section id="contribute" class="contribute">
+        <div class="container">
+            <h2 class="section-title" data-zh="📝 投稿指南" data-en="📝 Submission Guidelines">📝 投稿指南</h2>
+            <div class="contribute-grid">
+                <div class="contribute-card">
+                    <div class="contribute-icon">🎯</div>
+                    <h3 data-zh="投稿要求" data-en="Submission Requirements">投稿要求</h3>
+                    <ul>
+                        <li data-zh="内容完整：包含提示词和效果图片" data-en="Complete Content: Include prompts and result images">内容完整：包含提示词和效果图片</li>
+                        <li data-zh="分类清晰：标明案例分类" data-en="Clear Categories: Label case categories">分类清晰：标明案例分类</li>
+                        <li data-zh="质量优先：选择效果出色的案例" data-en="Quality First: Choose outstanding examples">质量优先：选择效果出色的案例</li>
+                        <li data-zh="格式规范：按照现有格式提交" data-en="Standard Format: Submit according to existing format">格式规范：按照现有格式提交</li>
+                    </ul>
+                </div>
+                <div class="contribute-card">
+                    <div class="contribute-icon">📮</div>
+                    <h3 data-zh="投稿方式" data-en="Submission Methods">投稿方式</h3>
+                    <div class="contribute-methods">
+                        <div class="method">
+                            <h4 data-zh="1. GitHub 提交" data-en="1. GitHub Submission">1. GitHub 提交</h4>
+                            <p data-zh="直接在本项目提交 Pull Request" data-en="Submit Pull Request directly to this project">直接在本项目提交 Pull Request</p>
+                            <a href="https://github.com/xianyu110/awesome-nanobananapro-prompts" target="_blank" class="btn btn-outline" data-zh="前往 GitHub" data-en="Go to GitHub">前往 GitHub</a>
+                        </div>
+                        <div class="method">
+                            <h4 data-zh="2. Issue 提交" data-en="2. Issue Submission">2. Issue 提交</h4>
+                            <p data-zh="在 GitHub Issues 中提交新的案例" data-en="Submit new cases in GitHub Issues">在 GitHub Issues 中提交新的案例</p>
+                            <a href="https://github.com/xianyu110/awesome-nanobananapro-prompts/issues" target="_blank" class="btn btn-outline" data-zh="创建 Issue" data-en="Create Issue">创建 Issue</a>
+                        </div>
+                        <div class="method">
+                            <h4 data-zh="3. 邮件投稿" data-en="3. Email Submission">3. 邮件投稿</h4>
+                            <p data-zh="发送邮件至项目邮箱" data-en="Send email to project email">发送邮件至项目邮箱</p>
+                            <a href="mailto:project@example.com" class="btn btn-outline" data-zh="发送邮件" data-en="Send Email">发送邮件</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contribute-card">
+                    <div class="contribute-icon">📋</div>
+                    <h3 data-zh="投稿模板" data-en="Submission Template">投稿模板</h3>
+                    <div class="template-code">
+                        <pre><code>**案例标题：** 简要描述案例内容
+
+**分类：** [角色一致性/翻译上色/海报设计/游戏设计/UI设计/产品渲染/IP创作/古风创作/信息图表/风格转换/场景编辑/视觉设计]
+
+**提示词：** 详细的提示词内容
+
+**效果图片：** 效果图片链接或附件
+
+**说明：** （可选）案例的特殊说明或技巧分享</code></pre>
+                    </div>
+                    <button class="btn btn-copy-template" id="copyTemplate" data-zh="📋 复制模板" data-en="📋 Copy Template">📋 复制模板</button>
                 </div>
             </div>
         </div>

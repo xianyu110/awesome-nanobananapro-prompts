@@ -863,4 +863,45 @@ Prompt: Translate all English text on three yellow-blue cans to Korean, keep eve
 
 ---
 
+## 📝 Submission Guidelines
+
+We welcome contributions of more high-quality prompt examples to this project!
+
+### Submission Requirements
+
+- **Complete Content**: Include prompts and result images
+- **Clear Categories**: Label case categories (e.g., Character Consistency, Translation & Coloring, Poster Design, etc.)
+- **Quality First**: Prioritize outstanding and representative examples
+- **Standard Format**: Submit according to existing format
+
+### Submission Methods
+
+1. **GitHub Submission**: Submit Pull Request directly to this project
+2. **Issue Submission**: Submit new cases in GitHub Issues
+3. **Email Submission**: Send email to [project@example.com]
+
+### Submission Template
+
+```markdown
+**Case Title**: Brief description of the case content
+
+**Category**: [Character Consistency/Translation & Coloring/Poster Design/Game Design/UI Design/Product Rendering/IP Creation/Traditional Art/Infographics/Style Transfer/Scene Editing/Visual Design]
+
+**Prompt**: Detailed prompt content
+
+**Result Images**: Result image links or attachments
+
+**Notes**: (Optional) Special notes or technique sharing for the case
+```
+
+## 🤝 Contributors
+
+Thanks to all friends who have contributed cases and prompts to this project!
+
+- Welcome to submit Pull Requests to contribute more high-quality cases
+- Submit Issues to report problems or suggestions
+- Share this project to let more people know about the powerful capabilities of Nano Banana Pro
+
+---
+
 *This collection is continuously updated with the latest community discoveries and official examples. Contributions are welcome!*

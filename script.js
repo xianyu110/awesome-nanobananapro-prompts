@@ -94,6 +94,50 @@ const casesData = [
     { id: 89, title: "个人名片设计", category: "poster", author: "@personal", tags: ["名片", "个人"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749848.png", prompt: "生成一张个人介绍图，用于向外展示" },
     { id: 90, title: "功夫图解", category: "infographic", author: "@kungfu", tags: ["功夫", "图解"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749585.png", prompt: "让特朗普用中文图解的方式教八部金刚功" },
     { id: 91, title: "古诗配图", category: "traditional", author: "@poetry", tags: ["古诗", "配图"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749972.png", prompt: "为采菊东篱下，悠然见南山这首诗配图" },
+
+    // Part 4: 特殊应用案例
+    { id: 92, title: "金门大桥工程图解", category: "technical", author: "@engineering", tags: ["工程图", "透视图解"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225945521.jpeg", prompt: "这是一张经典的旧金山金门大桥风景照，但在画面之上，叠加了一层白色手绘风格的工程结构图解。" },
+    { id: 93, title: "宇航服技术图纸", category: "technical", author: "@technical", tags: ["技术图纸", "宇航"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230025209.jpeg", prompt: "绘制此图的技术图纸" },
+    { id: 94, title: "F1赛车引擎图解", category: "technical", author: "@f1", tags: ["F1", "赛车"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225946951.jpeg", prompt: "面对F1赛车复杂的引擎套件，技术图解" },
+    { id: 95, title: "硅谷AI圈大合照", category: "fusion", author: "@silicon", tags: ["大合照", "AI圈"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225950556.jpeg", prompt: "将多个不同的AI领域人物完美融合到一个场景中，保持各自特征一致" },
+    { id: 96, title: "AI圈名人合照", category: "fusion", author: "@ai", tags: ["名人", "合照"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225950947.jpeg", prompt: "硅谷AI圈大合照，每个人的面部特征都高度还原" },
+    { id: 97, title: "多角色融合场景", category: "fusion", author: "@group", tags: ["多角色", "融合"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225951800.png", prompt: "同时处理十几张不同角色的参考图，完美融合到一个客厅场景中" },
+    { id: 98, title: "文字一键排版", category: "text", author: "@text", tags: ["文字", "排版"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225952289.jpeg", prompt: "把文字原封不动地放进一本桌上的亮面杂志里，配上图片、精美排版、引言框和版式设计" },
+    { id: 99, title: "杂志排版设计", category: "text", author: "@magazine", tags: ["杂志", "排版"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225952814.jpeg", prompt: "文字内容进行审美在线的双页排版，加上图表、引言框等设计" },
+    { id: 100, title: "衣服平铺转模特图", category: "fashion", author: "@fashion", tags: ["服装", "模特"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225947979.jpeg", prompt: "生成一张身穿图中所有衣物的女模特图" },
+    { id: 101, title: "真人换装", category: "fashion", author: "@style", tags: ["换装", "时尚"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225948464.jpeg", prompt: "给第二张图片中的人穿上第一张图片中的衣服" },
+    { id: 102, title: "宠物Cos服装", category: "fashion", author: "@pet", tags: ["宠物", "Cos"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225948865.jpeg", prompt: "给图中小狗换上《疯狂动物城》中尼克的衣服" },
+    { id: 103, title: "电影周边设计", category: "merchandise", author: "@movie", tags: ["周边", "设计"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225953247.jpeg", prompt: "生成一张电影《机器人之梦》的周边图，包括手机壳、3D手办、马克杯、帆布袋、笔记本等" },
+    { id: 104, title: "游戏手办设计", category: "merchandise", author: "@gaming", tags: ["手办", "游戏"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225954141.jpeg", prompt: "《使命召唤》中的König 1/7比例商业化人物手办，写实风格，粉色系少女风电竞房" },
+    { id: 105, title: "爱马仕联名设计", category: "merchandise", author: "@luxury", tags: ["联名", "奢侈品"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225955201.jpeg", prompt: "生成一张爱马仕和jellycat的联名包海报，融合毛绒玩偶质感和爱马仕橙" },
+    { id: 106, title: "漫画分镜创作", category: "comic", author: "@manga", tags: ["漫画", "分镜"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121225957322.jpeg", prompt: "生成一张五条悟的竖版黑白漫画分镜图" },
+    { id: 107, title: "动漫角色对话", category: "comic", author: "@anime", tags: ["对话", "分镜"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230000304.jpeg", prompt: "动漫角色的对话场景，富有张力的分镜" },
+    { id: 108, title: "多人漫画场景", category: "comic", author: "@group", tags: ["多人", "漫画"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230003277.jpeg", prompt: "多个动漫角色在同一场景中的漫画分镜" },
+    { id: 109, title: "名人金句卡片", category: "quote", author: "@celebrity", tags: ["名人", "金句"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230004596.jpeg", prompt: "生成人物金句卡，保持人像一致性" },
+    { id: 110, title: "Steve Jobs金句", category: "quote", author: "@jobs", tags: ["Jobs", "名言"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230007030.jpeg", prompt: "一张宽的名人金句卡，棕色背景，衬线体浅金色'保持饥饿, 保持愚蠢'" },
+    { id: 111, title: "家具摆放设计", category: "interior", author: "@home", tags: ["家具", "室内设计"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230009496.jpeg", prompt: "把五个家具的照片融洽地放到一个屋子里" },
+    { id: 112, title: "整栋房屋设计", category: "interior", author: "@architecture", tags: ["建筑", "设计"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230010728.jpeg", prompt: "帮室内设计师设计整栋房子" },
+    { id: 113, title: "创意Logo设计", category: "logo", author: "@branding", tags: ["Logo", "创意"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230012578.jpeg", prompt: "制作6个毛绒质感的创意Logo，每个Logo都是一个动物的英语单词" },
+    { id: 114, title: "咖啡拉花艺术", category: "food", author: "@coffee", tags: ["咖啡", "拉花"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230016694.png", prompt: "生成一张动漫Chiikawa中的小八的咖啡拉花图" },
+    { id: 115, title: "创意拉花图案", category: "food", author: "@latte", tags: ["拉花", "创意"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230017514.jpeg", prompt: "动漫人物的咖啡拉花艺术" },
+    { id: 116, title: "抖音短视频截图", category: "social", author: "@douyin", tags: ["抖音", "短视频"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230017886.jpeg", prompt: "生成一张抖音竖屏短视频的单帧截图，内容是在厨房里准备帝王蟹" },
+    { id: 117, title: "美食制作视频", category: "social", author: "@cooking", tags: ["美食", "视频"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230019674.jpeg", prompt: "抖音短视频单帧截图，厨师捧着帝王蟹的动作" },
+    { id: 118, title: "游戏模拟器界面", category: "ui", author: "@gaming", tags: ["游戏", "模拟器"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230020177.jpeg", prompt: "生成一个正在macOS上用游戏模拟器玩《我的世界》的截图" },
+    { id: 119, title: "游戏角色植入", category: "game", author: "@gaming", tags: ["游戏", "植入"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230020834.jpeg", prompt: "把Tim Cook做到游戏画面里，还把苹果手机和苹果体验店都搬了进来" },
+    { id: 120, title: "星巴克制作流程图", category: "infographic", author: "@coffee", tags: ["星巴克", "流程图"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230021873.jpeg", prompt: "制作一张信息图，展示如何制作星巴克焦糖玛奇朵" },
+    { id: 121, title: "流程图翻译", category: "translation", author: "@translate", tags: ["翻译", "流程图"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230022669.jpeg", prompt: "把上图翻译成中文" },
+    { id: 122, title: "古语翻译", category: "translation", author: "@classical", tags: ["古语", "翻译"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230023646.jpeg", prompt: "古语翻译和现代化表达" },
+    { id: 123, title: "文字清晰化", category: "text", author: "@ocr", tags: ["文字", "识别"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230024444.jpeg", prompt: "让文字更清晰、可读性更高一些" },
+    { id: 124, title: "技术图纸绘制", category: "technical", author: "@drawing", tags: ["技术", "图纸"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230025823.jpeg", prompt: "绘制此图的技术图纸" },
+    { id: 125, title: "Transformer原理图", category: "infographic", author: "@ai", tags: ["AI", "Transformer"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230026854.jpeg", prompt: "制作一张信息图，解释Transformer LLM的工作原理" },
+    { id: 126, title: "白板教学演示", category: "education", author: "@edu", tags: ["教学", "白板"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230027336.jpeg", prompt: "让Youtube顶流教育博主Eddie Woo在白板上讲解原理图" },
+    { id: 127, title: "二次元角色走进现实", category: "fusion", author: "@anime", tags: ["动漫", "现实"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230028061.jpeg", prompt: "请将图中右侧第二个说话的人替换成附图中的动漫女孩，并保持姿势不变" },
+    { id: 128, title: "动漫角色融合", category: "fusion", author: "@blend", tags: ["融合", "动漫"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230028576.jpeg", prompt: "二次元角色与真人场景的融合" },
+    { id: 129, title: "乔布斯上海打卡", category: "scene", author: "@travel", tags: ["旅行", "历史"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230030470.png", prompt: "乔布斯穿着高领毛衣和蓝色牛仔裤，在上海南京西路上打卡拍照" },
+    { id: 130, title: "经纬度生图", category: "location", author: "@location", tags: ["地理", "定位"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230031261.png", prompt: "输入经纬度和时间生成特定地点的街景图" },
+    { id: 131, title: "产品多角度渲染", category: "product", author: "@rendering", tags: ["3D", "产品"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230031902.png", prompt: "用这个logo制作一件周边套头卫衣，4个不同动态视图" },
+    { id: 132, title: "AI新榜纳斯达克", category: "creative", author: "@satire", tags: ["创意", "讽刺"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230032720.jpeg", prompt: "AI新榜直接纳斯达克上市的宣传图" },
+    { id: 133, title: "纳斯达克上市庆祝", category: "creative", author: "@celebration", tags: ["庆祝", "金融"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251121230040485.png", prompt: "有了AI，梦到什么生什么" }
 ];
 
 // ===== DOM Elements =====
@@ -114,8 +158,8 @@ const cardGrid = document.getElementById('cardGrid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // 当前显示数量
-let displayCount = 12;
-const increment = 12;
+let displayCount = 20;
+const increment = 20;
 
 // 生成卡片HTML
 function createCard(item) {
@@ -344,5 +388,36 @@ class LanguageThemeManager {
 
 // 初始化语言和主题管理器
 const langThemeManager = new LanguageThemeManager();
+
+// 复制模板功能
+document.addEventListener('DOMContentLoaded', function() {
+    const copyTemplateBtn = document.getElementById('copyTemplate');
+
+    if (copyTemplateBtn) {
+        copyTemplateBtn.addEventListener('click', function() {
+            const templateText = `**案例标题：** 简要描述案例内容
+
+**分类：** [角色一致性/翻译上色/海报设计/游戏设计/UI设计/产品渲染/IP创作/古风创作/信息图表/风格转换/场景编辑/视觉设计]
+
+**提示词：** 详细的提示词内容
+
+**效果图片：** 效果图片链接或附件
+
+**说明：** （可选）案例的特殊说明或技巧分享`;
+
+            navigator.clipboard.writeText(templateText).then(function() {
+                const originalText = copyTemplateBtn.textContent;
+                copyTemplateBtn.textContent = copyTemplateBtn.getAttribute('data-zh') === '📋 复制模板' ? '✅ 已复制!' : '✅ Copied!';
+
+                setTimeout(function() {
+                    copyTemplateBtn.textContent = originalText;
+                }, 2000);
+            }).catch(function(err) {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制模板内容');
+            });
+        });
+    }
+});
 
 console.log(`🍌 Awesome Nano Banana Pro Images 已加载 ${casesData.length} 个案例!`);

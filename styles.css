@@ -597,6 +597,150 @@ body {
 }
 .btn-copy-prompt:hover { background: var(--primary-dark); }
 
+/* ===== 投稿部分 ===== */
+.contribute { padding: var(--section-padding); background: var(--bg-light); }
+.contribute-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.contribute-card {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contribute-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+.contribute-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+.contribute-card h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.contribute-card ul { list-style: none; }
+.contribute-card li {
+    padding: 0.75rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.contribute-card li:last-child { border-bottom: none; }
+.contribute-card li::before {
+    content: "📝";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+}
+
+.contribute-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.method {
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--primary);
+}
+.method h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.method p {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.template-code {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+}
+.template-code pre {
+    margin: 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.btn-copy-template {
+    width: 100%;
+    justify-content: center;
+}
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 分组选择器样式 */
+select optgroup {
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--bg-light);
+}
+
+select optgroup option {
+    font-weight: normal;
+    color: var(--text-dark);
+    padding-left: 1rem;
+}
+
+/* 案例卡片的悬停效果增强 */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-img img {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+/* 标签样式优化 */
+.card-tags span {
+    background: var(--primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin: 2px;
+    display: inline-block;
+}
+
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
     .nav-menu, .nav-actions { display: none; }
