@@ -146,7 +146,7 @@ const casesData = [
 
     { id: 136, title: "人物地点打卡照片生成", category: "location", author: "@lovart", tags: ["打卡", "人物", "地点", "服装匹配"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125194506471.jpeg", prompt: "用 Nano Banana Pro 为这个人物创建一幅经纬度位于44.72067014987598, -110.85475719935745 并且符合当地当前时间氛围和实时天气的打卡照片，这个里边他的衣服穿着，需要根据所在地的这个风格去匹配。比如说雪山，它就是登山的衣服。比如说在都市里，它就是比较休闲的衣服， 在照片左下角用优美的排版写上当前经纬度以及位置信息和天气图标，并加上一句位置介绍文案。" },
 
-    { id: 137, title: "手绘板书风格 PPT 生成", category: "presentation", author: "@lovart", tags: ["PPT", "手绘", "教育", "板书"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125194506808.jpeg", prompt: "帮我根据下面这个文章做一套中学���都能理解的PPT。\n\n先写1个PPT大纲，规划出每一页的PPT的内容。\n\n然后将每一页的PPT内容分别扔给Nana Banana pro生成对应页面的PPT，需要确保风格一致。\n\nPPT的具体风格应改为教授手写拼贴画和白板风格。\n\n文字和图像都由 Nano Banana Pro 生成，另外不要将PPT 变成一整张图，一页一张生成。\n\n文章内容为：「此处填写文章内容」" },
+    { id: 137, title: "手绘板书风格 PPT 生成", category: "presentation", author: "@lovart", tags: ["PPT", "手绘", "教育", "板书"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125194506808.jpeg", prompt: "帮我根据下面这个文章做一套中学生都能理解的PPT。\n\n先写1个PPT大纲，规划出每一页的PPT的内容。\n\n然后将每一页的PPT内容分别扔给Nana Banana pro生成对应页面的PPT，需要确保风格一致。\n\nPPT的具体风格应改为教授手写拼贴画和白板风格。\n\n文字和图像都由 Nano Banana Pro 生成，另外不要将PPT 变成一整张图，一页一张生成。\n\n文章内容为：「此处填写文章内容」" },
 
     { id: 138, title: "迪特拉姆斯极简风格 PPT", category: "presentation", author: "@lovart", tags: ["PPT", "极简", "设计", "迪特拉姆斯"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125194506952.jpeg", prompt: "帮我根据下面这个文章做一套中学生都能理解的PPT。\n\nPPT的具体风格应该为迪特拉姆斯的设计风格（Dieter Rams）。\n\n主色调: 哑光白、浅灰、黑色。\n\n点缀色: 鲜艳的橙色和绿色。\n\n表面通常干净、平滑，没有任何多余的装饰性纹理。\n\n严谨的网格系统布局。圆角矩形，具有数学般的美感。" },
 
@@ -166,7 +166,7 @@ const casesData = [
 
     { id: 146, title: "鸡蛋浮力实验图解", category: "education", author: "@lovart", tags: ["物理", "浮力", "实验", "鸡蛋"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125204041390.jpeg", prompt: "如果在水中加入大量盐，鸡蛋会发生什么变化" },
 
-    { id: 147, title: "软件教程标注生成", category: "education", author: "@lovart", tags: ["教���", "标注", "截图", "操作指南"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125204043005.png", prompt: "我想写个教程，请你帮我在图片中模拟截图之后使用微信编辑工具进行标注（红框+红色箭头+红色文字），标注出创建知识库、新建应用、新建插件的位置，并简单讲解" },
+    { id: 147, title: "软件教程标注生成", category: "education", author: "@lovart", tags: ["教程", "标注", "截图", "操作指南"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125204043005.png", prompt: "我想写个教程，请你帮我在图片中模拟截图之后使用微信编辑工具进行标注（红框+红色箭头+红色文字），标注出创建知识库、新建应用、新建插件的位置，并简单讲解" },
 
     { id: 148, title: "韦斯·安德森风格构图", category: "style", author: "@lovart", tags: ["韦斯·安德森", "对称", "粉彩", "复古"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/640-20251125204045019.png", prompt: '帮我生成一张图：对称构图，居中拍摄，古怪的粉彩粉色酒店大堂，穿着紫色制服的门童静止站立，他手里拿着一把伞，伞上面写着毛笔书法字体"文艺复兴"，字体完美的贴合在雨伞的材质上，复古家具，平光，粉彩配色，异想天开的氛围，韦斯·安德森风格，35mm胶片颗粒。横版16:9比例' },
 
