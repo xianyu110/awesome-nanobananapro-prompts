@@ -603,7 +603,7 @@ Create a charming Q-version wooden puppet of [SUBJECT]. The puppet should have c
 A professional flat lay product photograph of [PRODUCT] arranged artistically on [SURFACE]. The composition should follow the rule of thirds with careful attention to negative space. Use soft, diffused studio lighting from above. Style with complementary props and accessories. The color palette should be harmonious. Include subtle shadows for depth. High-end commercial photography quality, sharp focus throughout.
 ```
 
-![产品摄影](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+![产品摄影](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/166.png)
 
 ---
 
@@ -612,7 +612,7 @@ A professional flat lay product photograph of [PRODUCT] arranged artistically on
 A cinematic product shot of [PRODUCT] partially buried in pristine white sand. Fine particles of sand are captured mid-air, swirling around the product as if caught in a gentle breeze. Golden hour lighting creates long, dramatic shadows. The product emerges heroically from the sand, with textures fully visible. Shot with a telephoto lens at f/2.8 for creamy bokeh. 4K resolution, commercial advertising quality.
 ```
 
-![沙风摄影](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+![沙风摄影](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/167.jpeg)
 
 ---
 
@@ -623,7 +623,7 @@ A cinematic product shot of [PRODUCT] partially buried in pristine white sand. F
 Create a miniature diorama scene of [SCENE]. Everything should appear tiny and scaled down, as if part of a model train set or miniature collection. Include meticulous details like small props, furniture, and elements appropriate to the scene. The lighting should be dramatic and focused. Place the diorama on a realistic surface like a wooden table or shelf. The overall aesthetic should evoke nostalgia and craftsmanship.
 ```
 
-![微缩场景](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+![微缩场景](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/168.png)
 
 ---
 
@@ -632,7 +632,7 @@ Create a miniature diorama scene of [SCENE]. Everything should appear tiny and s
 A miniature 3D world encapsulated within a transparent glass container. Inside the [SHAPE] container, there's a tiny scene of [DESCRIPTION]. The container sits on a wooden surface. Soft natural lighting illuminates the scene from above, creating delicate reflections on the glass. The miniature world inside has detailed tiny elements. The glass has subtle imperfections and realistic light refraction. Cozy, whimsical, and enchanting atmosphere.
 ```
 
-![透明容器](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+![透明容器](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/169.png)
 
 ---
 
