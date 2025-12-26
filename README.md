@@ -23,7 +23,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 
 刚刚发布的 **Nano Banana Pro（Gemini 3 Pro Image）** 再次在图像生成能力上重拳出击。初级设计师的饭碗，怕是要端不稳了。
 
-![Nano Banana Pro](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719380.png)
+![Nano Banana Pro](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719380.png)
 
 ## ⚡ 核心功能
 
@@ -53,7 +53,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 请绘制一张四宫格图片，四张图依次表现同一位戴着斗笠的年轻男子分别发音「我」「上」「早」「八」，人物外貌保持一致，口型准确对应每个字的发音，整体风格统一，16:9，4K
 ```
 
-![角色一致性](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719889.png)
+![角色一致性](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719889.png)
 
 ---
 
@@ -64,7 +64,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 将图片上的文字翻译为中文，并上色，其他不变
 ```
 
-![漫画上色](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719131.png)
+![漫画上色](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719131.png)
 
 ---
 
@@ -75,7 +75,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 将英文海报中的英文翻译成中文。
 ```
 
-![海报翻译](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719266.png)
+![海报翻译](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719266.png)
 
 ---
 
@@ -86,7 +86,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 生成两张竖版的微信群聊天界面截图，群成员正在讨论 Nano Banana Pro 的发布。
 ```
 
-![UI复刻](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719642.png)
+![UI复刻](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719642.png)
 
 ---
 
@@ -97,7 +97,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 生成一幅 4K 古画，画上写着：明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。
 ```
 
-![古画风格](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719856.png)
+![古画风格](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719856.png)
 
 ---
 
@@ -108,7 +108,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 哆啦A梦和李白在月下对酌。圆月高悬，古代亭台楼阁，哆啦A梦穿着唐朝服饰，李白持酒壶，石桌上摆着酒具，仙气飘飘，中日混合画风，精致细节
 ```
 
-![IP融合](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719241.png)
+![IP融合](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719241.png)
 
 ---
 
@@ -119,7 +119,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 生成一张可视化的图片，展示在广州旅游的 2 天行程。
 ```
 
-![行程规划](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211719795.png)
+![行程规划](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211719795.png)
 
 ---
 
@@ -130,7 +130,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 搜索广州实时天气信息，制作一幅中文波普艺术风格的信息图，4:3
 ```
 
-![天气信息图](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211720294.png)
+![天气信息图](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211720294.png)
 
 ---
 
@@ -141,7 +141,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 帮我搜索现在（20251120）北京的天气信息，并且将其放在一个天气UI设计稿中
 ```
 
-![天气UI](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740561.jpeg)
+![天气UI](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740561.jpeg)
 
 ---
 
@@ -152,7 +152,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 搜索北京市今天（202511120）的天气和一条正能量的早间新闻。将我的照片转换成'美式复古海报'风格。在海报顶部用巨大的艺术字写上今天的日期（中文），底部用报纸排版风格写上那条新闻的摘要和今天的天气提示。
 ```
 
-![搜索增强](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740241.png)
+![搜索增强](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740241.png)
 
 ---
 
@@ -163,7 +163,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 帮我生成一张拼贴手帐风格的广西旅游笔记，上面记录着自己的行程以及路上的照片等，文字有中文、韩语和英语。
 ```
 
-![多语言手账](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740100.jpeg)
+![多语言手账](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740100.jpeg)
 
 ---
 
@@ -174,7 +174,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 模拟在一张略带纹理的纸张上（米黄色或者浅棕色）手写的关于今天的日记。所有的图片以拼贴画风格放在一页日记上，保证图片与原图一致包含以下元素：用手写字体描述今天做了什么，以及一两句吸引人的标语或简介，包含几张图片的介绍，用红色笔迹或其他亮色圈出或用箭头指向特别推荐的地点或活动。穿插一些与图片特色相关的简单涂鸦式小图画，写着当前的日期和北京的天气，并添加一个图 4 手绘角色形象。整体感觉要像一份由热爱生活的作者精心制作的、生动有趣的个人日记。
 ```
 
-![手写日记](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740825.jpeg)
+![手写日记](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740825.jpeg)
 
 ---
 
@@ -185,7 +185,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 （示例为多种字体设计提示词的综合效果展示）
 ```
 
-![字体设计](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740992.jpeg)
+![字体设计](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740992.jpeg)
 
 ---
 
@@ -196,7 +196,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 为这款米色皮革手机壳设计产品海报。手机壳侧立放置的超近景特写，清晰展现素皮细腻纹理与橙色金属镜头圈的撞色质感，背部吸附同色系磁吸卡包。米色背景，周围缭绕棕色透明轻纱，搭配几株蕨类植物、沉香枯木与两支铃兰作为前景点缀。4K超清画面质感。静物摄影，昏暗氛围，光线追踪，高级柔光。海报上方文案标题："AATTT STUDIO"，极细衬线字体。页面下方小字："素皮 | 磁吸 | 极简"。艺术签角标："AATTT | Design"。
 ```
 
-![产品海报](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740269.png)
+![产品海报](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740269.png)
 
 ---
 
@@ -207,7 +207,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 为这两个香薰产品设计产品海报。两个香薰放在一起的超近景特写，质感清晰。米色背景，周围棕色透明轻纱，蕨类植物，沉香枯木，两支铃兰。4K超清画面质感。静物摄影，昏暗氛围，光线追踪。海报上方文案标题："昆仑煮雪"，极细文字。页面下方小字："沉香|铃兰|草本"。艺术签角标："观夏|to summer"。
 ```
 
-![香薰海报](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740031.jpeg)
+![香薰海报](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740031.jpeg)
 
 ---
 
@@ -218,7 +218,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 帮我将这个香薰放在符合设计风格的室内，大师级摄影，特写镜头
 ```
 
-![场景渲染](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740567.jpeg)
+![场景渲染](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740567.jpeg)
 
 ---
 
@@ -229,7 +229,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 将这些家具融洽的放到一个房间中
 ```
 
-![家具融合](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740721.jpeg)
+![家具融合](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740721.jpeg)
 
 ---
 
@@ -240,7 +240,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 轻度美颜、瘦脸，发型替换为美式前刺，发际线前移，眼镜更换为墨镜
 ```
 
-![人像编辑](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740959.jpeg)
+![人像编辑](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740959.jpeg)
 
 ---
 
@@ -251,7 +251,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 杰瑞鼠身披《大闹天宫》动画版标志性的鹅黄色虎皮裙、大红披风和金甲，头戴凤翅紫金冠，手持金箍棒，面部表情夸张而神气，背景是天宫的亭台楼阁或花果山水帘洞，整个画面都将严格遵循上海美术电影制片厂《大闹天宫》的经典画风，色彩浓烈，线条流畅，充满浓郁的中国传统水墨和工笔重彩韵味。
 ```
 
-![大闹天宫](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740823.jpeg)
+![大闹天宫](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740823.jpeg)
 
 ---
 
@@ -262,7 +262,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 一张手帐风格图片，上面画着电视剧权力的游戏的人物关系和势力关系图，人物有头像
 ```
 
-![权游关系图](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740621.jpeg)
+![权游关系图](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740621.jpeg)
 
 ---
 
@@ -273,7 +273,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 3D写实风格的宝可梦主题MMO游戏截图
 ```
 
-![宝可梦游戏](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740038.jpeg)
+![宝可梦游戏](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740038.jpeg)
 
 ---
 
@@ -284,7 +284,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 为这张手办完成材质添加和上色，同时将周围环境变为符合角色设定的环境
 ```
 
-![手办上色](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740819.jpeg)
+![手办上色](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740819.jpeg)
 
 ---
 
@@ -295,7 +295,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 （示例为对复杂海贼王漫画页进行翻译和上色）
 ```
 
-![海贼王上色](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740983.jpeg)
+![海贼王上色](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740983.jpeg)
 
 ---
 
@@ -306,8 +306,8 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 请分析我上传的这张照片，并将其转换成一张现代风格的平面设计海报。主体处理：首先，将主体从原始背景中精确地抠出来，作为海报的核心主体。背景改造：将原始背景替换为一个抽象的、具有毛玻璃质感的背景。核心构图：在主体的后面，添加一个醒目的纯色矩形色块。风格统一：确保整个海报的风格是Y2K美学或酸性设计。
 ```
 
-![酸性设计](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740806.jpeg)
-![Y2K风格](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740707.jpeg)
+![酸性设计](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740806.jpeg)
+![Y2K风格](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740707.jpeg)
 
 ---
 
@@ -318,7 +318,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 模仿这个设计稿的风格和关键元素表现形式，帮我生成一个天气应用的UI设计稿
 ```
 
-![UI风格迁移](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740851.jpeg)
+![UI风格迁移](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740851.jpeg)
 
 ---
 
@@ -329,7 +329,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 在画面上方有一张长长的画卷上用潇洒的书法写着一整首白居易的《琵琶行》内容是"浔阳江头夜送客，枫叶荻花秋瑟瑟...座中泣下谁最多？江州司马青衫湿。"，同时下方用中国水墨画风格画上这首诗对应的画面
 ```
 
-![琵琶行](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742741.jpeg)
+![琵琶行](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211742741.jpeg)
 
 ---
 
@@ -340,7 +340,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 生成一张微信手机聊天界面截图，严格按照微信的界面UI和排版方式，左侧对话气泡是灰色，右侧对话气泡是绿色，右侧是甄嬛的角色在讲话。群聊名称：紫禁城吃瓜群 聊天内容：...
 ```
 
-![甄嬛传微信群](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742790.png)
+![甄嬛传微信群](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211742790.png)
 
 ---
 
@@ -353,28 +353,28 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 精确复刻 Windows XP 的桌面环境。要求包含：经典蓝绿色背景、左下角'开始'按钮、一个打开的'我的电脑'窗口，窗口内文件列表的字体和图标必须忠于 XP 风格。
 ```
 
-![Windows XP](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740026.jpeg)
+![Windows XP](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740026.jpeg)
 
 **Windows 11:**
 ```
 生成一个 Windows 11 桌面截图。要求同时打开三个窗口：一个半透明的'设置'窗口、一个浏览器窗口和一个文件资源管理器窗口。要求窗口阴影和层级关系正确，且窗口标题栏中的中文文本准确。
 ```
 
-![Windows 11](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740313.jpeg)
+![Windows 11](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740313.jpeg)
 
 **Mac OS 9:**
 ```
 复刻 Mac OS 9 的桌面截图。要求显示黑白或低色彩的像素化图标、系统菜单栏、以及两个重叠的灰色窗口。要求字体和窗口的锯齿边缘（Aliasing）符合早期显示器特点。
 ```
 
-![Mac OS 9](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740040.jpeg)
+![Mac OS 9](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740040.jpeg)
 
 **macOS (最新):**
 ```
 复刻最新的 macOS 桌面。要求：顶部菜单栏清晰显示WiFi 图标、时间（9:41 AM）、以及一个正在弹出的系统通知（内容为：'软件更新已完成'，要求文本准确）。
 ```
 
-![macOS最新](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740903.jpeg)
+![macOS最新](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740903.jpeg)
 
 ---
 
@@ -387,21 +387,21 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 生成一个现代校园风格的视觉小说场景...对话框显示男主角的中文对话：'你为什么不相信我？'，要求男主角的表情为'焦急'，而女主角的表情为'怀疑'。
 ```
 
-![现代言情](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740424.jpeg)
+![现代言情](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740424.jpeg)
 
 **古风武侠**
 ```
 生成一个古风武侠场景...对话框中显示第三位角色的中文台词：'此物非同小可，谁来保管？'...
 ```
 
-![古风武侠](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740689.jpeg)
+![古风武侠](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211740689.jpeg)
 
 **奇幻冒险**
 ```
 生成一个奇幻冒险风格的视觉小说界面...屏幕下方清晰显示两个中文剧情选项按钮：'1. 掷出匕首' 和 '2. 召唤契约魔兽'。
 ```
 
-![奇幻冒险](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211741290.jpeg)
+![奇幻冒险](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211741290.jpeg)
 
 ---
 
@@ -412,21 +412,21 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 电影《死亡诗社》艺术海报...主标题用流动的艺术手写字体"死亡诗社"...
 ```
 
-![死亡诗社](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742631.jpeg)
+![死亡诗社](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211742631.jpeg)
 
 **电影海报《天书奇谭》**
 ```
 动画电影《天书奇谭》艺术海报，中国山水画风格...主题为手写艺术字体"天书奇谭"...
 ```
 
-![天书奇谭](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742848.jpeg)
+![天书奇谭](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211742848.jpeg)
 
 **活动海报**
 ```
 我要举办一场活动，主题为"AI赋能发明创新"...请帮我画一张宣传海报...
 ```
 
-![活动海报](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749177.png)
+![活动海报](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211749177.png)
 
 ---
 
@@ -437,28 +437,28 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 为我生成西安大同应县木塔的结构解说图，附上一整段详细中文，中文字清晰。
 ```
 
-![应县木塔](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742475.jpeg)
+![应县木塔](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211742475.jpeg)
 
 **苏绣工艺图**
 ```
 为我生成苏绣工艺的详细解说图，配上详细的中文知识解析。
 ```
 
-![苏绣工艺](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211742643.jpeg)
+![苏绣工艺](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211742643.jpeg)
 
 **百年孤独人物关系图**
 ```
 画出《百年孤独》中的重要人物关系图，用中文表示关系。
 ```
 
-![百年孤独](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211751857.png)
+![百年孤独](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211751857.png)
 
 **锂电池原理图**
 ```
 锂电池作用原理图，用中英文双语进行标注
 ```
 
-![锂电池](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211749359.png)
+![锂电池](https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202511211749359.png)
 
 ---
 
