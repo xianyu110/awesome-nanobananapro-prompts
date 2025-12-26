@@ -405,5 +405,365 @@ const casesData = [
     { id: 298, title: "手办-ZBrush建模屏显与万代风格包装盒", category: "product", author: "@community", tags: ["手办","包装","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/298.jpeg", prompt: "create a 1/7 scale commercialized figure of thecharacter in the image, in a realistic styie and environment.\nPlace the figure on a computer desk, using a circular transparent acrylic base without any text.\nOn the computer screen, display the ZBrush modeling process of the figure.\nNext to the compute..." },
     { id: 299, title: "制作大头贴", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/299.jpeg", prompt: "用这张照片，做一个3*3的photo booth grid，每张要用不同的姿势和表情不许重复" },
     { id: 300, title: "制作证件照", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/300.jpeg", prompt: "截取图片人像头部，帮我做成2寸证件照，要求:\n1、蓝底\n2、职业正装\n3、正脸\n4、微笑" },
-    { id: 301, title: "超写实肖像位于石膏中心", category: "portrait", author: "@community", tags: ["肖像"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/301.jpeg", prompt: "Ultra-real portrait of [CHARACTER] centered, surrounded by dozens of life-size stone busts of [CHARACTER
+    { id: 301, title: "超写实肖像位于石膏中心", category: "portrait", author: "@community", tags: ["肖像"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/301.jpeg", prompt: "Ultra-real portrait of [CHARACTER] centered, surrounded by dozens of life-size stone busts of [CHARACTER]" }
 ];
+
+
+// ===== DOM Elements =====
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+const langBtn = document.getElementById('langBtn');
+const langMenu = document.getElementById('langMenu');
+const backToTop = document.getElementById('backToTop');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalPrompt = document.getElementById('modalPrompt');
+const copyPrompt = document.getElementById('copyPrompt');
+const categoryFilter = document.getElementById('categoryFilter');
+const searchInput = document.getElementById('searchInput');
+const cardGrid = document.getElementById('cardGrid');
+
+// 分页相关元素
+const pagination = document.getElementById('pagination');
+const paginationInfo = document.getElementById('paginationInfo');
+const paginationPages = document.getElementById('paginationPages');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const pageSize = document.getElementById('pageSize');
+
+// 分页变量
+let currentPage = 1;
+let itemsPerPage = 12;
+
+// 生成卡片HTML
+function createCard(item) {
+    return `
+        <div class="card" data-category="${item.category}" data-id="${item.id}">
+            <div class="card-badge">#${item.id}</div>
+            <div class="card-img"><img src="${item.img}" alt="${item.title}" loading="lazy"></div>
+            <div class="card-body">
+                <h3>${item.title}</h3>
+                <p class="card-author">👤 ${item.author}</p>
+                <div class="card-tags">${item.tags.map(t => `<span>${t}</span>`).join('')}</div>
+                <div class="card-actions">
+                    <button class="btn-sm btn-view" data-prompt="${item.prompt.replace(/"/g, '&quot;')}">👁️ 查看详情</button>
+                    <button class="btn-sm btn-copy">📄 原文</button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// 渲染卡片
+function renderCards() {
+    const category = categoryFilter?.value || 'all';
+    const search = searchInput?.value.toLowerCase() || '';
+
+    const filtered = casesData.filter(item => {
+        const matchCategory = category === 'all' || item.category === category;
+        const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
+        return matchCategory && matchSearch;
+    });
+
+    // 计算分页数据
+    const totalItems = filtered.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const toShow = filtered.slice(startIndex, endIndex);
+
+    cardGrid.innerHTML = toShow.map(createCard).join('');
+
+    // 更新分页信息
+    updatePagination(totalItems, totalPages, startIndex + 1, Math.min(endIndex, totalItems));
+
+    // 重新绑定事件
+    bindCardEvents();
+}
+
+// 更新分页控件
+function updatePagination(totalItems, totalPages, startItem, endItem) {
+    // 更新信息显示
+    const currentLang = localStorage.getItem('language') || 'zh';
+    const infoText = currentLang === 'en'
+        ? `Showing ${startItem}-${endItem} of ${totalItems} cases`
+        : `显示 ${startItem}-${endItem} / 共 ${totalItems} 个案例`;
+    paginationInfo.textContent = infoText;
+
+    // 更新按钮状态
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+    // 生成页码按钮
+    generatePageButtons(totalPages);
+}
+
+// 生成页码按钮
+function generatePageButtons(totalPages) {
+    const currentLang = localStorage.getItem('language') || 'zh';
+    let pagesHTML = '';
+
+    if (totalPages <= 7) {
+        // 如果总页数少于等于7，显示所有页码
+        for (let i = 1; i <= totalPages; i++) {
+            pagesHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+    } else {
+        // 智能页码显示逻辑
+        if (currentPage <= 3) {
+            // 当前页在前面3页
+            for (let i = 1; i <= 5; i++) {
+                pagesHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+            }
+            pagesHTML += `<span class="page-dots">...</span>`;
+            pagesHTML += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
+        } else if (currentPage >= totalPages - 2) {
+            // 当前页在最后3页
+            pagesHTML += `<button class="page-btn" data-page="1">1</button>`;
+            pagesHTML += `<span class="page-dots">...</span>`;
+            for (let i = totalPages - 4; i <= totalPages; i++) {
+                pagesHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+            }
+        } else {
+            // 当前页在中间
+            pagesHTML += `<button class="page-btn" data-page="1">1</button>`;
+            pagesHTML += `<span class="page-dots">...</span>`;
+            pagesHTML += `<button class="page-btn" data-page="${currentPage - 1}">${currentPage - 1}</button>`;
+            pagesHTML += `<button class="page-btn active" data-page="${currentPage}">${currentPage}</button>`;
+            pagesHTML += `<button class="page-btn" data-page="${currentPage + 1}">${currentPage + 1}</button>`;
+            pagesHTML += `<span class="page-dots">...</span>`;
+            pagesHTML += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
+        }
+    }
+
+    paginationPages.innerHTML = pagesHTML;
+
+    // 绑定页码按钮事件
+    document.querySelectorAll('.page-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            currentPage = parseInt(this.dataset.page);
+            renderCards();
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+}
+
+// 绑定卡片事件
+function bindCardEvents() {
+    document.querySelectorAll('.btn-view').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const img = card.querySelector('.card-img img');
+            const title = card.querySelector('h3');
+            modalImg.src = img.src;
+            modalTitle.textContent = title.textContent;
+            modalPrompt.textContent = this.dataset.prompt;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    document.querySelectorAll('.btn-copy').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const viewBtn = this.closest('.card').querySelector('.btn-view');
+            navigator.clipboard.writeText(viewBtn.dataset.prompt).then(() => {
+                const currentLang = localStorage.getItem('language') || 'zh';
+                this.textContent = currentLang === 'en' ? '✓ Copied' : '✓ 已复制';
+                setTimeout(() => {
+                    this.textContent = currentLang === 'en' ? '📄 Original' : '📄 原文';
+                }, 2000);
+            });
+        });
+    });
+}
+
+// 初始化
+renderCards();
+
+// 筛选和搜索
+categoryFilter?.addEventListener('change', () => { currentPage = 1; renderCards(); });
+searchInput?.addEventListener('input', () => { currentPage = 1; renderCards(); });
+
+// 分页按钮事件
+prevBtn?.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        renderCards();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
+
+nextBtn?.addEventListener('click', () => {
+    const category = categoryFilter?.value || 'all';
+    const search = searchInput?.value.toLowerCase() || '';
+    const filtered = casesData.filter(item => {
+        const matchCategory = category === 'all' || item.category === category;
+        const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
+        return matchCategory && matchSearch;
+    });
+    const totalPages = Math.ceil(filtered.length / itemsPerPage);
+
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderCards();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
+
+// 每页显示数量改变事件
+pageSize?.addEventListener('change', function() {
+    itemsPerPage = parseInt(this.value);
+    currentPage = 1;
+    renderCards();
+});
+
+// 移动端菜单
+menuToggle?.addEventListener('click', () => navMenu.classList.toggle('show'));
+
+// 语言选择器
+langBtn?.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('show'); });
+langMenu?.querySelectorAll('li').forEach(item => {
+    item.addEventListener('click', () => {
+        langBtn.textContent = item.textContent.replace('✓ ', '') + ' ▼';
+        langMenu.classList.remove('show');
+    });
+});
+document.addEventListener('click', () => langMenu?.classList.remove('show'));
+
+// 返回顶部
+window.addEventListener('scroll', () => {
+    backToTop?.classList.toggle('show', window.scrollY > 300);
+});
+backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// 模态框
+modalClose?.addEventListener('click', closeModal);
+modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+function closeModal() {
+    modal?.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// 复制提示词
+copyPrompt?.addEventListener('click', async () => {
+    try {
+        await navigator.clipboard.writeText(modalPrompt.textContent);
+        const currentLang = localStorage.getItem('language') || 'zh';
+        copyPrompt.textContent = currentLang === 'en' ? '✓ Copied' : '✓ 已复制';
+        setTimeout(() => {
+            copyPrompt.textContent = currentLang === 'en' ? '📋 Copy Prompt' : '📋 复制提示词';
+        }, 2000);
+    } catch (err) {
+        alert(currentLang === 'en' ? 'Copy failed' : '复制失败');
+    }
+});
+
+// 平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            navMenu?.classList.remove('show');
+        }
+    });
+});
+
+// 导航高亮
+const navLinks = document.querySelectorAll('.nav-menu a');
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === `#${current}`) l.classList.add('active');
+    });
+});
+
+// 语言和主题管理
+class LanguageThemeManager {
+    constructor() {
+        this.currentLang = localStorage.getItem('language') || 'zh';
+        this.currentTheme = localStorage.getItem('theme') || 'light';
+        this.init();
+    }
+
+    init() {
+        this.setLanguage(this.currentLang);
+        this.setTheme(this.currentTheme);
+        this.bindEvents();
+    }
+
+    setLanguage(lang) {
+        this.currentLang = lang;
+        document.documentElement.lang = lang === 'en' ? 'en-US' : 'zh-CN';
+        document.documentElement.setAttribute('data-lang', lang);
+
+        // 更新按钮文本
+        const langBtn = document.getElementById('langBtn');
+        if (langBtn) {
+            langBtn.textContent = lang === 'en' ? 'English ▼' : '中文 ▼';
+        }
+
+        // 更新所有带有 data-zh 和 data-en 的元素
+        document.querySelectorAll('[data-zh][data-en]').forEach(element => {
+            element.textContent = element.getAttribute(`data-${lang}`);
+        });
+
+        // 更新 placeholder
+        document.querySelectorAll('[data-zh-placeholder][data-en-placeholder]').forEach(element => {
+            element.placeholder = element.getAttribute(`data-${lang}-placeholder`);
+        });
+
+        // 更新 option 文本
+        document.querySelectorAll('option[data-zh][data-en]').forEach(option => {
+            option.textContent = option.getAttribute(`data-${lang}`);
+        });
+
+        localStorage.setItem('language', lang);
+    }
+
+    setTheme(theme) {
+        this.currentTheme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+
+        // 更新主题按钮
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        localStorage.setItem('theme', theme);
+    }
+
+    bindEvents() {
+        // 主题切换
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                this.setTheme(this.currentTheme === 'light' ? 'dark' : 'light');
+            });
+        }
+
+        // 语言切换
+        const langMenuItems = document.querySelectorAll('#langMenu li[data-lang]');
+        langMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const lang = item.getAttribute('data-lang');
+                this.setLanguage(lang);
+
+                // 更新选中状态
+                langMenuItems.forEach(li => li.textContent = li.textContent.replace('✓ ', ''));
+                item.textContent = '✓ ' + item.textContent;
+            });
+        });
+    }
+}
+
+// 初始化语言和主题管理器
