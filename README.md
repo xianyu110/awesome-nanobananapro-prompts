@@ -520,6 +520,155 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 
 ---
 
+### Part 5: 更多精选案例
+
+#### 圣诞特辑系列
+
+**冷艳圣诞时尚大片**
+```
+[关键：保持精确的面部特征，保留原始脸部结构，整个拼图中角色完全一致]
+高级时尚感的妆容，采用金属质感的妆面，眼影是香槟金色渐变到玫瑰金，眼角延伸出精致的金色眼线，下眼睑点缀碎钻如冰晶闪烁。睫毛根根分明如芭比娃娃，眉毛是野生眉形态。唇部是镜面光泽的樱桃红色，腮红是高光打造的立体感。发型是时髦的低盘发，发髻用金色装饰球和圣诞铃铛点缀，侧边垂落几缕精致卷发，头顶斜戴着设计感十足的金属质感圣诞帽，帽檐镶嵌北极星装饰。身着改良版现代圣诞服，采用不对称设计，一侧肩膀露出，红色天鹅绒面料混搭金色亮片，腰间系着夸张的金色蝴蝶结，下摆不规则裁剪。搭配毛绒围巾随意搭在肩上，戴着镶钻的针织手套。人物摆出时尚大片姿势，一腿微曲，一手叉腰，另一手优雅地托着一个装饰奢华的礼物盒，表情高冷又不失节日欢愉。背景是纯白色摄影棚布置成的圣诞场景，巨大的白色圣诞树装饰着金色装饰球、灯串和星星。地面铺满仿真雪花，摆放着精致的雪人雕塑、圣诞麋鹿装置。旁边有个现代设计感的壁炉装置，里面跳动着蓝色的炉火。
+```
+
+![圣诞时尚](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 电影级增强现实视觉效果
+
+**Spotify AR 音乐卡片**
+```
+主体：我（使用上传的面部照片——100% 面部还原度，无任何修改）。面部未增加额外亮度，保留了我自然的深色肤色。梦幻般的电影级增强现实视觉效果，众多悬浮的 Spotify 播放器界面卡片围绕着中心人物（图中人物）旋转。我倚靠在路灯上，手持手机，以完整的 3D 空间构图观看手机。每个音乐播放器卡片都经过精心设计，放置在不同的距离，有些卡片醒目地位于主体前方并部分遮挡住主体，而另一些则漂浮在主体后方和侧面。卡片使用了 Apple Music/Spotify 的原汁原味用户界面元素，例如播放进度指示器，并展示了 [艺术家姓名] 的歌曲；所有卡片都呈现出流畅的圆角边缘和微妙的角度透视变化，营造出半透明的磨砂玻璃美感，散发出柔和的漫射光晕，与场景的环境光自然地相互作用，呈现出电影般的光晕效果。这幅作品采用��色调到中性色调，阴影细节丰富而保留，巧妙地融入了专辑封面的色彩，中高对比度与柔和的高光过渡相得益彰，景深变化细腻，近处的卡片保持清晰，远处的卡片则呈现柔和的虚化效果，并辅以低调的动态增强效果。所有这些都确保了主体逼真、居中，并自然地融入周围环境。照片中，人物身穿敞开的黄色连帽衫、黑色牛仔裤和白色运动鞋，背景是真实的伦敦街景。创建一张9:16的高清照片。
+```
+
+![AR音乐卡片](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 品牌跨界创意
+
+**终极跨界：快餐店偶遇**
+```
+Imagine [CHARAKTER 1] and [Charakter 2] casually sitting together at a table in a [FAST FOOD BRAND] restaurant. The atmosphere is relaxed and light-hearted, with the two characters engaged in an amusing or deep conversation over trays of food and drinks.
+```
+
+![品牌跨界](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 创意角色设计
+
+**3D 卡通钥匙扣**
+```
+Create a 3D cute cartoon keychain design of [SUBJECT]. The keychain should have a charming, adorable appearance with a smooth, rounded plastic texture and soft, vibrant colors. Attach a metallic key ring to the top. Place it against a clean, light-colored background with minimal shadows to emphasize the design.
+```
+
+![卡通钥匙扣](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+**毛绒玩具风格**
+```
+Create a high-quality, adorable plush toy design of [SUBJECT]. The toy should have soft, fuzzy textures, gentle stitching details, and a warm, huggable appearance. Use premium plush fabric materials with vibrant, welcoming colors. Include subtle highlights on the fur to enhance the three-dimensional quality. The pose should be friendly and inviting.
+```
+
+![毛绒玩具](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 粘土与纸艺风格
+
+**3D 纸艺折纸模型**
+```
+Create a stunning 3D origami art piece of [SUBJECT]. The design should feature clean, sharp geometric folds that capture the essence of the subject. Use high-quality textured paper with a subtle sheen. Arrange multiple origami elements in an artistic composition. The lighting should be soft and diffused to highlight the paper's texture and the intricate fold details. The background should be clean and minimal to emphasize the delicate paper art.
+```
+
+![纸艺折纸](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+**Q 版木雕人偶**
+```
+Create a charming Q-version wooden puppet of [SUBJECT]. The puppet should have cute, exaggerated proportions with a large head and small body. Carve from light wood with visible wood grain patterns. Add articulated joints connected by small ropes or strings. The face should have simple, expressive features painted in warm colors. Include a small wooden stand for display.
+```
+
+![木雕人偶](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 专业产品摄影
+
+**高端平铺式产品摄影**
+```
+A professional flat lay product photograph of [PRODUCT] arranged artistically on [SURFACE]. The composition should follow the rule of thirds with careful attention to negative space. Use soft, diffused studio lighting from above. Style with complementary props and accessories. The color palette should be harmonious. Include subtle shadows for depth. High-end commercial photography quality, sharp focus throughout.
+```
+
+![产品摄影](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+**沙与风产品摄影**
+```
+A cinematic product shot of [PRODUCT] partially buried in pristine white sand. Fine particles of sand are captured mid-air, swirling around the product as if caught in a gentle breeze. Golden hour lighting creates long, dramatic shadows. The product emerges heroically from the sand, with textures fully visible. Shot with a telephoto lens at f/2.8 for creamy bokeh. 4K resolution, commercial advertising quality.
+```
+
+![沙风摄影](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 微缩世界创意
+
+**微缩场景模型**
+```
+Create a miniature diorama scene of [SCENE]. Everything should appear tiny and scaled down, as if part of a model train set or miniature collection. Include meticulous details like small props, furniture, and elements appropriate to the scene. The lighting should be dramatic and focused. Place the diorama on a realistic surface like a wooden table or shelf. The overall aesthetic should evoke nostalgia and craftsmanship.
+```
+
+![微缩场景](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+**透明容器里的微缩世界**
+```
+A miniature 3D world encapsulated within a transparent glass container. Inside the [SHAPE] container, there's a tiny scene of [DESCRIPTION]. The container sits on a wooden surface. Soft natural lighting illuminates the scene from above, creating delicate reflections on the glass. The miniature world inside has detailed tiny elements. The glass has subtle imperfections and realistic light refraction. Cozy, whimsical, and enchanting atmosphere.
+```
+
+![透明容器](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 涂鸦与线条艺术
+
+**涂鸦线条干刷色块**
+```
+A mixed media artwork combining expressive doodle line art with bold dry brush color blocks. On [COLOR] background, draw [SUBJECT] using energetic, spontaneous black ink doodle lines that overlap and intersect. Add patches of vibrant acrylic color applied with a dry brush technique, creating texture and movement. The composition should be dynamic and playful. Some areas should have unfinished, sketch-like quality.
+```
+
+![涂鸦艺术](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 知识信息图
+
+**专业的知识信息图**
+```
+Create a professional infographic about [TOPIC]. The design should be clean, modern, and educational. Use a cohesive color scheme with [NUMBER] main colors. Include: a clear title at the top, organized sections with headings, relevant icons or small illustrations, data visualizations like charts or graphs if applicable, and concise text explanations. The layout should be balanced and easy to follow. Professional graphic design quality suitable for educational or business presentations.
+```
+
+![信息图](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
+#### 技术图纸风格
+
+**技术图纸展示板**
+```
+A technical drawing sheet showing [OBJECT] in multiple views. Include: front view, side view, top view, and an isometric view. Use precise black technical lines on off-white or blueprint background. Add dimension lines, measurements, and annotations. Include material callouts and surface finish symbols. The style should resemble professional engineering drawings or patent illustrations. Clean, precise, and detailed technical illustration style.
+```
+
+![技术图纸](https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg)
+
+---
+
 ## 📝 投稿指南
 
 欢迎为本项目贡献更多优质的提示词案例！
