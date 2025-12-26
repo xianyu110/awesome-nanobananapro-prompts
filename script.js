@@ -223,397 +223,187 @@ const casesData = [
     { id: 188, title: "浮雕艺术风格", category: "style", author: "@relief", tags: ["浮雕", "艺术", "3D", "复古"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg", prompt: "Create a relief sculpture art piece of [SUBJECT]. The design should have raised 3D elements against a flat background, reminiscent of coin relief or commemorative plaques." },
     { id: 189, title: "夜视仪效果", category: "style", author: "@nightvision", tags: ["夜视", "绿色", "军事", "效果"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg", prompt: "Create a night vision camera view of [SCENE]. Green monochrome color grading, scan lines, camera overlay text, and that characteristic night vision glow." },
     { id: 190, title: "无声电影场景", category: "movie", author: "@silent", tags: ["无声电影", "复古", "黑白", "电影"], img: "https://maynor123-1301929665.cos.ap-guangzhou.myqcloud.com/202511211740125.jpeg", prompt: "Create a silent film era scene of [ACTION]. Black and white film grain, exaggerated acting expressions, intertitle text cards, and 1920s period aesthetic." },
+,
+
+    { id: 121, title: "文艺复兴时期的解剖学研究", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/121.png", prompt: "A Renaissance anatomical study of a [subject], meticulously illustrated in fine graphite and ink cross-hatching, with transparent tissue overlays revealing skeletal and muscular systems. Labeled in elegant Latin calligraphy and presented on aged parchment, the composition exudes scholarly precision ..." },
+    { id: 122, title: "史莱姆制成的玩具运输车", category: "product", author: "@community", tags: ["玩具"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/122.png", prompt: "{\n  \"style\": \"Realistic 3D render\",\n  \"material\": \"Glossy slime-like material\",\n  \"texture\": [\"smooth\", \"soft\", \"stretchy\", \"shiny\"],\n  \"color\": \"VARIABLE\",  \n  \"object_type\": \"VARIABLE\",  \n  \"background\": \"plain white\",\n  \"lighting\": \"soft studio lighting\",\n  \"details\": {\n    \"focus\": \"single objec..." },
+    { id: 123, title: "植物雕塑", category: "creative", author: "@community", tags: ["雕塑"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/123.png", prompt: "The [subject] appears as if organically grown from intertwining plants, flowers, and vines. Leaf-like textures and blooming forms fuse seamlessly with anatomical or structural details, creating a surreal hybrid of nature and design. The composition feels ethereal, with natural asymmetry and dreamlik..." },
+    { id: 124, title: "磨砂模糊剪影", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/124.jpeg", prompt: "A black and white photograph shows the blurred silhouette of a [SUBJECT] behind a frosted or translucent surface. The [PART] is sharply defined and pressed against the surface, creating a stark contrast with the rest of the hazy, indistinct figure. The background is a soft gradient of gray tones, en..." },
+    { id: 125, title: "时尚品牌娃娃", category: "logo", author: "@community", tags: ["品牌","时尚"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/125.png", prompt: "A hyper-realistic photograph of a fashion doll styled in the aesthetic of [BRAND], sitting on a plush, cream-colored bed with soft folds. The doll’s look reflects the brand’s signature elements — from hair and outfit to accessories — arranged thoughtfully to evoke a dreamy, vintage-inspired editoria..." },
+    { id: 126, title: "重新构想的超现实主义广告", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/126.jpeg", prompt: "“[Product Name]” placed at the center in full photorealism, surrounded by surreal vector illustrations using exactly two bold, vibrant colors that match the product’s mood.\nThe scene is minimalistic yet energetic, with abstract vector shapes (symbols, lines, expressions, etc.) orbiting or interactin..." },
+    { id: 127, title: "符号冲突", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/127.png", prompt: "A surreal yet hyper-realistic image in levitation photography style, where elements of [subject] float chaotically and randomly above an outstretched hand, interwoven with symbolic elements that directly oppose it.\n\nThe background forms dynamically to visually embody the symbolism of the subject and..." },
+    { id: 128, title: "一个字的无限反射", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/128.png", prompt: "A [PERSON] in a dark room with a glowing projection of the word “[WORD]” repeated endlessly across the walls and body. The text is projected in high-contrast, neon [COLOR], wrapping around the contours of the object, creating a surreal, futuristic lighting effect. The background and object are seaml..." },
+    { id: 129, title: "创建悬浮切片水果", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/129.jpeg", prompt: "A hyper-realistic photograph of a [FRUIT] sliced into five glossy layers, each slice floating vertically in mid-air with glistening juice droplets at the edges. The slices cast soft, natural shadows on each other. The [FRUIT] has a vibrant skin with appropriate interior details .Set against a softly..." },
+    { id: 130, title: "创建超现实不可能的图像", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/130.jpeg", prompt: "Create a surreal split-scene where the left half is an underwater version of a [SCENE], filled with marine life (fish, sharks, octopus, coral, bubbles), and the right half is the regular dry version of the same [SCENE] continuing naturally. Separate the two halves with a vertical wall of water held ..." },
+    { id: 131, title: "自定义毛绒钥匙扣", category: "product", author: "@community", tags: ["毛绒","钥匙扣"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/131.jpeg", prompt: "Close-up photo of a small plush keychain of [attached image/emojis]  held gently between two fingers, made of soft felt or fuzzy material, cartoon-style proportions, embroidered face with simple expressive features, character designed to resemble, attached to a shiny silver keyring, neutral beige ba..." },
+    { id: 132, title: "悬浮魔幻现实主义", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/132.jpeg", prompt: "An old-fashioned postal shack floating on a space rock, with envelopes fluttering like wings and planets lined up as waiting customers - humorous, magical realism." },
+    { id: 133, title: "幽灵形态", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/133.png", prompt: "A hyper-realistic photograph of a [SUBJECT] entirely made from a single, semi-rigid transparent material that drapes and folds like sheer plastic or molten glass. The object is fully recognizable in shape, yet ghostly and fluid, as if sculpted from air and frozen in motion. Set in a moody, industria..." },
+    { id: 134, title: "生成真实电影海报", category: "poster", author: "@community", tags: ["电影","海报"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/134.jpeg", prompt: "“[MOVIE TITLE ]” — cinematic movie poster design in ultra-realistic, high-definition style. Capture a dramatic and emotionally charged scene based on the film’s title. Use a high Kelvin color temperature to eliminate yellow tint, favoring cold, bluish tones or neutral whites. Add volumetric fog, sha..." },
+    { id: 135, title: "棱柱形玻璃图标", category: "logo", author: "@community", tags: ["图标","玻璃"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/135.jpeg", prompt: "Create a high-resolution illustration of a [skull] icon in the style of a glossy, translucent sculpture. The icon should appear as if made of curved, flowing glass with reflective surfaces. Infuse the form with vivid, refracted rainbow gradients that shift smoothly across its contours. The shape sho..." },
+    { id: 136, title: "日常用品有皮肤", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/136.png", prompt: "A high-quality studio photograph of a [OBJECT] fully covered in ultra-realistic [ANIMAL] texture (e.g., fur, feathers, skin, or scales), placed against a soft neutral background. The object’s original form remains visible but is wrapped in the animal’s natural pattern and surface detail. The image f..." },
+    { id: 137, title: "透视一切", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/137.jpeg", prompt: "a fully transparent [product] made of ultra-clear iridescent glass, showing all internal components in photorealistic detail. The outer shell is glossy, refracts subtle rainbow colors, and reveals the product’s structure and mechanics. Scene lit with high-Kelvin studio lighting (~7000K) on a neutral..." },
+    { id: 138, title: "Gumroad样式图标", category: "logo", author: "@community", tags: ["图标"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/138.jpeg", prompt: "Create a high-resolution illustration of a [OBJECT] icon in the style of a flat, outlined sticker graphic. The icon should be made entirely from very thin, solid black outlines with no interior fill. Add a bold, soft-edged sticker-style contour around the icon using a flat, vibrant [YELLOW, BLUE, OR..." },
+    { id: 139, title: "将您最喜欢的品牌变成生活方式产品", category: "logo", author: "@community", tags: ["产品","品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/139.jpeg", prompt: "A high-quality studio product photo of a [brand name]-branded [product type], [floating / standing] against a solid background in the brand’s signature color. The product features the brand logo prominently and uses the official brand color palette. Clean composition, soft shadows, ultra-realistic m..." },
+    { id: 140, title: "现代数字动漫风格", category: "style", author: "@community", tags: ["动漫","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/140.png", prompt: "Transform this image into a modern digital anime TV style. Use clean and sharp outlines, vivid and high-contrast colors, and digital cel shading with subtle gradients. Add visual effects like glows, particles, or light flares if appropriate. The character design should follow modern anime proportion..." },
+    { id: 141, title: "监控级别的时尚洞察力", category: "fashion", author: "@community", tags: ["时尚"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/141.jpeg", prompt: "Create image with 1:1 ratio A cctv footage, \nA closed up view of focus woman carrying  [brand] [product] on street, a square zoomed window on the product, sci fi analyzing overlay UI with infos like brand name, date, time, location name, in brand color monospaced font, product name, width, height, w..." },
+    { id: 142, title: "为任何品牌设计运动鞋", category: "logo", author: "@community", tags: ["品牌","设计"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/142.jpeg", prompt: "create image with 1:1 ratio   A branded footwear ad for [Brand], showcasing the high-end Brand shoe using brand technology and texture.(fiction a technology and texture based on brand DNA). The shoe is shown in dynamic floating perspective over a graph paper background layout with technical sketches..." },
+    { id: 143, title: "迪士尼鸡尾酒", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/143.png", prompt: "A realistic, high-end cocktail in a frosted glass with a sparkling salt rim, filled with crystal-clear ice cubes. The drink is garnished with deep-blue kale leaves and delicate pastel-pink edible flowers. The lighting is moody and cinematic, with soft highlights on the glass. The entire visual style..." },
+    { id: 144, title: "梦幻般的蒸汽波失真", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/144.png", prompt: "[SUBJECT] rendered in Dreamlike Vaporwave Distortion, with soft pastels and surreal effects. Employ a nostalgic color palette of [COLOR1] and [COLOR2] to evoke a sense of longing and ethereal beauty" },
+    { id: 145, title: "用自己的审美下棋", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/145.png", prompt: "A highly realistic vertical photograph of a traditional chessboard viewed from above, set against a textured surface inspired by [COUNTRY]’s artistic heritage. The chessboard features intricate patterns and national motifs, with the word “[COUNTRY]” written across the board in elegant golden calligr..." },
+    { id: 146, title: "全息叠加效果彩虹渐变", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/146.jpeg", prompt: "Apply a holographic overlay effect on [SUBJECT/TEXT] — dreamy rainbow gradients with soft radial light reflections — smooth glossy surface, high contrast blending — iridescent hues like pink, teal, cyan, and purple — noise texture with soft light blend — subtle shadows and edge lighting to add depth..." },
+    { id: 147, title: "玻璃变形海报", category: "poster", author: "@community", tags: ["海报","玻璃"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/147.jpeg", prompt: "Design a cinematic brand poster featuring “[BRAND NAME]” — include a bold six-word slogan beneath — apply a 3D glass refraction effect that distorts part of the text or layout — incorporate the brand logo in the top corner — smooth shadows, glossy lighting, black extra-bold typography — clean modern..." },
+    { id: 148, title: "怀旧午后阳光", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/148.jpeg", prompt: "a pillow fort in the backyard, shaded by a big old tree. Sunlight filters through the leaves, and a young boy and his golden retriever naps beside a tray of lemonade and cookies. Wind chimes tinkle gently in the breeze. Warm afternoon light, playful and nostalgic, children's book illustrated feeling" },
+    { id: 149, title: "Gorillaz风格角色", category: "character", author: "@community", tags: ["角色","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/149.png", prompt: "Create a stylized full-body portrait of [your subject] in the Gorillaz character aesthetic. Give the character an exaggeratedly lanky build with long, skinny legs and narrow arms. Use simplified, angular features and thick, bold outlines. Style the hair to be spiky, tousled, or exaggerated, in a non..." },
+    { id: 150, title: "乙烯基玩具", category: "product", author: "@community", tags: ["玩具"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/150.png", prompt: "A comic-style caricature illustration of [subject], with an oversized head and expressive eyes, rendered in a hyper-realistic vinyl toy aesthetic. The character features exaggerated proportions, glossy textures, and playful details, blending caricature art with collectible figure charm." },
+    { id: 151, title: "Neoglo风格Logo", category: "logo", author: "@community", tags: ["Logo","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/151.jpeg", prompt: "Design a modern logo in NeoGradient Soft Tech style for a fictional startup called “NAME” in the “[INDUSTRY TYPE]” industry.\n\nThe logo must include:\n•A unique abstract icon\n•A clean, bold sans-serif logotype\n•Smooth glowing gradients blending vibrant colors like blue, purple, pink, orange, and teal\n..." },
+    { id: 152, title: "新动漫风格", category: "style", author: "@community", tags: ["动漫","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/152.png", prompt: "Transform this image into a 1960s Tezuka-style illustration. Use big, rounded expressive eyes with bright highlights. Simplify the anatomy with soft, rounded limbs and clean linework. Avoid detailed textures — focus on smooth color fills and strong silhouettes. The final image should resemble a vint..." },
+    { id: 153, title: "霓虹灯线框", category: "creative", author: "@community", tags: ["霓虹","霓虹灯"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/153.png", prompt: "A neon wireframe visualization of a [subject], traced in glowing [color1] and [color2] vector lines. Suspended in a digital void, the figure is surrounded by speed trails, motion blur, and shifting geometric shadows, evoking a sense of kinetic energy and futuristic momentum." },
+    { id: 154, title: "五颜六色的针织", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/154.jpeg", prompt: "A hyper-realistic, artistic rendering of a [OBJECT] entirely wrapped in colorful, tightly woven yarn and embroidery threads. The surface is covered in intricate, detailed textile patterns—knit, braided, and woven in a variety of textures. Each section of the [OBJECT] is segmented with vivid, high-sa..." },
+    { id: 155, title: "自己的国家地标时尚杂志", category: "fashion", author: "@community", tags: ["时尚"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/155.png", prompt: "a luxurious fashion magazine cover designed in the style of [COUNTRY], blending iconic landmarks, cultural symbols, and local fashion aesthetics. The layout mimics high-end editorial design, with headlines inspired by the country’s language, trends, and lifestyle. Sophisticated, cinematic lighting, ..." },
+    { id: 156, title: "作为家具的著名地标", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/156.jpeg", prompt: "The [LANDMARK - Statue of Liberty/Eiffel Tower/Big Ben] perfectly carved and functional as a [FURNITURE_PIECE - lamp/bookshelf/coffee table], living room setting, normal scale furniture, photorealistic detail." },
+    { id: 157, title: "最小天气小部件", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/157.jpeg", prompt: "create image with 1:1 ratio \nsurreal minimal aesthetic, airplane window frame on subtle gradient backdrop with same color, through the oval window showing random iconic landmark scenery of [Country Name], an overlay weather ui interface on the center of window, from top to bottom, contain the small ..." },
+    { id: 158, title: "品牌3D卡通动物角色", category: "logo", author: "@community", tags: ["3D","卡通","品牌","角色"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/158.png", prompt: "A high-quality 3D cartoon animal character inspired by [Brand Name], with large round eyes and an innocent, friendly expression. The character wears a knitted sweater featuring the brand name in bold letters. It sits confidently atop a futuristic vehicle shaped like a product from the brand, fully i..." },
+    { id: 159, title: "渲染宝石", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/159.jpeg", prompt: "Recreate this image using the pamareters of the JSON provided.\n{\n  \"name\": \"Gemstone Render\",\n  \"object\": {\n    \"type\": \"auto\",\n    \"detected_color\": \"auto\",\n    \"form\": \"realistic, natural form preserved\",\n    \"material\": \"crystal or faceted gemstone glass\",\n    \"surface\": \"precision-cut facets, sh..." },
+    { id: 160, title: "新动漫风格", category: "style", author: "@community", tags: ["动漫","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/160.png", prompt: "Transform this image into an over-the-top anime illustration in the style of Trigger / Gainax. Use exaggerated expressions, wild motion lines, and hyperdynamic poses. The anatomy should be fluid and distorted for emphasis — limbs stretching or snapping into action. Add speed lines, explosive backgro..." },
+    { id: 161, title: "物品纹理处理", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/161.png", prompt: "retexture the image attached based on the JSON below:\n{\n  \"style_name\": \"Transparent Studio Render\",\n  \"visual_rules\": {\n    \"form\": {\n      \"shape\": \"preserve original object shape\",\n      \"outline\": \"no outlines, use smooth geometry transitions and bevels\"\n    },\n    \"lighting\": {\n      \"style\": \"..." },
+    { id: 162, title: "超现实主义蒸汽波", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/162.png", prompt: "[SUBJECT] in a Surrealist Vaporwave collage. Combine elements of classical sculpture, 80s retrofuturism, and Japanese cityscapes. Use pastel shades of [COLOR1] and [COLOR2] with hints of neon" },
+    { id: 163, title: "半透明玻璃物品ASMR", category: "scene", author: "@community", tags: ["透明","玻璃"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/163.jpeg", prompt: "Hyper-realistic [fruit name] made of translucent glass, smooth, rounded surface with fine air bubbles inside, placed on a clean surface, sharp lighting with strong reflections and highlights, minimal background, photorealistic, glossy texture, 3D render style, crystal-like appearance, soft shadows, ..." },
+    { id: 164, title: "将表情符号变成纸板", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/164.png", prompt: "Ultra high-resolution 3D render of the emoji [🥹], meticulously recreated as a realistic cardboard sculpture. The object is crafted from corrugated brown cardboard, featuring clearly defined fluted edges, visible layering, and rough kraft paper textures. Close-up studio" },
+    { id: 165, title: "用气泡膜覆盖表情符号", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/165.png", prompt: "A hyper-realistic 3D render of the emoji [❤️‍🔥], entirely wrapped in transparent bubble wrap. The plastic is tightly fitted, with clearly visible air-filled bubbles creating overlaid reflections and soft distortions of the emoji underneath. The wrap has a glossy, crinkled texture that catches the l..." },
+    { id: 166, title: "几何禅", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/166.png", prompt: "[SUBJECT] illustrated in a Geometric Zen Tranquility style, where simplicity and balance are key. Utilize clean lines, basic shapes, and a serene color palette of [COLOR1] and [COLOR2] to evoke a sense of peace and harmony." },
+    { id: 167, title: "液态金属设计产品", category: "product", author: "@community", tags: ["产品","设计"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/167.jpeg", prompt: "create image with 1:1 ratio \nretexture the photo I attached with the following json \n{   \"style_name\": \"hermes_subtle_specular_gradient\",   \"background\": {     \"type\": \"solid\",     \"color\": \"#000000\",     \"light_reflection\": \"none\"   },   \"base_material\": {     \"type\": \"polished_metal\",     \"color\":..." },
+    { id: 168, title: "水果蜡烛", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/168.png", prompt: "A minimal still life of a round glass candle filled with [fruit], labeled “[SCENT NAME]”, placed on elegant white silk fabric. The candle glass is [glass color], and the wax matches the fruit color. The scene is softly lit by natural daylight with subtle shadows and smooth highlights. Hyperrealistic..." },
+    { id: 169, title: "微型透明胶囊", category: "scene", author: "@community", tags: ["透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/169.png", prompt: "Close-up, A hand holding a transparent capsule, inside it is a miniature model of [character name], wearing [their iconic outfit and accessories]. The character is posed in a [specific, expressive or dynamic pose], interacting with the inner surface of the capsule, as if they are frozen or confined ..." },
+    { id: 170, title: "新卡通风格", category: "anime", author: "@community", tags: ["卡通","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/170.png", prompt: "Transform this image into the Foster’s Home for Imaginary Friends cartoon style. Use bold outlines, flat shapes, and vivid solid colors. Characters should have simplified, playful designs with exaggerated expressions and unique silhouettes. Keep the background minimal or stylized with flat patterns ..." },
+    { id: 171, title: "霓虹灯品牌重新构想", category: "logo", author: "@community", tags: ["霓虹","霓虹灯","品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/171.jpeg", prompt: "Create a cinematic advertisement for “[PRODUCT NAME]” — use bioluminescent neon lighting that matches the brand’s visual identity — place the product at the center of the scene with surreal, minimalistic composition — automatically adapt the environment to reflect the product’s nature (e.g. tech, fr..." },
+    { id: 172, title: "棱柱形水晶", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/172.jpeg", prompt: "Recreate this image using the parameters of the JSON provided.\n{\n  \"style_transfer\": {\n    \"name\": \"Prismatic Crystal\",\n    \"description\": \"Applies a highly realistic prismatic crystal style to any object, using precise light dispersion and photographic clarity. Ideal for adding a premium, gem-like ..." },
+    { id: 173, title: "复古风格图标", category: "traditional", author: "@community", tags: ["古风","复古","图标","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/173.jpeg", prompt: "Create an illustration of a [OBJECT] in a retro cartoon style. Use only flat, solid colors with no gradients, smudging, airbrushing, or blur. All shading and highlights should be made from clean, separate color blocks. Outline all shapes with thick, bold black lines. Use a simplified color palette (..." },
+    { id: 174, title: "生成电影氛围图", category: "movie", author: "@community", tags: ["电影"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/174.png", prompt: "Cinematic still, A [ description of the character or action scene], with a [ background/environment], a dynamic angle, a [light effect or lighting condition], motion blur, high-resolution photography, a cinematic scene, cinematic lighting, and high contrast." },
+    { id: 175, title: "半透明晶体效果", category: "scene", author: "@community", tags: ["透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/175.jpeg", prompt: "a [SUBJECT] rendered as a translucent crystalline form with beveled edges, subtly glowing from within. Surfaces catch and reflect ambient light, revealing faint iridescent hues across its contours in dark background" },
+    { id: 176, title: "三维几何效果", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/176.jpeg", prompt: "A bison in the center of an array of colorful geometric shapes, surrounded by symbols representing different aspects like family and home. The artwork features warm colors in an oil painting style, with an Art Nouveau illustration showcasing ornate details and colorful patterns. The scene also inclu..." },
+    { id: 177, title: "2D单词海报设计", category: "poster", author: "@community", tags: ["海报","设计"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/177.jpeg", prompt: "Create a surreal 2D poster design based on the word “[KEYWORD]” — the layout should be dominated by kinetic typography where the word is visually shaped or distorted to reflect its meaning — integrate a symbolic flat minimal illustration that reinforces the concept — the style must be inspired by ri..." },
+    { id: 178, title: "生物发光", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/178.png", prompt: "[SUBJECT] depicted as a Mythical Creature Luminescence, with glowing edges that accentuate the fantastical and legendary aspects. Utilize [COLOR1] and [COLOR2] to enhance the mythical and enchanting qualities." },
+    { id: 179, title: "创建多种3D风格头像", category: "creative", author: "@community", tags: ["3D","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/179.png", prompt: "Create a 3D-rendered digital illustration of a stylized cartoon boy character, standing in a neutral pose. The character should be rendered in a realistic-minimalist 3D style, with soft rounded proportions and plush matte textures — similar to high-end Cinema 4D + Redshift product renders." },
+    { id: 180, title: "可爱粉彩乙烯基人物", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/180.png", prompt: "A cute pastel vinyl figure of [INSERT YOUR CHARACTER OR OBJECT], pastel colors (lavender, soft pink, baby blue), kawaii style with big round eyes and friendly smile, simple rounded shapes, stylized “RIP” detail somewhere on the figure or base, matching toy packaging in the background with themed art..." },
+    { id: 181, title: "抽象液体排版文字", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/181.jpeg", prompt: "Abstract liquid typography spelling \"text\", made of thick, transparent water-gel with realistic refraction and soft shadows. Each letter appears sculpted from droplets with surface tension, smooth curves, and light reflections. Water droplets scattered on the surface, minimal background, hyper-reali..." },
+    { id: 182, title: "鸟类羽毛制成LOGO", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/182.jpeg", prompt: "A detailed overhead shot of a fluid, colorful OpenAI logo created by arranging hundreds of naturally shed exotic bird feathers. Capture the incredible iridescence, delicate barbs, and varied textures against a misty white backdrop with side lighting." },
+    { id: 183, title: "霓虹效果海报", category: "creative", author: "@community", tags: ["霓虹","海报"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/183.jpeg", prompt: "a single [OBJECT] glowing vividly with internal neon light that matches its brand or essence — the glow must follow the object’s shape and details precisely without overexposing — cinematic studio lighting — rich reflective surface or texture — subtle ambient fog or mist around the object — sharp sh..." },
+    { id: 184, title: "乐高风格套装", category: "creative", author: "@community", tags: ["乐高","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/184.png", prompt: "a realistic LEGO-style set featuring [COUNTRY]’s national treasure: [ITEM]. Photorealistic packaging with LEGO branding, box art showing the built model, the model assembled from LEGO bricks in authentic colors and details. Studio product photography with soft shadows and clear lighting, highly deta..." },
+    { id: 185, title: "人体工程学", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/185.png", prompt: "Imagine a [piece of furniture] designed in the form of [creature/object/concept]. The design should be highly creative and sculptural, like an art piece. Use organic, flowing shapes and detailed textures. Make sure it remains functional and ergonomic. The goal is for it to be both visually striking ..." },
+    { id: 186, title: "装饰艺术大都会", category: "style", author: "@community", tags: ["装饰艺术"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/186.png", prompt: "[SUBJECT] set within an Art Deco Metropolis, showcasing the grandeur and geometric elegance of 1920s architecture. Use streamlined forms and ornamental details, highlighting a sophisticated color palette of [COLOR1] and [COLOR2] to reflect the prosperity of the era." },
+    { id: 187, title: "新卡通风格", category: "anime", author: "@community", tags: ["卡通","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/187.png", prompt: "Transform this image into a classic Tex Avery / Looney Tunes cartoon style. Use bold, clean outlines and exaggerated character features — huge eyes, stretched limbs, and over-the-top facial expressions. Emphasize slapstick comedy and visual humor. Colors should be vibrant and flat, with high contras..." },
+    { id: 188, title: "微型毛毡羊毛人物", category: "product", author: "@community", tags: ["毛毡"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/188.png", prompt: "A felted wool figure of a [subject], handcrafted with soft fibers, uneven stitching, and visible textures. Set within a miniature diorama of layered fabrics and pastel props, the scene radiates cozy, storybook charm like a still from a tactile, stop-motion fairytale made entirely of felt and thread." },
+    { id: 189, title: "心爱的角色制作动漫风格的签名", category: "character", author: "@community", tags: ["动漫","角色","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/189.png", prompt: "A minimalistic black-and-white autograph design in a single-line drawing style, featuring the handwritten signature: [CHARACTER NAME], integrated with cute line art elements inspired by the character’s appearance and personality (for example: hair, outfit details, weapons, magical symbols). Include ..." },
+    { id: 190, title: "品牌虚拟人物", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/190.png", prompt: "A fictional character shaped like a [Brand Name] product, wearing clothing that reflects the brand’s identity, sitting or riding on an oversized version of one of the brand's products as if it were a futuristic vehicle. The design features an expressive, dynamic artistic style full of motion and vib..." },
+    { id: 191, title: "后世界末日氛围", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/191.jpeg", prompt: "a young cartoon boy with big goggles and scarf driving a tiny makeshift vehicle in the desert, cute post-apocalyptic vibe, indie animation style, soft colors, emotional and adventurous --ar 3:4 --raw --p" },
+    { id: 192, title: "月光屋顶茶话会", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/192.jpeg", prompt: "A moonlight rooftop tea party between a girl and a boy, dreamy, gentle, painterly." },
+    { id: 193, title: "将您的徽标放在月球上", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/193.jpeg", prompt: "Recreate [BRAND NAME] logo following my JSON aesthetic below:\n{\n\"role\": \"You are a lunar scene generator trained on NASA’s Apollo archives. Your task is to create a hyperrealistic image of an authentic Moon landing photo featuring a single flag on the lunar surface, with the uploaded logo or subject..." },
+    { id: 194, title: "装饰艺术未来主义", category: "style", author: "@community", tags: ["装饰艺术","未来主义"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/194.jpeg", prompt: "create image with 1:1 ratio \n[Brand] ad. Ultra-high-detail product photo in a fusion of Art Deco and Futurism. The product rest on platforms.  Background features stylized Art Deco skyscraper silhouettes morphing into Futurist speed lines, forming a diagonal left-to-right composition. Surfaces use b..." },
+    { id: 195, title: "经典的微型玩具风格", category: "product", author: "@community", tags: ["玩具","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/195.png", prompt: "A miniature version of [LOCATION], designed in a whimsical dollhouse style. The structure is surrounded by thematic natural elements and tiny architectural details that reflect its cultural context (e.g., plants, paths, decor). The color palette uses soft pastels (such as coral, blush, sand, mint, o..." },
+    { id: 196, title: "字母景观", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/196.jpeg", prompt: "the letter B beautiful and elegant decorated with a beautiful beachscape" },
+    { id: 197, title: "数字粘土雕塑", category: "creative", author: "@community", tags: ["粘土","雕塑"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/197.png", prompt: "A digital clay sculpture of a [subject], captured in a [pose/action], resting on a minimalist [color] plinth etched with organic swirl patterns. The sculpt features smooth, flowing curves and a tactile finish, rendered in a refined [color palette] that evokes a soft, contemporary aesthetic." },
+    { id: 198, title: "可爱的设计师玩偶", category: "design", author: "@community", tags: ["设计"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/198.png", prompt: "A cute designer doll styled as a [SUBJECT]. The doll has a porcelain face with blush, soft curly white hair, and large expressive eyes with unique pupils (like a star and moon). It wears a fluffy pastel-colored costume resembling the [chosen creature or idea], with detailed accessories like a hood w..." },
+    { id: 199, title: "自定义纹理的复古玩具", category: "product", author: "@community", tags: ["复古","玩具"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/199.png", prompt: "Retexture the uploaded image based on the JSON\n\n{\n  \"materials\": {\n    \"exterior\": \"matte injection-molded plastic\",\n    \"interior\": [\n      \"blocky colored plastic parts\",\n      \"oversized gears\",\n      \"simple rods\",\n      \"basic springs\",\n      \"toy decals\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": ..." },
+    { id: 200, title: "真人和风格对照直出", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/200.jpeg", prompt: "创建图片 {\n\"title\": \"真人 × 动画对照创意作品\",\n\"author\": \"ZH4O\",\n\"description\": \"一张利用垂直拼贴与留白，将同一人物的照片与插画并置的创意作品，突出媒介在语言、质感与情绪上的对比。\",\n\"layout\": {\n\"orientation\": \"vertical\",\n\"photo\": {\n\"position\": \"top-left\",\n\"aspect_ratio\": \"3:4\",\n\"style\": \"street photo\",\n\"camera_angle\": \"eye-level, slightly tilted left\",\n\"lens\": ..." },
+    { id: 201, title: "纸上的小卡通角色", category: "anime", author: "@community", tags: ["卡通","角色"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/201.jpeg", prompt: "Imagine you’re a tiny cartoon character who has come to life on a piece of paper! Draw yourself running away from a giant pencil that’s trying to erase you. Add colorful pencils, a desk, and maybe some flying eraser bits for extra excitement. Use your wildest imagination to make it look like you’re ..." },
+    { id: 202, title: "创建半透明图标", category: "logo", author: "@community", tags: ["图标","透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/202.jpeg", prompt: "Create a 3D-rendered icon of [Subject] in a dreamy, translucent, glass-like plastic material with soft pink and purple hues. glossy, smooth, rounded edges, glowing highlights, and soft shimmer or sparkle effects. UI, floating against a clean white background with soft shadows and natural lighting, e..." },
+    { id: 203, title: "3D表情符号头部", category: "creative", author: "@community", tags: ["3D"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/203.jpeg", prompt: "Generate a hyper-realistic 3D render of a [EMOJI🐱] as a floating animal head with plush toy aesthetics. The design should emphasize ultra-soft, long fur, playful cuteness, and a childlike charm. Use a straight-on camera angle with soft, diffused lighting to create a warm and inviting glow. Keep the..." },
+    { id: 204, title: "黑客帝国的绿色代码", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/204.jpeg", prompt: "Transform this image into a digital Matrix-style scene. The background and subject should be composed of cascading neon green code on a black backdrop, similar to the iconic Matrix digital rain. Use glowing green symbols (Japanese katakana, numbers, and Latin letters), with some motion blur and dept..." },
+    { id: 205, title: "以动物为灵感的品牌", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/205.png", prompt: "A high-quality studio photograph of a [BRAND + OBJECT] fully covered in ultra-realistic [ANIMAL] texture (e.g., fur, feathers, skin, or scales), placed against a soft neutral background. The object’s original shape, key design elements, and brand identity remain clearly visible beneath the animal’s ..." },
+    { id: 206, title: "工业内部品牌广告", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/206.jpeg", prompt: "Create a hyperrealistic, surreal 1:1 advertisement for [Brand Name].\nTransform the product into a miniature industrial factory or laboratory from the inside.\nReveal detailed internal systems: pipes, workers, glowing fluids, steam, and machines — all functioning to reflect the product’s core purpose ..." },
+    { id: 207, title: "超现实的高冲击力的图像", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/207.jpeg", prompt: "Create a hyperrealistic, high-impact image of a [subject] suspended mid-air, captured at the peak of an explosive moment. Surround it with dynamic [particles/splashes/fragments] that enhance motion and energy. macro-level detail, bold rim lighting, and a vibrant [background color] to emphasize form,..." },
+    { id: 208, title: "逼真的产品照片", category: "product", author: "@community", tags: ["产品"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/208.jpeg", prompt: "A realistic product photo of a [brand name] [bottle or jar] sculpted entirely from fresh [ingredient name], arranged perfectly to form the shape of the original packaging, including a detailed and accurate label on the front. The background is a clean, soft light gray with a natural wooden surface. ..." },
+    { id: 209, title: "吃掉你的文字", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/209.jpeg", prompt: "Create the word “[WORD]” made entirely from its real texture and styled using the identity of the most iconic brand associated with it.\n\nThe word should:\n• Visually reflect the material (e.g. honey, chocolate, soda, candy).\n• Use the brand’s signature colors and typography.\n• Include the brand logo ..." },
+    { id: 210, title: "90年代风格的摔跤人物", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/210.jpeg", prompt: "Product photography, a 1990's style WWF Wrestling Figurine package with the figurine wrestler in the package being [your character]. The figure features bright colors, a detailed character design,  white background with professional studio lighting." },
+    { id: 211, title: "灯泡中的城市", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/211.jpeg", prompt: "Create a hyper-realistic, stylish poster featuring a light bulb lying on wet urban asphalt. Inside the bulb, place a miniature version of [CITY] with its iconic landmarks. A sleek white 3D text of the city name ‘[CITY]’ should stand prominently in front of the bulb. The background is a softly blurre..." },
+    { id: 212, title: "品牌在悬浮平台上", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/212.png", prompt: "A highly detailed cinematic advertisement scene featuring [TYPE OF ALCOHOL, BRAND], standing on a surreal floating platform that visually embodies its spirit. The platform is made of materials that represent the drink’s essence (e.g. sparkling crystals for champagne, rich dark wood for whiskey, fros..." },
+    { id: 213, title: "3D蓬松的物体", category: "creative", author: "@community", tags: ["3D"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/213.jpeg", prompt: "Transform the [BRAND NAME] logo into a hyper-realistic, 3D fluffy object. Keep the original shape and exact brand colors. Cover the entire surface in soft, detailed fur with a realistic hair texture. Use cinematic lighting to create subtle backlighting and soft shadows, making the logo appear tactil..." },
+    { id: 214, title: "部分咬掉的糕点", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/214.jpeg", prompt: "A high-resolution, studio-lit macro photograph of a pastry shaped like a [SUBJECT], with a partial bite taken out, placed on a neutral matte surface with visible crumbs and soft shadows, highlighting texture and detail" },
+    { id: 215, title: "Gorillaz风格", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/215.png", prompt: "Restyle this image into a gritty Gorillaz-style illustration, bold thick black outlines, sharp angular edges, flat expressive lighting, stylized high-contrast shadows, dirty distressed surface textures, muted color palette: washed-out teals, olive greens, rusty reds, mustard yellows, dusty browns, r..." },
+    { id: 216, title: "穿越梦境迷宫", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/216.png", prompt: "[Character] sprinting past dream elements, Storybook illustration, Maze of floating doors, clocks, and whispers, Lantern glow and ambient sparkle trails, [Color1] and [Color2], Whimsical and fast-paced, Follow-cam style with trailing POV" },
+    { id: 217, title: "卡通现代风格插画", category: "anime", author: "@community", tags: ["卡通","插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/217.png", prompt: "Transform this image into a Cartoon Modern Style illustration, inspired by classic UPA animation like Mr. Magoo and The Jetsons.\nRedesign the character using flat, geometric shapes: ovals, rectangles, simple curves and angles. Avoid realistic proportions — the design should be stylized and abstract...." },
+    { id: 218, title: "超现实的黑白彩色页面", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/218.jpeg", prompt: "Create a psychedelic black and white coloring page featuring melting [SUBJECT] in the center, surrounded by large, playful shapes and smooth flowing patterns. The background includes whimsical and surreal elements such as sunflowers with eyes, melting eyeballs, melting hearts, melting mushrooms, clo..." },
+    { id: 219, title: "冬日国家", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/219.png", prompt: "A super detailed, realistic snow globe containing the essence of [Country Name]. Inside the globe: miniature snowy landscapes, iconic landmarks, cultural symbols, and natural elements representing [Country Name], rendered with extreme realism and rich textures. Delicate falling snow creates a magica..." },
+    { id: 220, title: "3D店铺渲染图", category: "creative", author: "@community", tags: ["3D"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/220.jpeg", prompt: "Ultra-realistic 3D render of a cute, miniature [BRAND NAME] storefront building. Designed using the brand’s signature style and color palette. Features a clean, modern exterior with large glass windows and a glowing 3D [BRAND NAME] logo sign on the front. Includes subtle branded props inside the sto..." },
+    { id: 221, title: "钻石镶嵌风格", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/221.jpeg", prompt: "Recreate this image using the parameters of the JSON provided.\n{\n  \"style_name\": \"Diamond-Encrusted Glamour\",\n  \"description\": \"Applies a hyper-realistic diamond-encrusted style to any object, logo, or shape. The surface of the subject is entirely covered with sparkling gemstones that reflect light ..." },
+    { id: 222, title: "宝石渲染风格", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/222.jpeg", prompt: "Apply the parameters of the JSON provided to [insert image]\n\n{\n  \"name\": \"Gemstone Render\",\n  \"object\": {\n    \"type\": \"auto\",\n    \"detected_color\": \"auto\",\n    \"form\": \"realistic, natural form preserved\",\n    \"material\": \"crystal or faceted gemstone glass\",\n    \"surface\": \"precision-cut facets, shar..." },
+    { id: 223, title: "惊人的外骨骼图像", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/223.jpeg", prompt: "a futuristic 3D-rendered [object] made of translucent [color] inner structure encased in a smooth white exoskeleton with organic holes and flowing biomorphic patterns, floating in a minimal soft gray background, high contrast lighting, hyperrealistic materials, octane render, modern digital sculptur..." },
+    { id: 224, title: "舒适的周末从这里开始", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/224.png", prompt: "retexture the image attached based on the json below:\n{\n  \"style_name\": \"Soft Minimal 3D Plastic\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"flatten complex details into simplified geomet..." },
+    { id: 225, title: "时尚的胶囊海报", category: "poster", author: "@community", tags: ["海报","时尚"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/225.jpeg", prompt: "Create a hyper-realistic, stylish poster [1080x1080] aspect ratio featuring a horizontal tablet-capsule hovering above a surface covered in condensation and water droplets, with its shadow cast on the wet ground. One side of the capsule is transparent glass, while the other is glossy [COLOR/DESIGN] ..." },
+    { id: 226, title: "电影场景", category: "scene", author: "@community", tags: ["电影","场景"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/226.png", prompt: "Close-up. Overhead shot from an extremely high vantage point, extremely low grain with iso100 film shadows on a Lomo LC-A. Realistic depth of field. Artistic composition. Overall bluish tones. Beautiful light and shadows. The black floor with the projected image of the blue sky that fills the screen..." },
+    { id: 227, title: "糖果形状物品", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/227.png", prompt: "A glossy candy-shaped perfume bottle resting on an open book, soft morning light, delicate shadows, dreamy bokeh background with iridescent cellophane wrapping. The candy design is inspired by [YOUR STYLE]" },
+    { id: 228, title: "日本搞笑漫画风格插画", category: "creative", author: "@community", tags: ["漫画","插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/228.jpeg", prompt: "Transform this image into a Japanese gag manga style illustration. Use a high-contrast black-and-white color palette with bold linework and screentone (halftone) shading. Characters should have exaggerated facial expressions, cartoonish proportions (big head, small body), and comedic intensity. Incl..." },
+    { id: 229, title: "品牌快餐胶囊", category: "logo", author: "@community", tags: ["品牌","快餐"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/229.jpeg", prompt: "Create a hyper-realistic, stylish poster [1080x1080] aspect ratio featuring a horizontal tablet-capsule hovering above a surface covered in condensation and water droplets, with its shadow cast on the wet ground. One side of the capsule is transparent glass, while the other is glossy [BRAND COLORS] ..." },
+    { id: 230, title: "可爱的卡通灵魂", category: "anime", author: "@community", tags: ["卡通"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/230.jpeg", prompt: "A cute cartoon ghost is the absolute main subject of the picture. It has a pure white body with a smooth and rounded contour, and two simple black oval eyes, with no extra features. This ghost is floating quietly in the very center of the picture. The background is a pure, bright purple, creating a ..." },
+    { id: 231, title: "形状为生日气球文字", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/231.png", prompt: "Create a hyper-realistic 3D rendering of balloon letters forming the word [WOW]. Each letter should look like a shiny, inflatable mylar balloon with a bold printed pattern. Use a mix of textures such as [checkered print, color grids, polka dots, or glossy metallic black]. The balloons should be semi..." },
+    { id: 232, title: "胶囊从透明的药瓶中倾倒", category: "scene", author: "@community", tags: ["透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/232.jpeg", prompt: "Hyper-realistic poster, 1080x1080. Small glossy/glass capsules spilling from a transparent medicine bottle onto a wet surface. Each capsule features [white]/[red] plastic and transparent glass, with [KFC] logo and a floating 3D icon inside. Strong reflections, studio lighting, water droplets, soft e..." },
+    { id: 233, title: "超现实鸟类幻想", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/233.png", prompt: "A highly detailed and surreal depiction of a mythical bird creature. It has the elegant, colorful body of a butterfly, with vibrant symmetrical wing patterns. Its head is that of a majestic elephant, complete with large ears, a long curling trunk, and ivory tusks, giving it a powerful and ancient au..." },
+    { id: 234, title: "产品成为霓虹灯下的梦想", category: "product", author: "@community", tags: ["霓虹","产品","霓虹灯"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/234.jpeg", prompt: "a surreal-realistic digital artwork of a product from the brand [Brand name]. The product should be glowing with neon outlines, stylized like a high-contrast 3D render. Place it in a dreamlike environment inspired by the brand’s identity, color scheme, and culture. Use soft shadows, deep blacks, and..." },
+    { id: 235, title: "讽刺版的你", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/235.jpeg", prompt: "Based on your understanding of my personality and past interactions, create a humorous and satirical image that teases me in a playful way. The image must have comedic features, using exaggerated expressions or surreal visual metaphors. Artistic style: cartoon or caricature with high contrast and ex..." },
+    { id: 236, title: "直升机品牌广告", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/236.jpeg", prompt: "Create a hyper-realistic, square 1:1 image featuring a small helicopter flying through a bright blue sky with fluffy white clouds and a subtle lens flare. The helicopter is painted in the signature colors and graphics of [BRAND]. It is carrying a giant product from [BRAND] hanging below. The composi..." },
+    { id: 237, title: "电影镜头拍摄", category: "movie", author: "@community", tags: ["电影"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/237.png", prompt: "Cinematic shot of [detailed character description], shot from [camera angle], [lighting type], [color palette], shot at close range, 35mm film grain, wide angle lens, f2.0 bokeh, shallow depth of field." },
+    { id: 238, title: "用花朵美化你的产品", category: "product", author: "@community", tags: ["产品"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/238.png", prompt: "A high-end editorial photo of (PRODUCT NAME OR IMAGE) placed on a white marble pedestal, resting on champagne-colored silk. It is surrounded by pastel flowers whose type and color naturally harmonize with the product’s primary colors (COLOR PALETTE) — complementing and enhancing its tones. Soft natu..." },
+    { id: 239, title: "沙滩胶囊城市", category: "product", author: "@community", tags: ["沙"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/239.jpeg", prompt: "A vibrant, hyper-realistic miniature of [CITY] inside a transparent capsule lying on a sandy beach. The capsule is half [COLOR] (matching [COUNTRY]’s flag) with [CITY] written in white text on the colored section. Inside the capsule: iconic landmarks of [CITY], beautiful water canals or streets, sma..." },
+    { id: 240, title: "定制的枕头", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/240.jpeg", prompt: "Create a high-resolution 3D render of the [BRAND] logo designed as an inflatable, puffy object. The logo should appear soft, rounded, and air-filled – like a plush balloon or blow-up toy. Use a smooth, matte texture with subtle fabric creases and stitching to emphasize the inflatable look. Position ..." },
+    { id: 241, title: "9格Q版风格贴纸", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/241.png", prompt: "Create a 3D kawaii 10-16 canvas featuring nine chibi-style stickers in various outfits, poses, and expressions. Use the uploaded attachment image. Each sticker has a white border and includes a speech bubble with regular use phrases. Set on a soft white-to-pastel blue gradient background for a fun, ..." },
+    { id: 242, title: "有趣的块状 3D 世界", category: "creative", author: "@community", tags: ["3D"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/242.png", prompt: "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"Playful Chunky 3D Aesthetic\",\n  \"retexture_mode\": \"stylized_3d_overlay\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"moderate — focus on key forms and ..." },
+    { id: 243, title: "卡通照片转换", category: "anime", author: "@community", tags: ["卡通","转换"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/243.png", prompt: "Transform the character into a digital, half-body cartoon-style portrait. Use a playful, vector-friendly style with clean solid lines, rounded face, oversized googly eyes, and minimal facial details. Show the character from chest up, including shoulders and upper torso. Apply smooth gradient fills t..." },
+    { id: 244, title: "转换马赛克风格照片", category: "style", author: "@community", tags: ["风格","转换","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/244.png", prompt: "Transform this image into a refined low-poly mosaic style. Preserve the original structure and recognizable details, especially facial features and contours. Use small, high-density polygons to maintain clarity and identity while creating a crystalline, faceted look. Keep the original color palette ..." },
+    { id: 245, title: "Kiro卡通幽灵", category: "anime", author: "@community", tags: ["卡通"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/245.jpeg", prompt: "A cute cartoon ghost is the absolute main subject of the picture. It has a pure white body with a smooth and rounded contour, and two simple black oval eyes, with no extra features. This ghost is floating quietly in the very center of the picture. The background is a pure, bright purple, creating a ..." },
+    { id: 246, title: "色彩缤纷的手工雕塑", category: "creative", author: "@community", tags: ["雕塑"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/246.jpeg", prompt: "A colorful handcrafted sculpture of [insert subject], made from semi-transparent ice blocks in custom shapes. Accents like icing, candy, yarn, or fruit skin enhance facial features, texture, or accessories. Placed on a ceramic plate over a leaf or decorative mat, with a clean, softly lit studio or n..." },
+    { id: 247, title: "90年代美国卡通片定格动画风格插画", category: "anime", author: "@community", tags: ["卡通","插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/247.jpeg", prompt: "Transform this image into a 90s American cartoon cel-style illustration. Use thick black outlines, flat bold colors, and sharp cel shading with hard shadows. Emphasize exaggerated facial expressions and stylized, geometric character shapes. The background should be flat or minimal to keep the focus ..." },
+    { id: 248, title: "一张铅笔素描", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/248.png", prompt: "A pencil drawing of [Your character], with detailed lines and shading on white paper, capturing the energy and strength in his muscular body [with element effects] around  the character, in a dynamic pose,   tattoo design on paper, manga art style, dark background, high contrast, strong shadows, lig..." },
+    { id: 249, title: "路牌图片", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/249.jpeg", prompt: "Image of a billboard with the text: “Image of a billboard with the text:”" },
+    { id: 250, title: "被优雅水漩涡环绕的品牌产品", category: "logo", author: "@community", tags: ["产品","品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/250.png", prompt: "Create square image of studio-lit product photography of a [Product] suspended in mid-air, lots of thick dynamic water swirls surrounding it in slow-motion arcs, crystal-clear droplets glistening with light refraction, high-gloss finish, minimal backdrop, cinematic lighting with soft shadows and hig..." },
+    { id: 251, title: "超细节盒状纸艺玩具", category: "product", author: "@community", tags: ["玩具","纸艺"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/251.jpeg", prompt: "1×1 square, ultra-detailed render of a box-shaped papertoy version of [CHARACTER NAME]. Made from folded and cut matte cardstock with visible paper texture, crisp edges, and clean folds. Cubic head and body, blocky limbs, simplified facial features, flat printed colors, and subtle shading for depth...." },
+    { id: 252, title: "怪诞又梦幻的超现实插画", category: "creative", author: "@community", tags: ["插画"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/252.png", prompt: "Transform the uploaded image into a surreal illustration with a whimsical, dream‑like vibe.\n• Color palette: muted tones (soft greens, browns, greys) with occasional gentle pops of green.\n• Lighting: soft, diffused, almost ethereal light that blends gradients and subtle highlights.\n• Texture & mediu..." },
+    { id: 253, title: "亚克力钥匙扣", category: "product", author: "@community", tags: ["钥匙扣"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/253.jpeg", prompt: "Create a photorealistic square image (1080x1080) showing a custom acrylic keychain version of the [LOGO] logo hanging from the zipper of a dark-colored backpack (e.g. black or grey). The logo must retain its original shape, color, and proportions without any alteration. The keychain should have a cl..." },
+    { id: 254, title: "磨砂泡泡 3D 图标", category: "creative", author: "@community", tags: ["3D","图标"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/254.png", prompt: "{\n\"style_name\": \"Frosted Bubble 3D Icons\",\n\"render_mode\": \"3d_semi_transparent_detailed\",\n\"icon_subject\": \"{{icon_ PlayStation controller}}\",\n\"object_analysis\": {\n\"preserve_silhouette\": true,\n\"geometry_sensitive_mapping\": true,\n\"detail_retention\": \"smooth rounded edges, subtle internal reflections\"\n..." },
+    { id: 255, title: "头部的几何肖像", category: "portrait", author: "@community", tags: ["肖像"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/255.jpeg", prompt: "Design a geometric portrait of a [ANIMAL] head in the style of contemporary paper craft collage. Use multiple overlapping paper textures and shadow effects to build dimensional depth. Focus on botanical-inspired color palettes with matte finish aesthetics. The composition should feature bold, angula..." },
+    { id: 256, title: "漂浮玻璃霓虹3D", category: "creative", author: "@community", tags: ["3D","霓虹","玻璃"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/256.jpeg", prompt: "retexture the image attached based on the JSON below:\n\n{\n  \"style_name\": \"Floating Glassy Neon 3D\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"maintain contours, volumes, and layering\"\n  }..." },
+    { id: 257, title: "透明蜂窝状变形", category: "scene", author: "@community", tags: ["透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/257.png", prompt: "{\n  \"object\": \"OBJECT_NAME\",\n  \"style\": \"Transparent Honeycomb Transformation\",\n  \"description\": \"Transform the object into a structure made entirely of crystallized golden honey with high transparency. The surface should be ultra-glossy, semi-liquid, and light-reflective, with defined yet see-throu..." },
+    { id: 258, title: "20世纪50年代的海报", category: "poster", author: "@community", tags: ["海报"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/258.png", prompt: "Transform this image into a 1950s poster in the style of mid-century modern graphic designers. Use flat, geometric color blocks with strong typographic elements.  The overall tone should be optimistic, nostalgic, and promotional. Add bold location labels and promotional slogans." },
+    { id: 259, title: "20世纪30年代弗莱舍工作室风格的动画", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/259.png", prompt: "Transform this image into a 1930s animation storyboard in the style of Fleischer Studios. Use greyscale with expressive inky shading and rubber-hose limbs. Surround the scene with anthropomorphic objects, bouncy motion lines, and slapstick action. The overall tone should be jazzy, lively, and playfu..." },
+    { id: 260, title: "20世纪20年代亚瑟·拉克姆风格的童话插画", category: "creative", author: "@community", tags: ["插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/260.png", prompt: "Transform this image into a 1920s fairy tale illustration in the style of Arthur Rackham. Use muted watercolor tones and intricate ink linework. Fill the scene with whimsical forest creatures, twisted tree branches, and hidden magical objects. The overall tone should be mysterious, enchanting, and s..." },
+    { id: 261, title: "城市糖果传奇的风格", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/261.jpeg", prompt: "A colorful, playful 2D map of [city name], in the style of Candy Crush Saga, featuring the city’s iconic landmarks as candy-inspired buildings, cute gumdrop trees, licorice bridges, pastel roads, and glossy water elements, floating clouds, vibrant cartoon style, top-down view, kid-friendly game aest..." },
+    { id: 262, title: "街头顽童（Gorillaz）风格插画", category: "creative", author: "@community", tags: ["插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/262.png", prompt: "Restyle this image into a gritty Gorillaz-style illustration, bold thick black outlines, sharp angular edges, flat expressive lighting, stylized high-contrast shadows, dirty distressed surface textures, muted color palette: washed-out teals, olive greens, rusty reds, mustard yellows, dusty browns, r..." },
+    { id: 263, title: "低多边形马赛克风格", category: "style", author: "@community", tags: ["风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/263.jpeg", prompt: "Transform this image into a refined low-poly mosaic style. Preserve the original structure and recognizable details, especially facial features and contours. Use small, high-density polygons to maintain clarity and identity while creating a crystalline, faceted look. Keep the original color palette ..." },
+    { id: 264, title: "纸制玩具版本", category: "product", author: "@community", tags: ["玩具"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/264.png", prompt: "Ultra-detailed render of a [CHARACTER NAME] paper toy version in box form (papertoy) made from matte folded cardboard and cut with visible paper texture, clean edges and neat folds. Cubic head and body, square extremities, simplified facial features, flat printed colors and subtle shading for greate..." },
+    { id: 265, title: "品牌杂志", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/265.png", prompt: "A hyper-realistic editorial concept for a collaboration between [BRAND] and [MAGAZINE BRAND]. Square 1:1 composition, shot in a sleek Parisian interior with marble floors and tall windows, golden afternoon light illuminating the scene. A single model in a couture gown poses gracefully beside a reali..." },
+    { id: 266, title: "树上挂着产品", category: "product", author: "@community", tags: ["产品"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/266.png", prompt: "A hyper-realistic photograph of a tree in a scenic meadow, with a sturdy, detailed bark trunk and lush green leaves, where instead of fruits, the branches naturally bear [PRODUCT], seamlessly integrated into the foliage, with realistic textures, natural lighting, soft shadows, subtle imperfections, ..." },
+    { id: 267, title: "一个复古茶包", category: "style", author: "@community", tags: ["复古"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/267.png", prompt: "A single vintage tea bag lying on a clean white background, hand-painted with an intricate illustration resembling a book cover. The tea bag has delicate aged paper texture, soft warm lighting, and realistic details. On the painted design, leave a clear blank space labeled [BOOK] for the book title...." },
+    { id: 268, title: "童趣插画", category: "creative", author: "@community", tags: ["插画"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/268.jpeg", prompt: "Create a full body, flat vector illustration of [CHARACTER] in a whimsical, wavy cartoon style. Use thin black outlines and smooth, rounded shapes. The character should have a tiny white-colored head with tiny dot eyes and a simple nose and mouth. The body should have exaggerated, playful proportion..." },
+    { id: 269, title: "透明X光扫描面板后面", category: "scene", author: "@community", tags: ["透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/269.png", prompt: "Two anime-style characters standing behind a futuristic transparent X-ray scanning panel, each leaning on it casually. Their full bodies are visible through the glowing glass as stylized, semi-transparent X-ray scans. [INSERT SCAN DETAILS HERE — e.g. hybrid anatomy, supernatural markings, implants, ..." },
+    { id: 270, title: "乐高超级英雄摆出充满动感的动作姿势", category: "creative", author: "@community", tags: ["乐高","动感"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/270.jpeg", prompt: "Epic LEGO [SUPERHERO] in dynamic action pose showcasing their signature powers, wearing their iconic costume with authentic colors and details, dramatic stormy sky with brilliant lightning bolts illuminating the scene, heroic stance amid swirling LEGO debris and flying bricks, small LEGO minifigures..." },
+    { id: 271, title: "超现实几何艺术风格的数字插画", category: "creative", author: "@community", tags: ["插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/271.png", prompt: "Transform this image into a digital illustration with a surreal, geometric art style. Apply glitch textures, abstract shapes, and cinematic composition. Use the original photo’s lighting and color palette to guide the atmosphere, while reimagining the scene in a stylized, dreamy, retro-futuristic wa..." },
+    { id: 272, title: "铅笔素描画", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/272.png", prompt: "A pencil drawing of [Your character], with detailed lines and shading on white paper, capturing the energy and strength in his muscular body [with element effects] around  the character, in a dynamic pose,   tattoo design on paper, manga art style, dark background, high contrast, strong shadows, lig..." },
+    { id: 273, title: "超现实主义极简概念广告", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/273.jpeg", prompt: "“{BRAND or PRODUCT NAME}” — surreal minimal conceptual advertisement\nCreate a 1:1 high-resolution poster that reimagines the brand/product as a surreal object of desire using minimal elements and symbolic storytelling.\n\n• Visual Style: ultra-clean background (light or muted tone), soft lighting, str..." },
+    { id: 274, title: "创作漫画风格插画", category: "creative", author: "@community", tags: ["漫画","插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/274.png", prompt: "create comic style illustration:\n{\n\"style\": \"comic book illustration\",\n\"line_art\": {\n\"type\": \"bold black outlines\",\n\"thickness\": \"medium\",\n\"detail\": \"emphasized contours and shading lines\"\n},\n\"coloring\": {\n\"palette\": \"vibrant and saturated colors\",\n\"shading\": \"halftone dots and cel shading\",\n\"highli..." },
+    { id: 275, title: "品牌着陆页-年轻女性运动后的面部特写", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/275.jpeg", prompt: "Create a closeup face of a young woman after a workout, sweaty, deep blue eyes, with a bit of blurred gym background on the left side of the photo, 5:3 proportions, she's looking right at the camera, some freckles and messy hair, beautiful, editorial" },
+    { id: 276, title: "马赛克彩色玻璃徽章", category: "scene", author: "@community", tags: ["玻璃"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/276.png", prompt: "create image:\n{\n  \"style\": \"mosaic stained glass emblem\",\n  \"object\": \"brand logo\",\n  \"brand\": {\n    \"name\": \"Spotify\",\n    \"logo_shape\": \"circular\",\n    \"icon_style\": \"three curved bars\",\n    \"color_palette\": {\n      \"primary\": \"#1DB954\",\n      \"secondary\": \"#1ED760\",\n      \"glass_variants\": [\"#147..." },
+    { id: 277, title: "极简风格插画", category: "creative", author: "@community", tags: ["插画","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/277.png", prompt: "Create a minimalistic illustration of [object or scene] in a paper cut-out style. Use soft, pastel colors and simple shapes. Include layered paper textures and subtle shadows to create depth. Place the object on a plain background. Ensure a clean, modern, and aesthetically pleasing composition with ..." },
+    { id: 278, title: "3D卡通钥匙扣", category: "creative", author: "@community", tags: ["3D","卡通","钥匙扣"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/278.png", prompt: "Create a cute 3D cartoon keychain version of the person in the uploaded photo. Transform the face and pose into a soft, simplified toy-like figure with a silicone-like smooth texture and pastel colors. Add a name tag that says \"[NAME]\" attached to the keychain in a playful rounded font. No backgroun..." },
+    { id: 279, title: "俏皮现代的应用程序图标设计", category: "logo", author: "@community", tags: ["图标","设计"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/279.png", prompt: "A playful and modern app icon design of a cute coffee cup character with a winking eye and smiling mouth, red-orange flame-like hair on top, minimal flat vector style, glossy highlights, soft shadows, centered composition, high contrast, vibrant colors, rounded corners, on a transparent background, ..." },
+    { id: 280, title: "制作照片中人物的玩具", category: "product", author: "@community", tags: ["玩具"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/280.jpeg", prompt: "Create a toy of the person in the photo. Let it be an\naction figure. Next to the figure, there should be the toy's\nequipment like a football and football boot and world cup. Also,\non top of the box, write 'LIONEL MESSI and underneath it,\n'GOAT'.Visualize this in a realistic way." },
+    { id: 281, title: "创建Airbnb创意广告", category: "design", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/281.jpeg", prompt: "Create Airbnb creative ad, show a suitcase opening like a dollhouse, revealing a cozy room inside, tagline: “Feel at home, anywhere.”" },
+    { id: 282, title: "品牌模切乙烯基贴纸", category: "logo", author: "@community", tags: ["品牌"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/282.jpeg", prompt: "Generate a large die-cut vinyl sticker of the [BRAND] logo with thick white border, perfectly centered on a soft light blue background. The sticker is viewed straight-on from directly above with realistic drop shadows beneath. Clean, flat design with subtle 3D depth. The sticker takes up most of the..." },
+    { id: 283, title: "精致纸艺折纸模型", category: "creative", author: "@community", tags: ["纸艺","折纸"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/283.jpeg", prompt: "A square 1:1 format digital photograph of an intricate paper origami model representing (MONUMENT_NAME), folded from textured colored paper and centered in the frame. Above it, the word (CITY_NAME) appears in bold origami-style letters, folded from vibrant paper using the national colors of the coun..." },
+    { id: 284, title: "字母毛茸茸形象", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/284.jpeg", prompt: "Render a delightful alphabet character ‘[LETTER]’ as a lovable fuzzy being in square 1080x1080 dimensions. Transform the typography into a living creature where the letterform itself becomes the main structure. Position expressive googly eyes and a cheerful mouth as integrated features of the alphab..." },
+    { id: 285, title: "卡通插图药丸形象", category: "anime", author: "@community", tags: ["卡通"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/285.jpeg", prompt: "Create a stylized cartoon illustration of [CHARACTER] with a smooth, vertical pill-shaped body (rounded on top and bottom, symmetrical left to right). The body should be a single, unified capsule shape with no limbs. Do not alter the character's core design or personality, but simplify them into thi..." },
+    { id: 286, title: "Q版木雕人偶", category: "creative", author: "@community", tags: ["人偶","木雕"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/286.jpeg", prompt: "Hyper-realistic carved wooden figurine of [CHARACTER], chibi proportions (big head, short body), standing on a plain wood block. Keep key face traits and iconic [OUTFIT/PROP]. Visible wood grain and chisel marks, matte finish. Warm studio light, soft shadow, seamless beige background. Centered full-..." },
+    { id: 287, title: "3D纸艺作品", category: "creative", author: "@community", tags: ["3D","纸艺"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/287.png", prompt: "A 3D papercraft representation of [Subject], composed of layered paper cutouts, resting on a simple cardboard base. Highlights of [color 1] and [color 2] paper textures create depth and dimension. Set against a softly lit crafts room, realistic lighting, intricate paper edges, shallow depth of field" },
+    { id: 288, title: "食物与运动结合的广告", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/288.jpeg", prompt: "Muscular African  man dunks a grilled chicken breast into a basketball hoop with 'DUNK EVERY MACRO' text, under a clear sky. Fitness-themed, with Trifecta logo." },
+    { id: 289, title: "我知道你很急但你先别急", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/289.png", prompt: "别人催我时，我回复：我知道你很急，但你先别急\n\n请为此设计表情包图片" },
+    { id: 290, title: "食谱信息图制作", category: "infographic", author: "@community", tags: ["信息图"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/290.jpeg", prompt: "Create step-by-step recipe infographic for creamy garlic mushroom pasta, top-down view, minimal style on white background, ingredient photos labeled: \"200g spaghetti\", \"150g mushrooms\", \"3 garlic cloves\", \"200ml cream\", \"1 tbsp olive oil\", \"parmesan\", \"parsley\", dotted lines showing process steps wi..." },
+    { id: 291, title: "英语单词闪卡制作", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/291.jpeg", prompt: "你是一个英语单词闪卡制作大师, 你可以根据我输入的主题词,生成一个图片并以此拓展,比如我输入电脑,你生成一张和电脑相关的图片,并用箭头分步介绍键盘\\鼠标\\显示器等中文和英文" },
+    { id: 292, title: "3D超写实食品广告", category: "creative", author: "@community", tags: ["3D"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/292.jpeg", prompt: "Smooth 3D hyperrealistic food advertisement of [TYPE OF FOOD], shown with mouthwatering glossy textures and perfect lighting, placed on a dark moody surface with soft glow and cinematic blur in the background, high Kelvin lighting for golden highlights and sharp shadows, backlit to show delicious st..." },
+    { id: 293, title: "软质高品质毛绒玩具", category: "product", author: "@community", tags: ["玩具","毛绒"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/293.jpeg", prompt: "A soft, high-quality plush toy of [CHARACTER], with an oversized head, small body, and stubby limbs. Made of fuzzy fabric with visible stitching and embroidered facial features. The plush is shown sitting or standing against a neutral background. The expression is cute or expressive, and it wears si..." },
+    { id: 294, title: "钩针玩偶", category: "product", author: "@community", tags: ["钩针"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/294.jpeg", prompt: "Create a 3D photorealistic and highly detailed poster in amigurumi style. The design should imitate a real handmade crochet [ANIMAL], with visible thread texture, stitching details, and soft, felted proportions. Use realistic fabric shading, subtle fuzz, and natural lighting to achieve depth. The am..." },
+    { id: 295, title: "透明扭蛋场景模型", category: "scene", author: "@community", tags: ["扭蛋","场景","透明"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/295.jpeg", prompt: "A detailed transparent gashapon capsule diorama, held between fingers, featuring [NAME] in their [ICONIC POSE / STYLE]. Inside: [short description of figure’s look, clothing, and accessories], with background elements such as [relevant setting: stadium, stage, lecture hall, etc.]. Lighting should be..." },
+    { id: 296, title: "手办-高级包装带打印机（擎天柱）", category: "product", author: "@community", tags: ["手办","包装","高级"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/296.jpeg", prompt: "请将图片转化为一款收藏级手办。在手办后方，放置一个印有该手办图案及“open nana”名称的手办包装盒。在其旁边，添加一台正在打印该手办的高端3D打印机。在该手办包装盒前方，放置一个圆形塑料底座，放置手办。\n底座的PVC材质需呈现晶莹剔透的半透明质感，且整个场景需设定在室内环境中。" },
+    { id: 297, title: "制作工作室拍摄肖像照", category: "portrait", author: "@community", tags: ["肖像"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/297.jpeg", prompt: "给图里的人生成工作室拍摄肖像照片,黑色背景,黑色T恤,采用侧光和半身像的构图" },
+    { id: 298, title: "手办-ZBrush建模屏显与万代风格包装盒", category: "product", author: "@community", tags: ["手办","包装","风格","风"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/298.jpeg", prompt: "create a 1/7 scale commercialized figure of thecharacter in the image, in a realistic styie and environment.\nPlace the figure on a computer desk, using a circular transparent acrylic base without any text.\nOn the computer screen, display the ZBrush modeling process of the figure.\nNext to the compute..." },
+    { id: 299, title: "制作大头贴", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/299.jpeg", prompt: "用这张照片，做一个3*3的photo booth grid，每张要用不同的姿势和表情不许重复" },
+    { id: 300, title: "制作证件照", category: "creative", author: "@community", tags: ["创意"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/300.jpeg", prompt: "截取图片人像头部，帮我做成2寸证件照，要求:\n1、蓝底\n2、职业正装\n3、正脸\n4、微笑" },
+    { id: 301, title: "超写实肖像位于石膏中心", category: "portrait", author: "@community", tags: ["肖像"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/301.jpeg", prompt: "Ultra-real portrait of [CHARACTER] centered, surrounded by dozens of life-size stone busts of [CHARACTER
 ];
-
-// ===== DOM Elements =====
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-const langBtn = document.getElementById('langBtn');
-const langMenu = document.getElementById('langMenu');
-const backToTop = document.getElementById('backToTop');
-const modal = document.getElementById('modal');
-const modalClose = document.getElementById('modalClose');
-const modalImg = document.getElementById('modalImg');
-const modalTitle = document.getElementById('modalTitle');
-const modalPrompt = document.getElementById('modalPrompt');
-const copyPrompt = document.getElementById('copyPrompt');
-const categoryFilter = document.getElementById('categoryFilter');
-const searchInput = document.getElementById('searchInput');
-const cardGrid = document.getElementById('cardGrid');
-
-// 分页相关元素
-const pagination = document.getElementById('pagination');
-const paginationInfo = document.getElementById('paginationInfo');
-const paginationPages = document.getElementById('paginationPages');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const pageSize = document.getElementById('pageSize');
-
-// 分页变量
-let currentPage = 1;
-let itemsPerPage = 12;
-
-// 生成卡片HTML
-function createCard(item) {
-    return `
-        <div class="card" data-category="${item.category}" data-id="${item.id}">
-            <div class="card-badge">#${item.id}</div>
-            <div class="card-img"><img src="${item.img}" alt="${item.title}" loading="lazy"></div>
-            <div class="card-body">
-                <h3>${item.title}</h3>
-                <p class="card-author">👤 ${item.author}</p>
-                <div class="card-tags">${item.tags.map(t => `<span>${t}</span>`).join('')}</div>
-                <div class="card-actions">
-                    <button class="btn-sm btn-view" data-prompt="${item.prompt.replace(/"/g, '&quot;')}">👁️ 查看详情</button>
-                    <button class="btn-sm btn-copy">📄 原文</button>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-// 渲染卡片
-function renderCards() {
-    const category = categoryFilter?.value || 'all';
-    const search = searchInput?.value.toLowerCase() || '';
-
-    const filtered = casesData.filter(item => {
-        const matchCategory = category === 'all' || item.category === category;
-        const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
-        return matchCategory && matchSearch;
-    });
-
-    // 计算分页数据
-    const totalItems = filtered.length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const toShow = filtered.slice(startIndex, endIndex);
-
-    cardGrid.innerHTML = toShow.map(createCard).join('');
-
-    // 更新分页信息
-    updatePagination(totalItems, totalPages, startIndex + 1, Math.min(endIndex, totalItems));
-
-    // 重新绑定事件
-    bindCardEvents();
-}
-
-// 更新分页控件
-function updatePagination(totalItems, totalPages, startItem, endItem) {
-    // 更新信息显示
-    const currentLang = localStorage.getItem('language') || 'zh';
-    const infoText = currentLang === 'en'
-        ? `Showing ${startItem}-${endItem} of ${totalItems} cases`
-        : `显示 ${startItem}-${endItem} / 共 ${totalItems} 个案例`;
-    paginationInfo.textContent = infoText;
-
-    // 更新按钮状态
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage === totalPages || totalPages === 0;
-
-    // 生成页码按钮
-    generatePageButtons(totalPages);
-}
-
-// 生成页码按钮
-function generatePageButtons(totalPages) {
-    const currentLang = localStorage.getItem('language') || 'zh';
-    let pagesHTML = '';
-
-    if (totalPages <= 7) {
-        // 如果总页数少于等于7，显示所有页码
-        for (let i = 1; i <= totalPages; i++) {
-            pagesHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
-        }
-    } else {
-        // 智能页码显示逻辑
-        if (currentPage <= 3) {
-            // 当前页在前面3页
-            for (let i = 1; i <= 5; i++) {
-                pagesHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
-            }
-            pagesHTML += `<span class="page-dots">...</span>`;
-            pagesHTML += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
-        } else if (currentPage >= totalPages - 2) {
-            // 当前页在最后3页
-            pagesHTML += `<button class="page-btn" data-page="1">1</button>`;
-            pagesHTML += `<span class="page-dots">...</span>`;
-            for (let i = totalPages - 4; i <= totalPages; i++) {
-                pagesHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
-            }
-        } else {
-            // 当前页在中间
-            pagesHTML += `<button class="page-btn" data-page="1">1</button>`;
-            pagesHTML += `<span class="page-dots">...</span>`;
-            pagesHTML += `<button class="page-btn" data-page="${currentPage - 1}">${currentPage - 1}</button>`;
-            pagesHTML += `<button class="page-btn active" data-page="${currentPage}">${currentPage}</button>`;
-            pagesHTML += `<button class="page-btn" data-page="${currentPage + 1}">${currentPage + 1}</button>`;
-            pagesHTML += `<span class="page-dots">...</span>`;
-            pagesHTML += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
-        }
-    }
-
-    paginationPages.innerHTML = pagesHTML;
-
-    // 绑定页码按钮事件
-    document.querySelectorAll('.page-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            currentPage = parseInt(this.dataset.page);
-            renderCards();
-            // 滚动到顶部
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    });
-}
-
-// 绑定卡片事件
-function bindCardEvents() {
-    document.querySelectorAll('.btn-view').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const card = this.closest('.card');
-            const img = card.querySelector('.card-img img');
-            const title = card.querySelector('h3');
-            modalImg.src = img.src;
-            modalTitle.textContent = title.textContent;
-            modalPrompt.textContent = this.dataset.prompt;
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    document.querySelectorAll('.btn-copy').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const viewBtn = this.closest('.card').querySelector('.btn-view');
-            navigator.clipboard.writeText(viewBtn.dataset.prompt).then(() => {
-                const currentLang = localStorage.getItem('language') || 'zh';
-                this.textContent = currentLang === 'en' ? '✓ Copied' : '✓ 已复制';
-                setTimeout(() => {
-                    this.textContent = currentLang === 'en' ? '📄 Original' : '📄 原文';
-                }, 2000);
-            });
-        });
-    });
-}
-
-// 初始化
-renderCards();
-
-// 筛选和搜索
-categoryFilter?.addEventListener('change', () => { currentPage = 1; renderCards(); });
-searchInput?.addEventListener('input', () => { currentPage = 1; renderCards(); });
-
-// 分页按钮事件
-prevBtn?.addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--;
-        renderCards();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
-
-nextBtn?.addEventListener('click', () => {
-    const category = categoryFilter?.value || 'all';
-    const search = searchInput?.value.toLowerCase() || '';
-    const filtered = casesData.filter(item => {
-        const matchCategory = category === 'all' || item.category === category;
-        const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
-        return matchCategory && matchSearch;
-    });
-    const totalPages = Math.ceil(filtered.length / itemsPerPage);
-
-    if (currentPage < totalPages) {
-        currentPage++;
-        renderCards();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
-
-// 每页显示数量改变事件
-pageSize?.addEventListener('change', function() {
-    itemsPerPage = parseInt(this.value);
-    currentPage = 1;
-    renderCards();
-});
-
-// 移动端菜单
-menuToggle?.addEventListener('click', () => navMenu.classList.toggle('show'));
-
-// 语言选择器
-langBtn?.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('show'); });
-langMenu?.querySelectorAll('li').forEach(item => {
-    item.addEventListener('click', () => {
-        langBtn.textContent = item.textContent.replace('✓ ', '') + ' ▼';
-        langMenu.classList.remove('show');
-    });
-});
-document.addEventListener('click', () => langMenu?.classList.remove('show'));
-
-// 返回顶部
-window.addEventListener('scroll', () => {
-    backToTop?.classList.toggle('show', window.scrollY > 300);
-});
-backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-// 模态框
-modalClose?.addEventListener('click', closeModal);
-modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-function closeModal() {
-    modal?.classList.remove('show');
-    document.body.style.overflow = '';
-}
-
-// 复制提示词
-copyPrompt?.addEventListener('click', async () => {
-    try {
-        await navigator.clipboard.writeText(modalPrompt.textContent);
-        const currentLang = localStorage.getItem('language') || 'zh';
-        copyPrompt.textContent = currentLang === 'en' ? '✓ Copied' : '✓ 已复制';
-        setTimeout(() => {
-            copyPrompt.textContent = currentLang === 'en' ? '📋 Copy Prompt' : '📋 复制提示词';
-        }, 2000);
-    } catch (err) {
-        alert(currentLang === 'en' ? 'Copy failed' : '复制失败');
-    }
-});
-
-// 平滑滚动
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-            navMenu?.classList.remove('show');
-        }
-    });
-});
-
-// 导航高亮
-const navLinks = document.querySelectorAll('.nav-menu a');
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
-    navLinks.forEach(l => {
-        l.classList.remove('active');
-        if (l.getAttribute('href') === `#${current}`) l.classList.add('active');
-    });
-});
-
-// 语言和主题管理
-class LanguageThemeManager {
-    constructor() {
-        this.currentLang = localStorage.getItem('language') || 'zh';
-        this.currentTheme = localStorage.getItem('theme') || 'light';
-        this.init();
-    }
-
-    init() {
-        this.setLanguage(this.currentLang);
-        this.setTheme(this.currentTheme);
-        this.bindEvents();
-    }
-
-    setLanguage(lang) {
-        this.currentLang = lang;
-        document.documentElement.lang = lang === 'en' ? 'en-US' : 'zh-CN';
-        document.documentElement.setAttribute('data-lang', lang);
-
-        // 更新按钮文本
-        const langBtn = document.getElementById('langBtn');
-        if (langBtn) {
-            langBtn.textContent = lang === 'en' ? 'English ▼' : '中文 ▼';
-        }
-
-        // 更新所有带有 data-zh 和 data-en 的元素
-        document.querySelectorAll('[data-zh][data-en]').forEach(element => {
-            element.textContent = element.getAttribute(`data-${lang}`);
-        });
-
-        // 更新 placeholder
-        document.querySelectorAll('[data-zh-placeholder][data-en-placeholder]').forEach(element => {
-            element.placeholder = element.getAttribute(`data-${lang}-placeholder`);
-        });
-
-        // 更新 option 文本
-        document.querySelectorAll('option[data-zh][data-en]').forEach(option => {
-            option.textContent = option.getAttribute(`data-${lang}`);
-        });
-
-        localStorage.setItem('language', lang);
-    }
-
-    setTheme(theme) {
-        this.currentTheme = theme;
-        document.documentElement.setAttribute('data-theme', theme);
-
-        // 更新主题按钮
-        const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle) {
-            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-        }
-
-        localStorage.setItem('theme', theme);
-    }
-
-    bindEvents() {
-        // 主题切换
-        const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                this.setTheme(this.currentTheme === 'light' ? 'dark' : 'light');
-            });
-        }
-
-        // 语言切换
-        const langMenuItems = document.querySelectorAll('#langMenu li[data-lang]');
-        langMenuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const lang = item.getAttribute('data-lang');
-                this.setLanguage(lang);
-
-                // 更新选中状态
-                langMenuItems.forEach(li => li.textContent = li.textContent.replace('✓ ', ''));
-                item.textContent = '✓ ' + item.textContent;
-            });
-        });
-    }
-}
-
-// 初始化语言和主题管理器
-const langThemeManager = new LanguageThemeManager();
-
-// 复制模板功能
-document.addEventListener('DOMContentLoaded', function() {
-    const copyTemplateBtn = document.getElementById('copyTemplate');
-
-    if (copyTemplateBtn) {
-        copyTemplateBtn.addEventListener('click', function() {
-            const templateText = `**案例标题：** 简要描述案例内容
-
-**分类：** [角色一致性/翻译上色/海报设计/游戏设计/UI设计/产品渲染/IP创作/古风创作/信息图表/风格转换/场景编辑/视觉设计]
-
-**提示词：** 详细的提示词内容
-
-**效果图片：** 效果图片链接或附件
-
-**说明：** （可选）案例的特殊说明或技巧分享`;
-
-            navigator.clipboard.writeText(templateText).then(function() {
-                const originalText = copyTemplateBtn.textContent;
-                copyTemplateBtn.textContent = copyTemplateBtn.getAttribute('data-zh') === '📋 复制模板' ? '✅ 已复制!' : '✅ Copied!';
-
-                setTimeout(function() {
-                    copyTemplateBtn.textContent = originalText;
-                }, 2000);
-            }).catch(function(err) {
-                console.error('复制失败:', err);
-                alert('复制失败，请手动复制模板内容');
-            });
-        });
-    }
-});
-
-console.log(`🍌 Awesome Nano Banana Pro Images 已加载 ${casesData.length} 个案例!`);
