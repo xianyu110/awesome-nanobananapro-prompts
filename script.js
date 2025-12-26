@@ -461,11 +461,14 @@ function renderCards() {
     const category = categoryFilter?.value || 'all';
     const search = searchInput?.value.toLowerCase() || '';
 
-    const filtered = casesData.filter(item => {
+    let filtered = casesData.filter(item => {
         const matchCategory = category === 'all' || item.category === category;
         const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
         return matchCategory && matchSearch;
     });
+
+    // 按 id 降序排序（最新的排在前面）
+    filtered.sort((a, b) => b.id - a.id);
 
     // 计算分页数据
     const totalItems = filtered.length;
@@ -599,11 +602,12 @@ prevBtn?.addEventListener('click', () => {
 nextBtn?.addEventListener('click', () => {
     const category = categoryFilter?.value || 'all';
     const search = searchInput?.value.toLowerCase() || '';
-    const filtered = casesData.filter(item => {
+    let filtered = casesData.filter(item => {
         const matchCategory = category === 'all' || item.category === category;
         const matchSearch = item.title.toLowerCase().includes(search) || item.prompt.toLowerCase().includes(search);
         return matchCategory && matchSearch;
     });
+    filtered.sort((a, b) => b.id - a.id);
     const totalPages = Math.ceil(filtered.length / itemsPerPage);
 
     if (currentPage < totalPages) {
