@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- Homepage -->
+    <url>
+        <loc>https://xianyu110.github.io/awesome-nanobananapro-prompts/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://xianyu110.github.io/awesome-nanobananapro-prompts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://xianyu110.github.io/awesome-nanobananapro-prompts/"/>
+    </url>
+
+    <!-- GPT-4o Gallery Page -->
+    <url>
+        <loc>https://xianyu110.github.io/awesome-nanobananapro-prompts/gpt4o-image-prompts-master/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- GitHub Repository -->
+    <url>
+        <loc>https://github.com/xianyu110/awesome-nanobananapro-prompts</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>

@@ -1343,6 +1343,7 @@ let currentPage = 1
 let pageSize = 12
 let currentCategory = "all"
 let currentSearch = ""
+let currentSort = "latest"  // latest | popular
 let filteredCases = [...casesData]
 
 function init() {
@@ -1357,13 +1358,19 @@ function setupEventListeners() {
         currentPage = 1
         filterCases()
     })
-    
+
+    document.getElementById("sortFilter").addEventListener("change", (e) => {
+        currentSort = e.target.value
+        currentPage = 1
+        filterCases()
+    })
+
     document.getElementById("searchInput").addEventListener("input", (e) => {
         currentSearch = e.target.value.toLowerCase()
         currentPage = 1
         filterCases()
     })
-    
+
     document.getElementById("pageSize").addEventListener("change", (e) => {
         pageSize = parseInt(e.target.value)
         currentPage = 1
@@ -1398,12 +1405,22 @@ function setupEventListeners() {
 function filterCases() {
     filteredCases = casesData.filter(c => {
         const matchCategory = currentCategory === "all" || c.category === currentCategory
-        const matchSearch = currentSearch === "" || 
+        const matchSearch = currentSearch === "" ||
             c.title.toLowerCase().includes(currentSearch) ||
             c.prompt.toLowerCase().includes(currentSearch) ||
             c.tags.some(t => t.toLowerCase().includes(currentSearch))
         return matchCategory && matchSearch
     })
+
+    // 排序
+    if (currentSort === "latest") {
+        // 最新优先：按 id 降序
+        filteredCases.sort((a, b) => b.id - a.id)
+    } else if (currentSort === "popular") {
+        // 最热门：可以按浏览量或其他指标，这里暂时按 id 升序
+        filteredCases.sort((a, b) => a.id - b.id)
+    }
+
     renderCards()
     renderPagination()
 }
@@ -1413,12 +1430,14 @@ function renderCards() {
     const start = (currentPage - 1) * pageSize
     const end = start + pageSize
     const pageCases = filteredCases.slice(start, end)
-    
+
     grid.innerHTML = pageCases.map(c => {
         const tagsHtml = Array.isArray(c.tags) ? c.tags.map(t => '<span class="tag">' + t + '</span>').join('') : ''
+        // 使用镜像URL，优先使用国内可访问的镜像
+        const imgSrc = 'https://ghproxy.net/https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/' + c.img.split('/').pop()
         return '<div class="card" data-id="' + c.id + '">' +
             '<div class="card-img-wrapper">' +
-            '<img src="' + c.img + '" alt="' + c.title + '" loading="lazy" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage%3C/text%3E%3C/svg%3E\'">' +
+            '<img src="' + imgSrc + '" data-original-url="' + c.img + '" alt="' + c.title + '" loading="lazy" onerror="tryMirrorImage(this)" onload="this.classList.add(\'loaded\')">' +
             '</div>' +
             '<div class="card-content">' +
             '<div class="card-tags">' + tagsHtml + '</div>' +
@@ -1468,7 +1487,14 @@ function renderPagination() {
 }
 
 function openModal(caseData) {
-    document.getElementById("modalImg").src = caseData.img
+    const modalImg = document.getElementById("modalImg")
+    const imgSrc = 'https://ghproxy.net/https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/' + caseData.img.split('/').pop()
+    modalImg.classList.remove('loaded')
+    modalImg.src = imgSrc
+    modalImg.setAttribute('data-original-url', caseData.img)
+    modalImg.onerror = function() { tryMirrorImage(this) }
+    modalImg.onload = function() { this.classList.add('loaded') }
+
     document.getElementById("modalTitle").textContent = caseData.title
     document.getElementById("modalPrompt").textContent = caseData.prompt
     document.getElementById("modal").classList.add("active")
@@ -1488,6 +1514,49 @@ function copyPromptToClipboard() {
         btn.textContent = "✓ 已复制"
         setTimeout(() => btn.textContent = originalText, 2000)
     })
+}
+
+// 图片镜像配置 - 解决 raw.githubusercontent.com 国内访问问题
+const imageMirrors = [
+    'https://ghproxy.net/https://raw.githubusercontent.com',  // 镜像1 - 测试可用
+    'https://raw.githubusercontent.com',                      // 原始地址
+    'https://gh-proxy.com/https://raw.githubusercontent.com'  // 镜像2
+]
+
+// 图片加载失败时尝试镜像
+function tryMirrorImage(img) {
+    const currentSrc = img.getAttribute('src')
+    const originalUrl = img.getAttribute('data-original-url')
+
+    if (!originalUrl) {
+        img.setAttribute('data-original-url', currentSrc)
+        return
+    }
+
+    // 查找当前使用的是哪个镜像
+    let currentIndex = -1
+    imageMirrors.forEach((mirror, index) => {
+        if (currentSrc.includes(mirror.replace('/https://raw.githubusercontent.com', '')) ||
+            currentSrc.includes(mirror.replace('https://raw.githubusercontent.com', ''))) {
+            currentIndex = index
+        }
+    })
+
+    // 尝试下一个镜像
+    const nextIndex = currentIndex + 1
+    if (nextIndex < imageMirrors.length) {
+        let nextUrl = originalUrl
+        if (imageMirrors[nextIndex].includes('raw.githubusercontent.com')) {
+            nextUrl = originalUrl
+        } else {
+            nextUrl = imageMirrors[nextIndex] + originalUrl.replace('https://raw.githubusercontent.com', '')
+        }
+        img.src = nextUrl
+    } else {
+        // 所有镜像都失败，使用占位图
+        img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="225"%3E%3Crect fill="%231a1a2e" width="300" height="225"/%3E%3Ctext fill="%236366f1" x="50%25" y="45%25" text-anchor="middle" font-size="24" dy="0.3em"%3E加载失败%3C/text%3E%3Ctext fill="%2394a3b8" x="50%25" y="60%25" text-anchor="middle" font-size="14"%3E图片暂时无法显示%3C/text%3E%3C/svg%3E'
+        img.classList.add('img-error')
+    }
 }
 
 document.addEventListener("DOMContentLoaded", init)

@@ -316,6 +316,8 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.6rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 .prompt-card {
@@ -341,6 +343,8 @@ main {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: rgba(148, 163, 184, 0.08);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 350px;
 }
 
 .card-placeholder {
