@@ -482,79 +482,63 @@ body {
     padding: 8px 0;
     color: var(--text-gray);
 }
-.channel-card { background: var(--bg-white); border: 1px solid var(--border); }
-.channel-card a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: color 0.2s;
+/* 渠道表格样式 */
+.channel-section {
+    margin-bottom: 2.5rem;
 }
-.channel-card a:hover { color: var(--primary-dark); text-decoration: underline; }
-
-/* 渠道链接样式美化 */
-.channel-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-.channel-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: var(--bg-light);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-align: left;
-}
-.channel-link:not(.offline):hover {
-    transform: translateX(5px);
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
-}
-.channel-link.offline {
-    cursor: default;
-    opacity: 0.9;
-}
-.channel-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-.channel-link:not(.offline):hover .channel-icon {
-    transform: scale(1.1) rotate(5deg);
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
-}
-.channel-info {
-    flex: 1;
-    min-width: 0;
-}
-.channel-name {
-    font-size: 1rem;
+.channel-section-title {
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 0.25rem;
-    word-break: break-all;
+    margin-bottom: 1rem;
 }
-.channel-desc {
-    font-size: 0.875rem;
-    color: var(--text-gray);
-    line-height: 1.4;
+.channel-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
-/* 移除旧的ul样式 */
-.channel-card ul {
-    display: none;
+.channel-table thead {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+}
+.channel-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+}
+.channel-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+.channel-table tbody tr {
+    transition: background 0.2s;
+}
+.channel-table tbody tr:hover {
+    background: var(--bg-light);
+}
+.channel-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.platform-cell {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+.platform-icon {
+    margin-right: 0.5rem;
+}
+.channel-table a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.channel-table a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 /* ===== Footer ===== */
@@ -831,20 +815,15 @@ select optgroup option {
     .hero-btns { flex-direction: column; align-items: center; }
     .filter-bar { flex-direction: column; gap: 1rem; }
     .card-grid { grid-template-columns: 1fr; }
-    .channel-link {
-        padding: 0.875rem;
-        gap: 0.75rem;
+    .channel-table {
+        font-size: 0.875rem;
     }
-    .channel-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
+    .channel-table th,
+    .channel-table td {
+        padding: 0.75rem 0.5rem;
     }
-    .channel-name {
-        font-size: 0.9rem;
-    }
-    .channel-desc {
-        font-size: 0.8rem;
+    .channel-section-title {
+        font-size: 1.1rem;
     }
 }
 
