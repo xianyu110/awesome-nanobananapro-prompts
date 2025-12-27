@@ -1413,27 +1413,50 @@ function renderCards() {
     const start = (currentPage - 1) * pageSize
     const end = start + pageSize
     const pageCases = filteredCases.slice(start, end)
-    
+
     grid.innerHTML = pageCases.map(c => {
-        const tagsHtml = Array.isArray(c.tags) ? c.tags.map(t => '<span class="tag">' + t + '</span>').join('') : ''
+        const tagsHtml = Array.isArray(c.tags) ? c.tags.map(t => '<span class="tag">' + escapeHtml(t) + '</span>').join('') : ''
         return '<div class="card" data-id="' + c.id + '">' +
             '<div class="card-img-wrapper">' +
-            '<img src="' + c.img + '" alt="' + c.title + '" loading="lazy" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage%3C/text%3E%3C/svg%3E\'">' +
+            '<img data-src="' + c.img + '" alt="' + escapeHtml(c.title) + '" onerror="this.onerror=null;this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E\\u52a0\\u8f7d\\u5931\\u8d25%3C/text%3E%3C/svg%3E\'">' +
             '</div>' +
             '<div class="card-content">' +
             '<div class="card-tags">' + tagsHtml + '</div>' +
-            '<h3 class="card-title">' + c.title + '</h3>' +
-            '<p class="card-author">' + c.author + '</p>' +
+            '<h3 class="card-title">' + escapeHtml(c.title) + '</h3>' +
+            '<p class="card-author">' + escapeHtml(c.author) + '</p>' +
             '</div>' +
             '</div>'
     }).join('')
-    
+
+    // 懒加载图片
+    const images = grid.querySelectorAll('img[data-src]')
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target
+                img.src = img.dataset.src
+                img.onload = function() { this.classList.add('loaded') }
+                img.onerror = function() { this.classList.add('loaded') }
+                observer.unobserve(img)
+            }
+        })
+    }, { rootMargin: '50px' })
+
+    images.forEach(img => imageObserver.observe(img))
+
     document.querySelectorAll(".card").forEach(card => {
         card.addEventListener("click", () => {
             const caseData = casesData.find(c => c.id === parseInt(card.dataset.id))
             openModal(caseData)
         })
     })
+}
+
+// HTML转义函数
+function escapeHtml(text) {
+    const div = document.createElement('div')
+    div.textContent = text
+    return div.innerHTML
 }
 
 function renderPagination() {
@@ -1468,11 +1491,18 @@ function renderPagination() {
 }
 
 function openModal(caseData) {
-    document.getElementById("modalImg").src = caseData.img
+    const modalImg = document.getElementById("modalImg")
+    modalImg.src = caseData.img
     document.getElementById("modalTitle").textContent = caseData.title
     document.getElementById("modalPrompt").textContent = caseData.prompt
     document.getElementById("modal").classList.add("active")
     document.body.style.overflow = "hidden"
+
+    // 重置复制按钮状态
+    const btn = document.getElementById("copyPrompt")
+    btn.classList.remove("copied")
+    const span = btn.querySelector("span")
+    if (span) span.textContent = span.getAttribute("data-zh") || "复制提示词"
 }
 
 function closeModal() {
@@ -1484,10 +1514,34 @@ function copyPromptToClipboard() {
     const prompt = document.getElementById("modalPrompt").textContent
     navigator.clipboard.writeText(prompt).then(() => {
         const btn = document.getElementById("copyPrompt")
-        const originalText = btn.textContent
-        btn.textContent = "✓ 已复制"
-        setTimeout(() => btn.textContent = originalText, 2000)
+        btn.classList.add("copied")
+        const span = btn.querySelector("span")
+        if (span) span.textContent = "✓ 已复制"
+        setTimeout(() => {
+            btn.classList.remove("copied")
+            if (span) span.textContent = span.getAttribute("data-zh") || "复制提示词"
+        }, 2000)
+    }).catch(err => {
+        console.error("复制失败:", err)
     })
 }
+
+// 键盘快捷键支持
+document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("modal")
+    if (!modal.classList.contains("active")) return
+
+    // ESC 关闭模态框
+    if (e.key === "Escape") {
+        closeModal()
+        return
+    }
+
+    // Ctrl+C 或 Cmd+C 复制提示词
+    if ((e.ctrlKey || e.metaKey) && e.key === "c") {
+        e.preventDefault()
+        copyPromptToClipboard()
+    }
+})
 
 document.addEventListener("DOMContentLoaded", init)

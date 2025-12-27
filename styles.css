@@ -320,8 +320,8 @@ body {
 /* ===== 卡片网格 ===== */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 .card {
     background: var(--bg-white);
@@ -330,6 +330,7 @@ body {
     box-shadow: var(--shadow);
     transition: all 0.3s;
     position: relative;
+    cursor: pointer;
 }
 .card:hover {
     transform: translateY(-5px);
@@ -347,19 +348,47 @@ body {
     font-weight: 600;
     z-index: 10;
 }
-.card-img {
+.card-img-wrapper {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     position: relative;
+    background: var(--bg-light);
 }
-.card-img img {
+.card-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
+    opacity: 0;
 }
-.card:hover .card-img img {
+.card-img-wrapper img.loaded {
+    opacity: 1;
+}
+.card-img-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--bg-light) 25%, var(--border) 50%, var(--bg-light) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    z-index: 1;
+}
+.card-img-wrapper img.loaded + *::before {
+    display: none;
+}
+.card-img-wrapper img {
+    position: relative;
+    z-index: 2;
+}
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+.card:hover .card-img-wrapper img {
     transform: scale(1.05);
 }
 .card-body {
@@ -595,11 +624,11 @@ body {
     z-index: 2000;
     padding: 20px;
 }
-.modal.show { display: flex; }
+.modal.active { display: flex; }
 .modal-content {
     background: var(--bg-white);
     border-radius: var(--radius);
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
     max-height: 90vh;
     overflow: auto;
@@ -618,35 +647,77 @@ body {
     cursor: pointer;
     z-index: 10;
 }
-.modal-content img {
+.modal-close:hover { background: var(--border); }
+#modalImg {
     width: 100%;
     display: block;
+    max-height: 50vh;
+    object-fit: contain;
+    background: var(--bg-light);
 }
 .modal-info {
     padding: 1.5rem;
 }
 .modal-info h3 {
     font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+.modal-copy-hint {
+    font-size: 0.8rem;
+    color: var(--text-light);
     margin-bottom: 1rem;
 }
-.modal-info p {
-    color: var(--text-gray);
-    line-height: 1.8;
-    margin-bottom: 1rem;
+.modal-copy-hint kbd {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+.modal-prompt-box {
     background: var(--bg-light);
     padding: 1rem;
     border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+#modalPrompt {
+    color: var(--text-gray);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+}
+.modal-actions {
+    display: flex;
+    gap: 10px;
 }
 .btn-copy-prompt {
+    flex: 1;
     background: var(--primary);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
 }
 .btn-copy-prompt:hover { background: var(--primary-dark); }
+.btn-copy-prompt.copied {
+    background: #10b981;
+}
+.btn-copy-prompt svg {
+    width: 18px;
+    height: 18px;
+}
 
 /* ===== 投稿部分 ===== */
 .contribute { padding: var(--section-padding); background: var(--bg-light); }
