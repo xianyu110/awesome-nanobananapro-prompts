@@ -1337,3 +1337,157 @@ const casesData = [
     { id: 1300, title: "制作证件照", category: "creative", author: "@community", tags: "[\"创意\"]", img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/300.jpeg", prompt: "截取图片人像头部，帮我做成2寸证件照，要求:\n1、蓝底\n2、职业正装\n3、正脸\n4、微笑" },
     { id: 1301, title: "超写实肖像位于石膏中心", category: "portrait", author: "@community", tags: "[\"肖像\"]", img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/301.jpeg", prompt: "Ultra-real portrait of [CHARACTER] centered, surrounded by dozens of life-size stone busts of [CHARACTER]" },
 ];
+
+// 初始化
+let currentPage = 1
+let pageSize = 12
+let currentCategory = "all"
+let currentSearch = ""
+let filteredCases = [...casesData]
+
+function init() {
+    renderCards()
+    renderPagination()
+    setupEventListeners()
+}
+
+function setupEventListeners() {
+    document.getElementById("categoryFilter").addEventListener("change", (e) => {
+        currentCategory = e.target.value
+        currentPage = 1
+        filterCases()
+    })
+    
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+        currentSearch = e.target.value.toLowerCase()
+        currentPage = 1
+        filterCases()
+    })
+    
+    document.getElementById("pageSize").addEventListener("change", (e) => {
+        pageSize = parseInt(e.target.value)
+        currentPage = 1
+        renderCards()
+        renderPagination()
+    })
+    
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--
+            renderCards()
+            renderPagination()
+        }
+    })
+    
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        const totalPages = Math.ceil(filteredCases.length / pageSize)
+        if (currentPage < totalPages) {
+            currentPage++
+            renderCards()
+            renderPagination()
+        }
+    })
+    
+    document.getElementById("modalClose").addEventListener("click", closeModal)
+    document.getElementById("modal").addEventListener("click", (e) => {
+        if (e.target.id === "modal") closeModal()
+    })
+    document.getElementById("copyPrompt").addEventListener("click", copyPromptToClipboard)
+}
+
+function filterCases() {
+    filteredCases = casesData.filter(c => {
+        const matchCategory = currentCategory === "all" || c.category === currentCategory
+        const matchSearch = currentSearch === "" || 
+            c.title.toLowerCase().includes(currentSearch) ||
+            c.prompt.toLowerCase().includes(currentSearch) ||
+            c.tags.some(t => t.toLowerCase().includes(currentSearch))
+        return matchCategory && matchSearch
+    })
+    renderCards()
+    renderPagination()
+}
+
+function renderCards() {
+    const grid = document.getElementById("cardGrid")
+    const start = (currentPage - 1) * pageSize
+    const end = start + pageSize
+    const pageCases = filteredCases.slice(start, end)
+    
+    grid.innerHTML = pageCases.map(c => {
+        const tagsHtml = Array.isArray(c.tags) ? c.tags.map(t => '<span class="tag">' + t + '</span>').join('') : ''
+        return '<div class="card" data-id="' + c.id + '">' +
+            '<div class="card-img-wrapper">' +
+            '<img src="' + c.img + '" alt="' + c.title + '" loading="lazy" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage%3C/text%3E%3C/svg%3E\'">' +
+            '</div>' +
+            '<div class="card-content">' +
+            '<div class="card-tags">' + tagsHtml + '</div>' +
+            '<h3 class="card-title">' + c.title + '</h3>' +
+            '<p class="card-author">' + c.author + '</p>' +
+            '</div>' +
+            '</div>'
+    }).join('')
+    
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+            const caseData = casesData.find(c => c.id === parseInt(card.dataset.id))
+            openModal(caseData)
+        })
+    })
+}
+
+function renderPagination() {
+    const total = filteredCases.length
+    const totalPages = Math.ceil(total / pageSize)
+    const start = (currentPage - 1) * pageSize + 1
+    const end = Math.min(currentPage * pageSize, total)
+    
+    document.getElementById("paginationInfo").textContent = '显示 ' + start + '-' + end + ' / 共 ' + total + ' 个案例'
+    
+    document.getElementById("prevBtn").disabled = currentPage === 1
+    document.getElementById("nextBtn").disabled = currentPage === totalPages
+    
+    const pagesContainer = document.getElementById("paginationPages")
+    let pagesHtml = ""
+    for (let i = 1; i <= totalPages; i++) {
+        if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+            pagesHtml += '<button class="page-btn' + (i === currentPage ? ' active' : '') + '" data-page="' + i + '">' + i + '</button>'
+        } else if (i === currentPage - 3 || i === currentPage + 3) {
+            pagesHtml += '<span class="page-ellipsis">...</span>'
+        }
+    }
+    pagesContainer.innerHTML = pagesHtml
+    
+    pagesContainer.querySelectorAll(".page-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            currentPage = parseInt(btn.dataset.page)
+            renderCards()
+            renderPagination()
+        })
+    })
+}
+
+function openModal(caseData) {
+    document.getElementById("modalImg").src = caseData.img
+    document.getElementById("modalTitle").textContent = caseData.title
+    document.getElementById("modalPrompt").textContent = caseData.prompt
+    document.getElementById("modal").classList.add("active")
+    document.body.style.overflow = "hidden"
+}
+
+function closeModal() {
+    document.getElementById("modal").classList.remove("active")
+    document.body.style.overflow = ""
+}
+
+function copyPromptToClipboard() {
+    const prompt = document.getElementById("modalPrompt").textContent
+    navigator.clipboard.writeText(prompt).then(() => {
+        const btn = document.getElementById("copyPrompt")
+        const originalText = btn.textContent
+        btn.textContent = "✓ 已复制"
+        setTimeout(() => btn.textContent = originalText, 2000)
+    })
+}
+
+document.addEventListener("DOMContentLoaded", init)
