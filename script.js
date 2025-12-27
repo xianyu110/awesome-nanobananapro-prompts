@@ -989,3 +989,127 @@ const casesData = [
     { id: 987, title: "九宫格拼贴画", category: "collage", author: "@msjiaozhu", tags: ["拼贴"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/987.jpeg", prompt: "{\n\"project_settings\": {\n\"task_type\": \"单图联系表（9格）\",\n\"aspect_ratio\": \"3:4\",\n\"resolution_mode\": \"高/放大（网格中面部细节至关重要）\",\n\"batch_size\": 1\n},\n\"reference_config\": {\n\"用法\" \"上传参考图像->设置强度为 0.5-0.7\",\n“目的”：“定义 3x3 网格结构和角色标识”\n},\n\"prompt_payload\": {\n\"structure_trigger\": \"包含 3x3 照片网格矩阵的单个联系表图像\",\n\"grid_logic\": \"9 个不同的面板，由细白边框分隔\",\n“subject_consistency”: “所有9幅画中的都是同一位年轻的亚洲女性，穿着相同的衣服，发型也相同”\n\"expression_variation\": \"9 种不同的面部表情（眨眼、吐舌头、惊讶、大笑、严肃等）\",\n\"camera_angles\": \"每..." },
     { id: 988, title: "圣诞特辑-冷艳圣诞甜酷皆在方寸间", category: "christmas", author: "@songguoxiansen", tags: ["圣诞"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/988.jpeg", prompt: "[关键：保持精确的面部特征，保留原始脸部结构，整个拼图中角色完全一致]\n高级时尚感的妆容，采用金属质感的妆面，眼影是香槟金色渐变到玫瑰金，眼角延伸出精致的金色眼线，下眼睑点缀碎钻如冰晶闪烁。睫毛根根分明如芭比娃娃，眉毛是野生眉形态。唇部是镜面光泽的樱桃红色，腮红是高光打造的立体感。发型是时髦的低盘发，发髻用金色装饰球和圣诞铃铛点缀，侧边垂落几缕精致卷发，头顶斜戴着设计感十足的金属质感圣诞帽，帽檐镶嵌北极星装饰。身着改良版现代圣诞服，采用不对称设计，一侧肩膀露出，红色天鹅绒面料混搭金色亮片，腰间系着夸张的金色蝴蝶结，下摆不规则裁剪。搭配毛绒围巾随意搭在肩上，戴着镶钻的针织手套。人物摆出时尚大片姿势，一腿微曲，一手叉腰，另一手优雅地托着一个装饰奢华的礼物盒，表情高冷又不失节日欢愉。背景是纯白色摄影棚布置成的圣诞场景，巨大的白色圣诞树装饰着金色装饰球、灯串和星星。地面铺满仿真雪花，摆放着精致的雪人雕塑、圣诞麋鹿装置。旁边有个现代设计感的壁炉装置，里面跳动着蓝色的炉火。墙面投影着圣诞老人剪影、驯鹿鲁道夫、雪橇、圣诞马车的图案。周围散落着高级包装的糖果、姜饼礼盒、拐杖糖。圣诞袜以装置艺术形式悬..." },
 ];
+
+// ===== 页面渲染逻辑 =====
+
+let currentPage = 1;
+let pageSize = 12;
+let currentCategory = 'all';
+let searchQuery = '';
+let filteredCases = [...casesData];
+
+const cardGrid = document.getElementById('cardGrid');
+const paginationInfo = document.getElementById('paginationInfo');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const paginationPages = document.getElementById('paginationPages');
+
+function init() {
+    updatePaginationInfo();
+    renderCards();
+    renderPagination();
+    setupEventListeners();
+}
+
+function setupEventListeners() {
+    document.getElementById('categoryFilter').addEventListener('change', (e) => {
+        currentCategory = e.target.value;
+        currentPage = 1;
+        filterAndRender();
+    });
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase();
+        currentPage = 1;
+        filterAndRender();
+    });
+
+    document.getElementById('pageSize').addEventListener('change', (e) => {
+        pageSize = parseInt(e.target.value);
+        currentPage = 1;
+        renderCards();
+        renderPagination();
+    });
+
+    prevBtn.addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderCards(); renderPagination(); } });
+    nextBtn.addEventListener('click', () => { const totalPages = Math.ceil(filteredCases.length / pageSize); if (currentPage < totalPages) { currentPage++; renderCards(); renderPagination(); } });
+
+    document.getElementById('modalClose').addEventListener('click', () => { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = ''; });
+    document.getElementById('modal').addEventListener('click', (e) => { if (e.target.id === 'modal') { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = ''; } });
+
+    document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+function filterAndRender() {
+    filteredCases = casesData.filter(item => {
+        const matchCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchSearch = !searchQuery || item.title.toLowerCase().includes(searchQuery) || item.prompt.toLowerCase().includes(searchQuery);
+        return matchCategory && matchSearch;
+    });
+    renderCards();
+    renderPagination();
+}
+
+function renderCards() {
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    const pageCases = filteredCases.slice(start, end);
+
+    if (pageCases.length === 0) {
+        cardGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px;">暂无匹配的案例</div>';
+        updatePaginationInfo();
+        return;
+    }
+
+    cardGrid.innerHTML = pageCases.map(item => `
+        <div class="case-card" style="cursor: pointer;">
+            <div class="card-image" onclick="openModal(${item.id})">
+                <img src="${item.img}" alt="${item.title}" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="card-content">
+                <h3>${item.title}</h3>
+                <div class="card-meta">
+                    <span>${item.author}</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    updatePaginationInfo();
+}
+
+function renderPagination() {
+    const totalPages = Math.ceil(filteredCases.length / pageSize);
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+    let pagesHTML = '';
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    for (let i = startPage; i <= endPage; i++) {
+        const activeClass = i === currentPage ? 'active' : '';
+        pagesHTML += `<button class="page-num ${activeClass}" onclick="currentPage=${i};renderCards();renderPagination();">${i}</button>`;
+    }
+    paginationPages.innerHTML = pagesHTML;
+}
+
+function updatePaginationInfo() {
+    const start = (currentPage - 1) * pageSize + 1;
+    const end = Math.min(currentPage * pageSize, filteredCases.length);
+    const total = filteredCases.length;
+    paginationInfo.textContent = `显示 ${start}-${end} / 共 ${total} 个案例`;
+}
+
+function openModal(id) {
+    const item = casesData.find(c => c.id === id);
+    if (!item) return;
+    document.getElementById('modalImg').src = item.img;
+    document.getElementById('modalTitle').textContent = item.title;
+    document.getElementById('modalPrompt').textContent = item.prompt;
+    document.getElementById('modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+document.addEventListener('DOMContentLoaded', init);
