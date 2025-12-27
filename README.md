@@ -65,7 +65,7 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 
 ## 🖼️ 案例展示
 
-> 📊 **共收录 986 个精选案例**  
+> 📊 **共收录 908 个精选案例**  
 > 更多案例请访问 [在线图库](https://xianyu110.github.io/awesome-nanobananapro-prompts/) 或查看 [gpt4o-image-prompts-master 目录](https://github.com/xianyu110/awesome-nanobananapro-prompts/tree/main/gpt4o-image-prompts-master)
 
 ---
@@ -174,7 +174,22 @@ A small "VI" logo at the top left (mention it visually).
 
 ---
 
-#### 7. 刺绣插图风格
+#### 7. 刺绣肖像
+
+**分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：7
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://ghproxy.net/https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/7.png" style="max-width: 100%; border-radius: 8px;" alt="刺绣肖像">
+</div>
+
+**提示词：**
+```
+An embroidered portrait of [subject], [colors] thread on deep linen fabric. Visible needlework, layered textures, and handmade patterns give it an earthy, sacred feel.
+```
+
+---
+
+#### 8. 刺绣插图风格
 
 **分类**：🎨 精选案例 | **来源**：@Artedeingenio | **案例ID**：8
 
@@ -189,7 +204,7 @@ A handcrafted illustration that simulates traditional embroidery using colorful 
 
 ---
 
-#### 8. 青花瓷风格
+#### 9. 青花瓷风格
 
 **分类**：🎨 精选案例 | **来源**：@firatbilal | **案例ID**：9
 
@@ -204,7 +219,7 @@ Using the uploaded image as the exact visual base, transform it into a hyper-rea
 
 ---
 
-#### 9. 熔化变异文本
+#### 10. 熔化变异文本
 
 **分类**：🎨 精选案例 | **来源**：@gnrlyxyz | **案例ID**：10
 
@@ -219,7 +234,7 @@ Create a psychedelic, grotesque cartoon-style text design that says “GNARLY”
 
 ---
 
-#### 10. 品牌之爱话术
+#### 11. 品牌之爱话术
 
 **分类**：🎨 精选案例 | **来源**：@aziz4ai | **案例ID**：11
 
@@ -234,7 +249,7 @@ A romantic square-format bouquet inspired by [Brand Name]. Roses are crafted fro
 
 ---
 
-#### 11. 创意广告
+#### 12. 创意广告
 
 **分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：12
 
@@ -250,7 +265,7 @@ A real [Real Object] is integrated into a hand-drawn black ink doodle, using loo
 
 ---
 
-#### 12. 创意广告
+#### 13. 创意广告
 
 **分类**：🎨 精选案例 | **来源**：@aziz4ai | **案例ID**：13
 
@@ -269,7 +284,7 @@ Use the uploaded product image exactly as it is — do not alter, redraw, or rei
 
 ---
 
-#### 13. 创意广告
+#### 14. 创意广告
 
 **分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：14
 
@@ -284,7 +299,7 @@ A high-impact advertisement set against a clean, dark or high-contrast backgroun
 
 ---
 
-#### 14. 树屋
+#### 15. 树屋
 
 **分类**：🎨 精选案例 | **来源**：@TheRelianceAI | **案例ID**：15
 
@@ -299,7 +314,7 @@ A quiet morning in a luxury treehouse retreat created by [BRAND NAME] — golden
 
 ---
 
-#### 15. 品牌星球世界
+#### 16. 品牌星球世界
 
 **分类**：🎨 精选案例 | **来源**：@TheRelianceAI | **案例ID**：16
 
@@ -314,7 +329,7 @@ Planet [Brand name], Year 3025. A distant world shaped entirely by the essence o
 
 ---
 
-#### 16. 未来一瞥
+#### 17. 未来一瞥
 
 **分类**：🎨 精选案例 | **来源**：@TheRelianceAI | **案例ID**：17
 
@@ -329,7 +344,7 @@ A cinematic rendering of [subject] walking through a rain-soaked street at night
 
 ---
 
-#### 17. 品牌我的世界风格
+#### 18. 品牌我的世界风格
 
 **分类**：🎨 精选案例 | **来源**：@TheRelianceAI | **案例ID**：18
 
@@ -344,7 +359,7 @@ A cinematic rendering of [subject] walking through a rain-soaked street at night
 
 ---
 
-#### 18. Emoji变成一个花盆
+#### 19. Emoji变成一个花盆
 
 **分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：19
 
@@ -359,7 +374,7 @@ A high-quality photo of a cute ceramic [object/animal]-shaped planter with a glo
 
 ---
 
-#### 19. 透明塑料袋装物体
+#### 20. 透明塑料袋装物体
 
 **分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：20
 
@@ -374,7 +389,7 @@ A high-resolution photograph of a clear plastic drawstring bag placed on a light
 
 ---
 
-#### 20. 产品变成纸玻璃
+#### 21. 产品变成纸玻璃
 
 **分类**：🎨 精选案例 | **来源**：@aziz4ai | **案例ID**：21
 
@@ -393,7 +408,7 @@ Include a bold, elegant 4-word slog...
 
 ---
 
-#### 21. 自定义气球
+#### 22. 自定义气球
 
 **分类**：🎨 精选案例 | **来源**：@ZHO_ZHO_ZHO | **案例ID**：22
 
@@ -418,7 +433,7 @@ Include a bold, elegant 4-word slog...
 
 ---
 
-#### 22. 平面设计等边风格
+#### 23. 平面设计等边风格
 
 **分类**：🎨 精选案例 | **来源**：@Artedeingenio | **案例ID**：23
 
@@ -433,7 +448,7 @@ A flat isometric digital illustration of [describe the subject: e.g., a modern w
 
 ---
 
-#### 23. 新市场中的美妆品牌
+#### 24. 新市场中的美妆品牌
 
 **分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：24
 
@@ -448,7 +463,7 @@ A product photography shot of a [PRODUCT] inspired by [FOOD BRAND], placed again
 
 ---
 
-#### 24. 按键删除周一
+#### 25. 按键删除周一
 
 **分类**：🎨 精选案例 | **来源**：@michaelrabone | **案例ID**：25
 
@@ -463,7 +478,7 @@ Detailed photographic image of a miniature person in bed feeling cranky under an
 
 ---
 
-#### 25. 水流身份
+#### 26. 水流身份
 
 **分类**：🎨 精选案例 | **来源**：@aziz4ai | **案例ID**：26
 
@@ -478,7 +493,7 @@ An ultra-high resolution 8K cinematic render of the [Brand Name] logo, sculpted 
 
 ---
 
-#### 26. 品牌奢华之物从天而降
+#### 27. 品牌奢华之物从天而降
 
 **分类**：🎨 精选案例 | **来源**：@hc_dsn | **案例ID**：27
 
@@ -494,7 +509,7 @@ a dreamy brand ad of [Brand], a brand designed bubble-like capsule with brand co
 
 ---
 
-#### 27. 狭窄走廊里奔跑
+#### 28. 狭窄走廊里奔跑
 
 **分类**：🎨 精选案例 | **来源**：@B_4AI | **案例ID**：28
 
@@ -509,7 +524,7 @@ A thrilling 3D cartoon scene: [CHARACTER1] runs through a narrow corridor inside
 
 ---
 
-#### 28. 面包形态
+#### 29. 面包形态
 
 **分类**：🎨 精选案例 | **来源**：@azed_ai | **案例ID**：29
 
@@ -524,7 +539,7 @@ A highly realistic sculpture of a [object], made entirely from [bread type] with
 
 ---
 
-#### 29. 公司金币
+#### 30. 公司金币
 
 **分类**：🎨 精选案例 | **来源**：@umesh_ai | **案例ID**：30
 
@@ -539,29 +554,8 @@ Prompt: A high-resolution photograph of a gold coin featuring the [COMPANY NAME]
 
 ---
 
-#### 30. 超写实拼图肖像
-
-**分类**：🎨 精选案例 | **来源**：@ZHO_ZHO_ZHO | **案例ID**：31
-
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://ghproxy.net/https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/31.jpeg" style="max-width: 100%; border-radius: 8px;" alt="超写实拼图肖像">
-</div>
-
-**提示词：**
-```
-高分辨率的摄影棚人像，一位惊艳年轻模特「安妮海瑟薇」为主角。她拥有一头顺直的黑发，背景为白色，无任何可辨识的元素。她的脸略微侧转，但目光直视镜头，目光强烈而专注，毫无动摇。
-
-她整张脸由拼图块组成——每一块都清晰可见，边缘整齐，具备细腻的立体感。她轻柔地用手指捏着一块刚从脸颊取下的拼图块，露出其下方一个空洞的黑色虚空。
-
-光线集中且具方向性，几乎不产生阴影，但准确地勾勒出皮肤的轮廓与拼图结构的立体感。整体氛围超现实、精准且高度写实。
-
-顶部有像时尚杂志一样的标题“ZHOGUE”（在人物后面）
-```
-
----
-
 > 📌 **查看更多案例**
-> 访问 [在线图库](https://xianyu110.github.io/awesome-nanobananapro-prompts/) 浏览全部 986+ 个案例
+> 访问 [在线图库](https://xianyu110.github.io/awesome-nanobananapro-prompts/) 浏览全部 908+ 个案例
 > 或查看 [gpt4o-image-prompts-master](https://github.com/xianyu110/awesome-nanobananapro-prompts/tree/main/gpt4o-image-prompts-master) 获取完整数据和提示词
 ## 📝 投稿指南
 
