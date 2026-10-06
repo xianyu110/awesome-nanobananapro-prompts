@@ -1338,6 +1338,24 @@ const casesData = [
     { id: 1988, title: "圣诞特辑-冷艳圣诞甜酷皆在方寸间", category: "christmas", author: "@songguoxiansen", tags: ["圣诞"], img: "https://raw.githubusercontent.com/xianyu110/awesome-nanobananapro-prompts/main/gpt4o-image-prompts-master/images/988.jpeg", prompt: "[关键：保持精确的面部特征，保留原始脸部结构，整个拼图中角色完全一致]\n高级时尚感的妆容，采用金属质感的妆面，眼影是香槟金色渐变到玫瑰金，眼角延伸出精致的金色眼线，下眼睑点缀碎钻如冰晶闪烁。睫毛根根分明如芭比娃娃，眉毛是野生眉形态。唇部是镜面光泽的樱桃红色，腮红是高光打造的立体感。发型是时髦的低盘发，发髻用金色装饰球和圣诞铃铛点缀，侧边垂落几缕精致卷发，头顶斜戴着设计感十足的金属质感圣诞帽，帽檐镶嵌北极星装饰。身着改良版现代圣诞服，采用不对称设计，一侧肩膀露出，红色天鹅绒面料混搭金色亮片，腰间系着夸张的金色蝴蝶结，下摆不规则裁剪。搭配毛绒围巾随意搭在肩上，戴着镶钻的针织手套。人物摆出时尚大片姿势，一腿微曲，一手叉腰，另一手优雅地托着一个装饰奢华的礼物盒，表情高冷又不失节日欢愉。背景是纯白色摄影棚布置成的圣诞场景，巨大的白色圣诞树装饰着金色装饰球、灯串和星星。地面铺满仿真雪花，摆放着精致的雪人雕塑、圣诞麋鹿装置。旁边有个现代设计感的壁炉装置，里面跳动着蓝色的炉火。墙面投影着圣诞老人剪影、驯鹿鲁道夫、雪橇、圣诞马车的图案。周围散落着高级包装的糖果、姜饼礼盒、拐杖糖。圣诞袜以装置艺术形式悬..." },
 ];
 
+// gptimage2.asia 详细教程页（完整提示词 + 修改技巧）：画廊案例 id -> slug
+const NBP_DETAIL_SLUGS = { 1432: "1998-artist-painting-recursive-image", 1434: "journey-to-the-west-beijing-subway", 1437: "jet-airliner-3d-cutaway-infographic", 1438: "stressed-programmer-cat-pixar-3d", 1441: "landmark-photo-with-blueprint-ar-overlay", 1444: "1975-film-photo-magic-window-anomaly", 1448: "white-line-drawing-people-on-photo", 1454: "photoreal-chinese-street-mural-rose-hair", 1458: "text-to-glossy-magazine-article-photo", 1466: "fluffy-creatures-watching-retro-tv", 1475: "three-heroes-car-chase-ink-comedy", 1476: "hand-drawn-recipe-infographic-template", 1482: "gongbi-fairy-on-robot-vacuum", 1488: "minimalist-childrens-drawing-glowing-lines", 1499: "chengdu-hand-drawn-watercolor-travel-map", 1501: "tang-dynasty-changan-gongbi-map", 1502: "old-beijing-aerial-hidden-character", 1508: "cinematic-film-beach-portrait-dusk", 1515: "dan-dan-noodles-deconstructed-layers-poster", 1518: "minimalist-cocktail-photo-with-menu-card", 1521: "hand-drawn-isometric-landmark-schematic", 1529: "kids-chinese-literacy-poster-template", 1533: "wacky-over-complicated-toast-flowchart", 1534: "four-seasons-kids-infographic-eric-carle-style", 1535: "research-paper-to-professor-whiteboard", 1536: "landmark-made-of-food-3d-render", 1540: "object-teardown-knolling-with-labels", 1541: "3d-tempeh-making-infographic-poster", 1543: "isometric-city-weather-card", 1546: "article-to-cartoon-infographic", 1547: "hand-drawn-daily-calendar-illustration", 1548: "suzhou-embroidery-emoji-sticker-sheet", 1549: "line-style-chibi-emoji-sticker-sheet", 1551: "chicago-riverfront-qingming-scroll-style", 1558: "astronaut-fishing-stars-on-moon-lofi", 1561: "koala-official-slacker-license-card", 1563: "journey-to-the-west-rock-band-gongbi", 1568: "golden-retriever-mukbang-livestream", 1570: "pixel-game-character-escaping-tv", 1571: "qing-emperor-video-conference-court-painting", 1574: "handheld-console-split-3d-platform-world", 1585: "vintage-film-camera-knolling-flat-lay", 1593: "dieline-to-3d-packaging-box-mockup", 1604: "noir-street-motion-blur-photo", 1607: "nine-lighting-setups-portrait-grid", 1612: "recursive-picture-frame-droste-photo", 1624: "watercolor-vitamin-beauty-infographic", 1626: "minimalist-chinese-ink-lone-fisherman", 1627: "macbook-pro-teardown-knolling-photo", 1629: "nine-shot-cinematic-contact-sheet" }
+const NBP_LANG = new URLSearchParams(location.search).get("lang") === "en" ? "en" : "zh"
+const NBP_DETAIL_LABEL = NBP_LANG === "zh" ? "完整提示词与教程 →" : "Full prompt + tips →"
+function nbpDetailUrl(slug) {
+    return "https://gptimage2.asia" + (NBP_LANG === "zh" ? "/zh" : "") + "/prompts/nano-banana-pro/" + slug + "?utm_source=github&utm_medium=gallery&utm_campaign=nbp_prompts"
+}
+function nbpHubUrl() {
+    return "https://gptimage2.asia" + (NBP_LANG === "zh" ? "/zh" : "") + "/prompts/nano-banana-pro?utm_source=github&utm_medium=gallery&utm_campaign=nbp_prompts"
+}
+function setupNbpHubLinks() {
+    document.querySelectorAll("[data-nbp-hub]").forEach(a => {
+        a.href = nbpHubUrl()
+        const label = a.getAttribute("data-" + NBP_LANG)
+        if (label) a.textContent = label
+    })
+}
+
 // 初始化
 let currentPage = 1
 let pageSize = 12
@@ -1347,6 +1365,7 @@ let currentSort = "latest"  // latest | popular
 let filteredCases = [...casesData]
 
 function init() {
+    setupNbpHubLinks()
     renderCards()
     renderPagination()
     setupEventListeners()
@@ -1404,7 +1423,8 @@ function setupEventListeners() {
 
 function filterCases() {
     filteredCases = casesData.filter(c => {
-        const matchCategory = currentCategory === "all" || c.category === currentCategory
+        const matchCategory = currentCategory === "all" ||
+            (currentCategory === "nbp-guide" ? Boolean(NBP_DETAIL_SLUGS[c.id]) : c.category === currentCategory)
         const matchSearch = currentSearch === "" ||
             c.title.toLowerCase().includes(currentSearch) ||
             c.prompt.toLowerCase().includes(currentSearch) ||
@@ -1443,6 +1463,7 @@ function renderCards() {
             '<div class="card-tags">' + tagsHtml + '</div>' +
             '<h3 class="card-title">' + c.title + '</h3>' +
             '<p class="card-author">' + c.author + '</p>' +
+            (NBP_DETAIL_SLUGS[c.id] ? '<a class="card-detail-link" href="' + nbpDetailUrl(NBP_DETAIL_SLUGS[c.id]) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">' + NBP_DETAIL_LABEL + '</a>' : '') +
             '</div>' +
             '</div>'
     }).join('')
@@ -1505,6 +1526,17 @@ function openModal(caseData) {
         tryLink.href = 'https://gptimage2.asia/zh/generate?' +
             (p && !truncated ? 'prompt=' + encodeURIComponent(p) + '&' : '') +
             'utm_source=github&utm_medium=readme&utm_campaign=nanobananapro_gallery&utm_content=case_' + caseData.id
+    }
+    const detailLink = document.getElementById("detailPrompt")
+    if (detailLink) {
+        const slug = NBP_DETAIL_SLUGS[caseData.id]
+        if (slug) {
+            detailLink.href = nbpDetailUrl(slug)
+            detailLink.textContent = NBP_DETAIL_LABEL
+            detailLink.style.display = ""
+        } else {
+            detailLink.style.display = "none"
+        }
     }
     document.getElementById("modal").classList.add("active")
     document.body.style.overflow = "hidden"

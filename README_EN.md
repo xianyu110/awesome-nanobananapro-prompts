@@ -3,6 +3,8 @@
 [![English](https://img.shields.io/badge/lang-English-blue.svg)](README_EN.md) [![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](README.md) [![GitHub stars](https://img.shields.io/github/stars/xianyu110/awesome-nanobananapro-prompts.svg?style=social&label=Star)](https://github.com/xianyu110/awesome-nanobananapro-prompts) [![GitHub forks](https://img.shields.io/github/forks/xianyu110/awesome-nanobananapro-prompts.svg?style=social&label=Fork)](https://github.com/xianyu110/awesome-nanobananapro-prompts)
 
 > 🎨 **Want to run these prompts right now?** Open **[GPT Image 2.5 online](https://gptimage2.asia/?utm_source=github&utm_medium=readme&utm_campaign=nanobananapro_en&utm_content=banner)** — one free try, no API key needed, 1K–4K output and reference-image editing. Every case below has a "Try this prompt" link that opens the generator with the prompt pre-filled (results will differ between models).
+>
+> 📘 **50 prompts explained in depth:** [Nano Banana Pro prompt guides](https://gptimage2.asia/prompts/nano-banana-pro?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) — each with the full prompt, example image, author credit and editing tips. [Jump to the list below](#-50-featured-cases-full-prompt--tips).
 
 ## Table of Contents
 
@@ -68,6 +70,65 @@ The newly released **Nano Banana Pro (Gemini 3 Pro Image)** delivers another pow
 
 > 📊 **Featuring 986+ curated cases**
 > Visit the [Online Gallery](https://xianyu110.github.io/awesome-nanobananapro-prompts/) or check [gpt4o-image-prompts-master directory](https://github.com/xianyu110/awesome-nanobananapro-prompts/tree/main/gpt4o-image-prompts-master) for more
+
+---
+
+### 📘 50 Featured Cases: Full Prompt & Tips
+
+> These 50 cases each have a dedicated page on gptimage2.asia with the full prompt, example image, author credit and editing tips. [See all →](https://gptimage2.asia/prompts/nano-banana-pro?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts)
+
+| Case | Title | Author | Link |
+| --- | --- | --- | --- |
+| 627 | MacBook Pro Teardown Knolling Photo | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/macbook-pro-teardown-knolling-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 585 | Vintage Film Camera Knolling Flat Lay | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/vintage-film-camera-knolling-flat-lay?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 574 | Handheld Console Split in Half 3D Render | @egeberkina | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/handheld-console-split-3d-platform-world?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 540 | Object Teardown with English Labels (Knolling) | @PandaTalk8 | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/object-teardown-knolling-with-labels?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 593 | Dieline to 3D Packaging Box Mockup | @Salmaaboukarr | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/dieline-to-3d-packaging-box-mockup?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 604 | Noir Street Motion Blur Photo | @oggii_0 | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/noir-street-motion-blur-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 612 | Infinite Recursive Picture Frame (Droste Effect) | @maxescu | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/recursive-picture-frame-droste-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 508 | Cinematic Film-Style Beach Portrait at Dusk | @MANISH1027512 | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/cinematic-film-beach-portrait-dusk?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 444 | 1975 Film Photo “Impossible Window” | @azed_ai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/1975-film-photo-magic-window-anomaly?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 432 | 1998 Amateur Photo: Artist Painting a Recursive Image | @goodside | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/1998-artist-painting-recursive-image?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 518 | Minimalist Cocktail Photo with Frosted Menu Card | @egeberkina | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/minimalist-cocktail-photo-with-menu-card?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 607 | 3×3 Editorial Portrait Grid: 9 Lens & Lighting Setups | @MonetizeXWithAb | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/nine-lighting-setups-portrait-grid?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 629 | 9-Shot Cinematic Contact Sheet from One Image | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/nine-shot-cinematic-contact-sheet?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 448 | Add White Line-Drawing People to a Photo | @egeberkina | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/white-line-drawing-people-on-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 624 | Hand-Drawn Watercolor Health Infographic | @cnyzgkc | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/watercolor-vitamin-beauty-infographic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 546 | Turn Any Article into a Hand-Drawn Cartoon Infographic | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/article-to-cartoon-infographic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 541 | 3D Step-by-Step Food Process Infographic Poster | @cnyzgkc | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/3d-tempeh-making-infographic-poster?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 535 | Research Paper to Professor’s Whiteboard | @skirano | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/research-paper-to-professor-whiteboard?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 534 | Four Seasons Classroom Infographic (Collage Picture-Book Style) | @jacalulu | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/four-seasons-kids-infographic-eric-carle-style?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 533 | Wacky Over-Complicated Flowchart Prompt (How to Toast Bread) | @emollick | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/wacky-over-complicated-toast-flowchart?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 437 | Jet Airliner 3D Exploded Cutaway Infographic | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/jet-airliner-3d-cutaway-infographic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 529 | Kids’ Chinese Literacy Poster Template (Pinyin Labels) | @lxfater | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/kids-chinese-literacy-poster-template?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 626 | Minimalist Chinese Ink Painting: Lone Fisherman | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/minimalist-chinese-ink-lone-fisherman?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 454 | Photoreal Chinese-Style Street Mural with Rose Hair | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/photoreal-chinese-street-mural-rose-hair?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 551 | Modern City in “Along the River During Qingming” Scroll Style | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/chicago-riverfront-qingming-scroll-style?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 482 | Gongbi Fairy Riding a Robot Vacuum (Old Meets New) | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/gongbi-fairy-on-robot-vacuum?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 475 | Three Kingdoms Car Chase: Humorous Ink Painting | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/three-heroes-car-chase-ink-comedy?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 558 | Astronaut Fishing for Stars on the Moon (Lofi Aesthetic) | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/astronaut-fishing-stars-on-moon-lofi?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 488 | Minimalist Children’s Drawing with Glowing White Lines | @azed_ai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/minimalist-childrens-drawing-glowing-lines?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 543 | Isometric 3D City Weather Card | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/isometric-city-weather-card?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 521 | Hand-Drawn Isometric Landmark Schematic | @TechieBySA | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/hand-drawn-isometric-landmark-schematic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 499 | Hand-Drawn Watercolor City Travel Map Prompt (Chengdu) | @imaxichuhai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/chengdu-hand-drawn-watercolor-travel-map?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 501 | Tang Dynasty Chang’an Illustrated Map | @imaxichuhai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/tang-dynasty-changan-gongbi-map?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 502 | Old Beijing Aerial with a Hidden Chinese Character | @imaxichuhai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/old-beijing-aerial-hidden-character?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 441 | Landmark Photo with Hand-Drawn Blueprint AR Overlay | @azed_ai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/landmark-photo-with-blueprint-ar-overlay?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 549 | LINE-Style Chibi Emoji Sticker Sheet (4×6) | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/line-style-chibi-emoji-sticker-sheet?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 548 | Suzhou Embroidery Style Emoji Sticker Sheet | @TaXue2025 | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/suzhou-embroidery-emoji-sticker-sheet?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 547 | Hand-Drawn Daily Calendar Illustration Template | @dotey | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/hand-drawn-daily-calendar-illustration?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 466 | Fluffy Creatures Squeezed on a Sofa Watching Retro TV | @nickfloats | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/fluffy-creatures-watching-retro-tv?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 438 | Stressed Programmer Cat in Pixar-Style 3D | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/stressed-programmer-cat-pixar-3d?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 536 | Famous Landmark Made Entirely of Food 3D Render | @Kerroudjm | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/landmark-made-of-food-3d-render?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 515 | Deconstructed Dan Dan Noodles Premium Food Poster | @berryxia_ai | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/dan-dan-noodles-deconstructed-layers-poster?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 476 | Hand-Drawn Watercolor Recipe Infographic Template | @cnyzgkc | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/hand-drawn-recipe-infographic-template?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 571 | Qing Emperor Holding Morning Court on a Video Call | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/qing-emperor-video-conference-court-painting?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 570 | Pixel Game Character Crawling Out of the TV | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/pixel-game-character-escaping-tv?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 568 | Golden Retriever Hosting a Mukbang Livestream | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/golden-retriever-mukbang-livestream?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 561 | Koala “Official Slacking License” ID Card | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/koala-official-slacker-license-card?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 434 | Journey to the West Characters Riding the Beijing Subway | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/journey-to-the-west-beijing-subway?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 458 | Turn Your Text into a Glossy Magazine Article Photo | @fofrAI | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/text-to-glossy-magazine-article-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 563 | Journey to the West Rock Band in Gongbi Style | @songguoxiansen | [Full prompt & tips](https://gptimage2.asia/prompts/nano-banana-pro/journey-to-the-west-rock-band-gongbi?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
 
 ---
 

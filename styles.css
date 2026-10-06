@@ -1071,4 +1071,32 @@ select optgroup option {
         font-size: 0.8rem;
     }
 }
+
+/* gptimage2.asia 详细教程链接 */
+.card-detail-link {
+    display: inline-block;
+    margin-top: 0.2rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
 }
+.card-detail-link:hover { background: var(--primary-dark); }
+.nbp-hub-banner {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+}
+.nbp-hub-banner a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    text-decoration: none;
+}
+.nbp-hub-banner a:hover { background: var(--primary); color: #fff; }

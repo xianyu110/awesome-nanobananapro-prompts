@@ -3,6 +3,8 @@
 [![English](https://img.shields.io/badge/lang-English-blue.svg)](README_EN.md) [![中文](https://img.shields.io/badge/lang-中文-red.svg)](README.md) [![GitHub stars](https://img.shields.io/github/stars/xianyu110/awesome-nanobananapro-prompts.svg?style=social&label=Star)](https://github.com/xianyu110/awesome-nanobananapro-prompts) [![GitHub forks](https://img.shields.io/github/forks/xianyu110/awesome-nanobananapro-prompts.svg?style=social&label=Fork)](https://github.com/xianyu110/awesome-nanobananapro-prompts)
 
 > 🎨 **想直接跑这些提示词？** 打开 **[GPT Image 2.5 在线生图](https://gptimage2.asia/zh?utm_source=github&utm_medium=readme&utm_campaign=nanobananapro&utm_content=banner)** —— 免费试一次、无需 API Key，支持 1K–4K 输出和参考图编辑。下方每个案例都附有「试试这个提示词」链接，点开即自动填好提示词（不同模型出图效果会有差异）。
+>
+> 📘 **精选 50 个提示词详解**：[Nano Banana Pro 提示词教程合集](https://gptimage2.asia/zh/prompts/nano-banana-pro?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) —— 每个案例都有完整提示词、示例图、作者署名和修改技巧，也可以[直接跳到下方列表](#-精选-50-例完整提示词与教程)。
 
 ## 📋 目录
 
@@ -68,6 +70,65 @@ Google 的 AI 攻势没有半点减弱的迹象。如果说前几天 Gemini 3 Pr
 
 > 📊 **共收录 908 个精选案例**  
 > 更多案例请访问 [在线图库](https://xianyu110.github.io/awesome-nanobananapro-prompts/) 或查看 [gpt4o-image-prompts-master 目录](https://github.com/xianyu110/awesome-nanobananapro-prompts/tree/main/gpt4o-image-prompts-master)
+
+---
+
+### 📘 精选 50 例：完整提示词与教程
+
+> 以下 50 个案例在 gptimage2.asia 上有单独的详解页（完整提示词、示例图、作者署名、修改技巧），[查看全部 →](https://gptimage2.asia/zh/prompts/nano-banana-pro?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts)
+
+| 案例 | 标题 | 作者 | 链接 |
+| --- | --- | --- | --- |
+| 627 | MacBook Pro 笔记本电脑拆解 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/macbook-pro-teardown-knolling-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 585 | 相机拆解 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/vintage-film-camera-knolling-flat-lay?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 574 | 掌上游戏机的精美3D渲染图 | @egeberkina | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/handheld-console-split-3d-platform-world?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 540 | 物品拆解图 | @PandaTalk8 | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/object-teardown-knolling-with-labels?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 593 | 模切线变为现实 | @Salmaaboukarr | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/dieline-to-3d-packaging-box-mockup?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 604 | 夜间拖影快门曝光 | @oggii_0 | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/noir-street-motion-blur-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 612 | 一个 男人被相框套娃了 | @maxescu | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/recursive-picture-frame-droste-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 508 | 女子海边电影风格肖像照 | @MANISH1027512 | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/cinematic-film-beach-portrait-dusk?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 444 | 魔法窗口 | @azed_ai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/1975-film-photo-magic-window-anomaly?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 432 | 电视屏幕内容复制到油画中 | @goodside | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/1998-artist-painting-recursive-image?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 518 | 极简主义鸡尾酒摄影 | @egeberkina | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/minimalist-cocktail-photo-with-menu-card?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 607 | 9种照片专业打光效果 | @MonetizeXWithAb | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/nine-lighting-setups-portrait-grid?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 629 | 一张图片生成9个不同景别的镜头 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/nine-shot-cinematic-contact-sheet?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 448 | 将素描人物添加到您的真实照片中 | @egeberkina | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/white-line-drawing-people-on-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 624 | 手绘美颜科普图 | @cnyzgkc | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/watercolor-vitamin-beauty-infographic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 546 | 把文章变成卡通信息图 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/article-to-cartoon-infographic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 541 | 高细节的3D信息图海报 | @cnyzgkc | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/3d-tempeh-making-infographic-poster?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 535 | 将paper转换成教授白板的图片 | @skirano | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/research-paper-to-professor-whiteboard?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 534 | 四季变化信息图 | @jacalulu | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/four-seasons-kids-infographic-eric-carle-style?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 533 | 烤面包流程图 | @emollick | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/wacky-over-complicated-toast-flowchart?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 437 | 飞机立体剖面信息图 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/jet-airliner-3d-cutaway-infographic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 529 | 识字小报元提示词 | @lxfater | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/kids-chinese-literacy-poster-template?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 626 | 黑白水墨画风格-孤舟蓑笠翁 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/minimalist-chinese-ink-lone-fisherman?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 454 | 摄影质感极强的街头壁画 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/photoreal-chinese-street-mural-rose-hair?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 551 | 现代芝加哥河滨清明上河图风格 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/chicago-riverfront-qingming-scroll-style?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 482 | 传统的中国工笔水墨画-仙女 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/gongbi-fairy-on-robot-vacuum?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 475 | 三英飙车战吕布 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/three-heroes-car-chase-ink-comedy?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 558 | 宇航员坐在弯弯的月亮边钓星星 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/astronaut-fishing-stars-on-moon-lofi?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 488 | 极简儿童绘画风格 | @azed_ai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/minimalist-childrens-drawing-glowing-lines?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 543 | 城市动态天气卡片 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/isometric-city-weather-card?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 521 | 绘制地标的手绘等距示意图 | @TechieBySA | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/hand-drawn-isometric-landmark-schematic?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 499 | 成都旅游地图 | @imaxichuhai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/chengdu-hand-drawn-watercolor-travel-map?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 501 | 大唐长安插画 | @imaxichuhai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/tang-dynasty-changan-gongbi-map?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 502 | 老北京航拍 | @imaxichuhai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/old-beijing-aerial-hidden-character?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 441 | 自由女神像建筑蓝图 | @azed_ai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/landmark-photo-with-blueprint-ar-overlay?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 549 | LINE风格半身Q版表情包 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/line-style-chibi-emoji-sticker-sheet?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 548 | 仿真绣苏绣表情包 | @TaXue2025 | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/suzhou-embroidery-emoji-sticker-sheet?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 547 | 手绘日历插画 | @dotey | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/hand-drawn-daily-calendar-illustration?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 466 | 14个毛茸茸的小家伙并排挤沙发上 | @nickfloats | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/fluffy-creatures-watching-retro-tv?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 438 | 疯狂的程序喵 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/stressed-programmer-cat-pixar-3d?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 536 | 食物制作成的超写实3D写实图 | @Kerroudjm | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/landmark-made-of-food-3d-render?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 515 | 担担面高级海报 | @berryxia_ai | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/dan-dan-noodles-deconstructed-layers-poster?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 476 | 菜谱-番茄炒蛋 | @cnyzgkc | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/hand-drawn-recipe-infographic-template?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 571 | 早朝了开个视频会议先 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/qing-emperor-video-conference-court-painting?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 570 | 游戏角色试图从电视屏幕爬到客厅 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/pixel-game-character-escaping-tv?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 568 | 金毛直播 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/golden-retriever-mukbang-livestream?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 561 | 国家一级摆烂许可证 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/koala-official-slacker-license-card?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 434 | 西游记人物坐地铁 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/journey-to-the-west-beijing-subway?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 458 | 文字生成精美的杂志文章的照片 | @fofrAI | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/text-to-glossy-magazine-article-photo?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
+| 563 | 西游记师徒四人组成了一个摇滚乐队 | @songguoxiansen | [完整提示词与教程](https://gptimage2.asia/zh/prompts/nano-banana-pro/journey-to-the-west-rock-band-gongbi?utm_source=github&utm_medium=readme&utm_campaign=nbp_prompts) |
 
 ---
 

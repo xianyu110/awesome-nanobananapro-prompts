@@ -51,7 +51,7 @@
     <link rel="dns-prefetch" href="https://github.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.css?v=20261006" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
 
     <!-- Structured Data (JSON-LD) -->
@@ -141,7 +141,7 @@
     </script>
 
     <title data-zh="Awesome Nano Banana Pro Images ✨" data-en="Awesome Nano Banana Pro Images ✨">Awesome Nano Banana Pro Images ✨</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261006">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -158,6 +158,7 @@
                 <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
                 <li><a href="#contribute" data-zh="投稿" data-en="Contribute">投稿</a></li>
                 <li><a href="#channels" data-zh="使用渠道" data-en="Channels">使用渠道</a></li>
+                <li><a href="https://gptimage2.asia/zh/prompts/nano-banana-pro?utm_source=github&utm_medium=gallery&utm_campaign=nbp_prompts" target="_blank" rel="noopener" data-nbp-hub data-zh="📘 提示词教程" data-en="📘 Prompt guides">📘 提示词教程</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle">🌙</button>
@@ -190,6 +191,7 @@
                 <a href="https://github.com/xianyu110/awesome-nanobananapro-prompts" target="_blank" class="btn btn-secondary" data-zh="📦 GitHub仓库" data-en="📦 GitHub Repo">📦 GitHub仓库</a>
                 <a href="https://gptimage2.asia/zh?utm_source=github&utm_medium=readme&utm_campaign=nanobananapro_gallery&utm_content=hero" target="_blank" rel="noopener" class="btn btn-secondary" data-zh="🎨 在线生图 · GPT Image 2.5" data-en="🎨 Try GPT Image 2.5">🎨 在线生图 · GPT Image 2.5</a>
             </div>
+            <p class="nbp-hub-banner"><a href="https://gptimage2.asia/zh/prompts/nano-banana-pro?utm_source=github&utm_medium=gallery&utm_campaign=nbp_prompts" target="_blank" rel="noopener" data-nbp-hub data-zh="📘 精选 50 个 Nano Banana Pro 提示词详解：完整提示词、示例图、作者署名与修改技巧 →" data-en="📘 50 Nano Banana Pro prompts explained: full prompt, example image, author credit and tips →">📘 精选 50 个 Nano Banana Pro 提示词详解：完整提示词、示例图、作者署名与修改技巧 →</a></p>
             <p class="hero-desc" style="margin-top:1rem;font-size:0.95rem;" data-zh="看中哪个提示词？点开案例，一键带到 GPT Image 2.5 直接出图：免费试一次、无需 API Key、支持 4K 和参考图编辑。" data-en="Like a prompt? Open a case and send it to GPT Image 2.5 in one click: one free try, no API key, 4K output and reference-image editing.">看中哪个提示词？点开案例，一键带到 GPT Image 2.5 直接出图：免费试一次、无需 API Key、支持 4K 和参考图编辑。</p>
         </div>
     </section>
@@ -202,6 +204,7 @@
                     <label data-zh="分类：" data-en="Category:">分类：</label>
                     <select id="categoryFilter">
                         <option value="all" data-zh="全部案例" data-en="All Cases">全部案例</option>
+                        <option value="nbp-guide" data-zh="📘 有完整教程（50）" data-en="📘 With full guide (50)">📘 有完整教程（50）</option>
                         <optgroup label="🎯 风格艺术">
                             <option value="style" data-zh="风格转换" data-en="Style Transfer">风格转换</option>
                             <option value="art" data-zh="艺术手工" data-en="Art & Craft">艺术手工</option>
@@ -542,11 +545,12 @@
                         <span data-zh="复制提示词" data-en="Copy Prompt">复制提示词</span>
                     </button>
                     <a class="btn-copy-prompt" id="tryPrompt" href="https://gptimage2.asia/zh/generate?utm_source=github&utm_medium=readme&utm_campaign=nanobananapro_gallery&utm_content=modal" target="_blank" rel="noopener" style="text-decoration:none;" data-zh="🎨 用 GPT Image 2.5 生成" data-en="🎨 Generate with GPT Image 2.5">🎨 用 GPT Image 2.5 生成</a>
+                    <a class="btn-copy-prompt" id="detailPrompt" href="#" target="_blank" rel="noopener" style="text-decoration:none;display:none;">完整提示词与教程 →</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js" charset="UTF-8"></script>
+    <script src="script.js?v=20261006" charset="UTF-8"></script>
 </body>
 </html>
